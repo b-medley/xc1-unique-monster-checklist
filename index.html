@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xenoblade Chronicles — Unique Monster Checklist</title>
+<style>
+  :root{
+    --bg: #0e1614;
+    --panel: #142420;
+    --panel-2: #16302a;
+    --line: #23413a;
+    --text: #e7f2ee;
+    --dim: #8fada5;
+    --accent: #4fd6b5;   /* monado ether teal */
+    --accent-2: #d9a441; /* mechon gold */
+    --danger: #d9714a;   /* superboss/missable clay */
+    --done: #3a5a52;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(79,214,181,0.08), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(217,164,65,0.06), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    line-height:1.4;
+    padding-bottom:4rem;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:2.2rem 1.2rem 1rem;}
+  header{margin-bottom:1.6rem;}
+  .eyebrow{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    color:var(--accent);
+    margin:0 0 .4rem;
+  }
+  h1{
+    margin:0 0 .3rem;
+    font-size:2.1rem;
+    font-weight:600;
+    letter-spacing:.01em;
+  }
+  .sub{color:var(--dim); font-size:.98rem; margin:0 0 1.3rem; max-width:62ch;}
+
+  .progress-row{
+    display:flex; flex-wrap:wrap; gap:1rem;
+    margin-bottom:1.4rem;
+  }
+  .progress-row .progress-card{
+    flex:1 1 260px;
+    margin-bottom:0;
+  }
+  .progress-card{
+    background:linear-gradient(180deg, var(--panel-2), var(--panel));
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:1rem 1.2rem;
+    display:flex;
+    align-items:center;
+    gap:1.2rem;
+    margin-bottom:1.4rem;
+  }
+  .ring{
+    width:64px;height:64px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-weight:700;font-size:.95rem;
+    background:
+      conic-gradient(var(--accent) calc(var(--pct,0)*1%), #24403a calc(var(--pct,0)*1%));
+    flex:none;
+    position:relative;
+  }
+  .ring::after{
+    content:"";
+    position:absolute; inset:6px;
+    border-radius:50%;
+    background:var(--panel);
+  }
+  .ring span{position:relative; z-index:1;}
+  .progress-text{font-family:"Helvetica Neue",Arial,sans-serif;}
+  .progress-text b{color:var(--accent); font-size:1.05rem;}
+  .progress-text .muted{color:var(--dim); font-size:.85rem;}
+
+  .controls{
+    display:flex; flex-wrap:wrap; gap:.6rem;
+    margin-bottom:1.2rem;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+  }
+  input[type="search"]{
+    flex:1 1 220px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    color:var(--text);
+    padding:.55rem .8rem;
+    border-radius:8px;
+    font-size:.9rem;
+  }
+  input[type="search"]::placeholder{color:var(--dim);}
+  select{
+    background:var(--panel);
+    border:1px solid var(--line);
+    color:var(--text);
+    padding:.55rem .7rem;
+    border-radius:8px;
+    font-size:.85rem;
+  }
+  button.ghost{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--dim);
+    padding:.55rem .9rem;
+    border-radius:8px;
+    font-size:.82rem;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  button.ghost:hover{border-color:var(--accent); color:var(--accent);}
+
+  .toggle-checkall{
+    display:flex; align-items:center; gap:.4rem;
+    color:var(--dim); font-size:.82rem;
+    margin-left:auto;
+    cursor:pointer;
+    user-select:none;
+  }
+  .toggle-checkall input{cursor:pointer;}
+  #areas.hide-checkall .check-all-btn{display:none;}
+
+  .legend{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:.74rem; color:var(--dim);
+    display:flex; flex-wrap:wrap; gap:.5rem 1rem;
+    margin:-0.4rem 0 1.2rem;
+    padding:.6rem .9rem;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:8px;
+  }
+  .legend span{white-space:nowrap;}
+
+  .area{
+    margin-bottom:1.1rem;
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    background:var(--panel);
+  }
+  .area-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:.8rem 1rem;
+    cursor:pointer;
+    user-select:none;
+    background:var(--panel-2);
+  }
+  .area-head h2{
+    margin:0; font-size:1.02rem; font-weight:600; letter-spacing:.01em;
+  }
+  .area-meta{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:.78rem; color:var(--dim);
+    display:flex; align-items:center; gap:.6rem;
+  }
+  .check-all-btn{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:.7rem;
+    color:var(--dim);
+    background:transparent;
+    border:1px solid var(--line);
+    padding:.2rem .55rem;
+    border-radius:20px;
+    cursor:pointer;
+  }
+  .check-all-btn:hover{border-color:var(--accent); color:var(--accent);}
+  .area-meta .count{color:var(--accent);}
+  .filter-badge{
+    display:none;
+    align-items:center;
+    gap:.25rem;
+    color:var(--accent-2);
+    border:1px solid rgba(217,164,65,0.4);
+    padding:.05rem .5rem;
+    border-radius:20px;
+    font-size:.72rem;
+  }
+  .filter-badge.show{display:inline-flex;}
+  .empty-msg{
+    display:none;
+    padding:.9rem 1rem 1rem;
+    color:var(--dim);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:.85rem;
+    font-style:italic;
+  }
+  .empty-msg.show{display:block;}
+  .chevron{
+    transition:transform .15s ease;
+    color:var(--dim);
+    font-size:.8rem;
+  }
+  .area.open .chevron{transform:rotate(90deg);}
+  .area-note{
+    font-size:.78rem; color:var(--danger); padding:.4rem 1rem 0;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+  }
+  .area-body{display:none;}
+  .area.open .area-body{display:block;}
+
+  ul.monsters{list-style:none; margin:0; padding:.3rem 0 .5rem;}
+  li.m{
+    display:flex; align-items:flex-start; gap:.7rem;
+    padding:.5rem 1rem;
+    border-top:1px solid rgba(35,65,58,0.5);
+  }
+  li.m:first-child{border-top:none;}
+  li.m.hidden{display:none;}
+  li.m.done{opacity:.55;}
+  li.m.done .mname{text-decoration:line-through; text-decoration-color:var(--dim);}
+
+  input.chk{
+    appearance:none; -webkit-appearance:none;
+    width:19px; height:19px; margin-top:.15rem; flex:none;
+    border:1.5px solid var(--dim);
+    border-radius:5px;
+    cursor:pointer;
+    background:transparent;
+    position:relative;
+  }
+  input.chk:checked{
+    background:var(--accent);
+    border-color:var(--accent);
+  }
+  input.chk:checked::after{
+    content:"";
+    position:absolute; left:5px; top:1px;
+    width:5px; height:9px;
+    border:solid #0e1614;
+    border-width:0 2px 2px 0;
+    transform:rotate(45deg);
+  }
+
+  .mrow{flex:1;}
+  .mtitle{display:flex; align-items:baseline; gap:.5rem; flex-wrap:wrap;}
+  .lvl{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:.7rem; color:var(--accent-2);
+    border:1px solid rgba(217,164,65,0.4);
+    padding:.05rem .4rem; border-radius:20px;
+    flex:none;
+  }
+  .mname{font-size:1rem;}
+  .badge{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:.66rem; text-transform:uppercase; letter-spacing:.05em;
+    padding:.05rem .4rem; border-radius:20px;
+    flex:none;
+  }
+  .badge.quest{color:var(--accent); border:1px solid rgba(79,214,181,0.4);}
+  .badge.boss{color:var(--danger); border:1px solid rgba(217,113,74,0.5);}
+  .time{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:.72rem;
+    color:#bfe0d8;
+    background:rgba(79,214,181,0.08);
+    border:1px solid rgba(79,214,181,0.25);
+    padding:.03rem .45rem; border-radius:20px;
+    flex:none;
+    white-space:nowrap;
+  }
+  .mloc{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    color:var(--dim); font-size:.82rem; margin-top:.15rem;
+  }
+  .mnote{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    color:#7d9891; font-size:.76rem; margin-top:.15rem; font-style:italic;
+  }
+
+  footer{
+    max-width:960px; margin:1.5rem auto 0; padding:0 1.2rem;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    color:var(--dim); font-size:.78rem;
+  }
+  a{color:var(--accent);}
+
+  .feedback-box{
+    margin-top:1.4rem;
+    padding:1rem 1.1rem 1.1rem;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+  }
+  .feedback-box h3{
+    margin:0 0 .7rem;
+    font-size:.92rem;
+    font-weight:600;
+    color:var(--text);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+  }
+  .feedback-box form{
+    display:flex; flex-direction:column; gap:.6rem;
+  }
+  .feedback-box select,
+  .feedback-box textarea{
+    background:var(--bg);
+    border:1px solid var(--line);
+    color:var(--text);
+    padding:.55rem .7rem;
+    border-radius:8px;
+    font-size:.85rem;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    resize:vertical;
+  }
+  .feedback-box textarea{min-height:80px;}
+  .feedback-box button{
+    align-self:flex-start;
+    background:transparent;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    padding:.5rem 1rem;
+    border-radius:8px;
+    font-size:.82rem;
+    cursor:pointer;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+  }
+  .feedback-box button:hover{
+    background:var(--accent);
+    color:var(--bg);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">You Will Know Our Names</p>
+    <h1>Unique Monster Checklist</h1>
+    <p class="sub">All Unique Monsters from <em>Xenoblade Chronicles</em> (Definitive Edition), organized by area, plus the <em>Future Connected</em> epilogue. Check off each kill — progress saves automatically in your browser.</p>
+  </header>
+
+  <div class="progress-row">
+    <div class="progress-card">
+      <div class="ring" id="ringMain" style="--pct:0"><span id="ringMainPct">0%</span></div>
+      <div class="progress-text">
+        <div><b id="doneMain">0</b> / <span id="totalMain">0</span> defeated</div>
+        <div class="muted">Main game — Affinity Coins</div>
+      </div>
+    </div>
+    <div class="progress-card">
+      <div class="ring" id="ringFC" style="--pct:0"><span id="ringFCPct">0%</span></div>
+      <div class="progress-text">
+        <div><b id="doneFC">0</b> / <span id="totalFC">0</span> defeated</div>
+        <div class="muted">Future Connected — Arts Coins</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input type="search" id="search" placeholder="Search by name or location…">
+    <select id="filter">
+      <option value="all">Show all</option>
+      <option value="undone">Undefeated only</option>
+      <option value="done">Defeated only</option>
+      <option value="quest">Quest-exclusive only</option>
+      <option value="boss">Superbosses only</option>
+      <option value="night">Night spawns</option>
+      <option value="day">Day spawns</option>
+      <option value="weather">Weather-locked</option>
+    </select>
+    <button class="ghost" id="expandAll">Expand all</button>
+    <button class="ghost" id="collapseAll">Collapse all</button>
+    <button class="ghost" id="resetBtn">Reset progress</button>
+    <label class="toggle-checkall">
+      <input type="checkbox" id="toggleCheckAll" checked>
+      Show "check all" buttons
+    </label>
+  </div>
+
+  <div class="legend">
+    <span>♾️ Anytime</span>
+    <span>☀️ Day</span>
+    <span>🌙 Night</span>
+    <span>🌦️ Specific weather</span>
+    <span>🕐 Fixed clock time</span>
+    <span>📜 Quest/story‑locked</span>
+    <span>❓ Not yet confirmed</span>
+  </div>
+
+  <div id="areas"></div>
+</div>
+
+<footer>
+  Source: <a href="https://www.xenoserieswiki.org/wiki/Unique_monster_(XC1)" target="_blank" rel="noopener">Xeno Series Wiki</a> &amp; <a href="https://www.rpgsite.net/feature/9774-xenoblade-chronicles-definitive-edition-unique-monster-locations-guide" target="_blank" rel="noopener">RPG Site</a>. Progress is stored locally in your browser only.
+  <div style="margin-top:.8rem;">
+    <a href='https://ko-fi.com/C1D724ZVWC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+  </div>
+
+  <div class="feedback-box">
+    <h3>Found an error, or have feedback?</h3>
+    <form action="https://formspree.io/f/xkjwbdoo" method="POST">
+      <select name="type" required>
+        <option value="" disabled selected>Type of feedback</option>
+        <option value="Bug on the page">Bug on the page</option>
+        <option value="Wrong location/spawn info">Wrong location/spawn info</option>
+        <option value="Feedback/Suggestion">Feedback/Suggestion</option>
+        <option value="Other">Other</option>
+      </select>
+      <textarea name="message" placeholder="Describe it here..." required></textarea>
+      <button type="submit">Send feedback</button>
+    </form>
+  </div>
+</footer>
+
+<script>
+// Each monster: [level, name, location, tag("" | "quest" | "boss"), note, timeIcon, timeLabel]
+const DATA = [
+["Colony 9","",[
+  [5,"Verdant Bluchal","Beach south of Anti-Air Battery 1","quest","Needed for Challenge 2","♾️","Anytime"],
+  [6,"Evil Rhangrot","Tephra Hill","quest","Needed for Challenge 1","♾️","Anytime"],
+  [6,"Lake Magdalena","Water beneath Outlook Park","quest","Needed for Challenge 3","🌙","Night"],
+  [6,"Itinerant Dorothea","Cliff Lake","","","☀️","Day"],
+  [10,"Speedy Ramshyde","Cliff Lake","","","♾️","Anytime"],
+  [13,"Enchanting Grune","Beach east of Tephra Cave Entrance","","","🕐","5:00am"],
+  [18,"Dark Murakmor","Anti-Air Battery 3","quest","Needed for The Plan - Execution","🌙","Night"],
+  [37,"Gentle Mother Armu","Agora Shore","","","♾️","Anytime"],
+  [38,"Impenetrable Redrob","Hazzai Cape","","","🌙","Night"],
+  [39,"Roguish Frengel","Cave north of Cliff Lake","","","♾️","Anytime"],
+  [40,"Gentle Rodriguez","North end of Agora Shore","","","♾️","Anytime"],
+  [40,"Lakebed Orthlus","Agora Shore","quest","Quest-exclusive — Preparing for Adventure 3","📜","Quest-locked"],
+  [44,"Shadeless Matrix","Cave north of Cliff Lake","","","🌙","Night"],
+  [73,"Flailing Bracken","Beach north of Anti-Air Battery 2","","","♾️","Anytime"]
+]],
+["Tephra Cave","High-level areas open after Mechonis Core (Ch.17)",[
+  [8,"Mining Patrichev","Northeast of Caterpile Nest","","","♾️","Anytime"],
+  [9,"Wallslide Gwynry","North of Escape Pod Bay","quest","Needed for Challenge 4","♾️","Anytime"],
+  [10,"Cellar Bugworm","Caterpile Nest","","","♾️","Anytime"],
+  [10,"Solid Konev","South of Spring of Grief","","","🌙","Night"],
+  [11,"Gluttonous Eugen","Vilia Lake","","","♾️","Anytime"],
+  [92,"Plump Sprahda","Alcove south of Bafalgar Tomb","","","♾️","Anytime"],
+  [93,"Musical Vanflare","North end of Bone Corridor","","","♾️","Anytime"],
+  [94,"Judicious Bunnitzol","Hole north of Heavenly Window","","","♾️","Anytime"],
+  [95,"Reckless Galdon","Hidden Warehouse","","","♾️","Anytime"],
+  [96,"Protective Torquidon","Heavenly Window","","","♾️","Anytime"],
+  [97,"Dazzling Tolosnia","Southwest of Heavenly Window","quest","Quest-exclusive — The Blood of Bafalgar","📜","Quest-locked"],
+  [97,"Erratic Goliante","Heavenly Window","","","♾️","Anytime"],
+  [98,"Firework Geldesia","Arachno Queen's Nest","quest","Quest-exclusive — Battling Brutes","📜","Quest-locked"],
+  [98,"Reckless Zanden","Arachno Queen's Nest","quest","Quest-exclusive — Battling Brutes","📜","Quest-locked"]
+]],
+["Bionis' Leg","",[
+  [15,"Sniper Paramecia","Southwest Gaur Plain","","","♾️","Anytime"],
+  [15,"Trainer Harmelon","East of Zax Guidepost","quest","Needed for Challenge 2 - Part 1","♾️","Anytime"],
+  [16,"Violent Andante","Near Raguel Lake, by Viliera Hill","quest","Needed for Challenge 1 - Part 2","♾️","Anytime"],
+  [16,"Vagrant Alfead","Tirkin Headquarters","quest","Needed for Challenge 2 - Part 2","♾️","Anytime"],
+  [17,"White Eduardo","Island in Raguel Lake","quest","Needed for Challenge 1 - Part 1","🌦️","Thunderstorm"],
+  [17,"Napping Volfen","East Gaur Plain","","","🌦️","Rain / storm"],
+  [18,"Night Cardamon","Near Kasharpa Falls","","","🌙🌦️","Night, clear"],
+  [32,"Clifftop Bayern","Daksha Shrine","","","♾️","Anytime"],
+  [75,"Mysterious Barnaby","Windy Cave","","","♾️","Anytime"],
+  [76,"Field Altrich","Northwest of Crevasse Waterfall","","","♾️","Anytime"],
+  [78,"Canyon Valencia","Observation Platform","quest","Needed for Nic's Training","🌦️","Clear weather"],
+  [81,"Territorial Rotbart","Gaur Plain","quest","Needed for Homs Determination","♾️","Anytime"],
+  [82,"Armoured Rockwell","Under Viliera Hill","","","🌦️","Rain / storm"],
+  [90,"Immovable Gonzalez","Spiral Valley","","After the Xord battle (Ch.4+)","♾️","Anytime"]
+]],
+["Ether Mine","",[
+  [20,"Dark Kisling","East of Central Terminal","","","♾️","Anytime"],
+  [22,"Vengeful Daulton","East of Test Pit 4","","","♾️","Anytime"],
+  [29,"Elegant Marin","Near Glowmoss Lake","quest","Needed for What is Courage?!","♾️","Anytime"]
+]],
+["Colony 6","",[
+  [19,"Graceful Holand","Northeast of Drainage Outlet","","","🌦️","Rain / storm"],
+  [25,"Drifter Jutard","Pod Depot","","","♾️","Anytime"]
+]],
+["Satorl Marsh","",[
+  [25,"Stormy Widardun","Zaldania Waterfall","","","☀️","Day"],
+  [26,"Cautious Balteid","West of Barren Moor","","","♾️","Anytime"],
+  [27,"Tumultuous Felix","Southeast of Silent Obelisk","","","♾️","Anytime"],
+  [27,"Amber Fischer","Near the Altar of Fate","","","🌦️","No dense fog"],
+  [28,"Aggressive Cornelius","Southern Igna Territory","","","♾️","Anytime"],
+  [28,"Swift Zektol","East Igna Territory","","","♾️","Anytime"],
+  [30,"Sunlight Schvaik","Barren Moor","quest","Needed for Zazadan Still In Danger","☀️","Day"],
+  [31,"Reckless Godwin","Exile Fortress","","","♾️","Anytime"],
+  [83,"Veteran Yozel","Northeast of Silent Obelisk","quest","Needed for a Challenge (after Mechonis Core)","🌙🌦️","Night, fog"],
+  [85,"Indomitable Daulton","Soter Ruins","quest","Needed for Nic's Final Test","♾️","Anytime"],
+  [91,"Eternal Palsadia","Top of Exile Fortress","","After completing The Giants' Treasure","♾️","Anytime"],
+  [108,"Despotic Arsene","North of Glowing Obelisk","boss","Superboss — after Mechonis Core","♾️","Anytime"]
+]],
+["Makna Forest","",[
+  [33,"Agile Albatro","River near Bridge Three","quest","Needed for Challenge 1","🌦️","Clear or torrid"],
+  [33,"Shimmering Forte","East of Eks Watering Hole","quest","Needed for a Challenge (after Frontier Village)","🌦️","Torrid weather"],
+  [34,"Elder Gragus","East of Nopon Arch","quest","Needed for The Old Soldier's Test","🌦️","Clear or torrid"],
+  [34,"Lazy Bluco","Yellow Flower Grove","quest","Needed for Challenge 3","🌙","Night"],
+  [35,"Obsessive Galgaron","Hode Lair","quest","Needed for Beat Kilaki to it!","♾️","Anytime"],
+  [37,"Breezy Zolos","North of Windmill Pavilion","quest","Needed for Challenge 2","♾️","Anytime"],
+  [46,"Brutal Gravar","King Agni's Tomb","","Accessible during Mystery of Makna Ruins 2","♾️","Anytime"],
+  [96,"Unreliable Rezno","Island in Great Makna Falls","quest","Quest-exclusive — Final Challenge of the Sage","📜","Quest-locked"],
+  [98,"Illustrious Golteus","Precipice Bridge","","After Mechonis Core","🌦️","Clear or torrid"],
+  [99,"Magnificent Digalus","Near Decayed Forest","","After Mechonis Core","♾️","Anytime"]
+]],
+["Frontier Village","",[
+  [78,"Frenzied Bana","Apex Lake","quest","Quest-exclusive — Bana the Betrayer (after Mechonis Core)","📜","Quest-locked"]
+]],
+["Eryth Sea","",[
+  [36,"Turbulent Belmo","Hovering Reef 1","","","🌦️","Clear weather"],
+  [38,"Peeling Kircheis","Hovering Reef 7","quest","Needed for Challenge 3","♾️","Anytime"],
+  [38,"Flabbergasted Jerome","Island below Hovering Reef 5","quest","Needed for a Challenge","🌦️","Clear or shooting stars"],
+  [39,"Proper Bandaz","Secluded Island","quest","Needed for Challenge 1","🌙🌦️","Night, shooting stars"],
+  [39,"Tempestuous Edegia","Hovering Reef 10","quest","Needed for Challenge 2","♾️","Anytime"],
+  [40,"Subterranean Zomar","Soltnar Seal Island","","","♾️","Anytime"],
+  [41,"Cumulus Danaemos","Khatorl Seal Island","","","♾️","Anytime"],
+  [42,"Funeral Gozra","Hode Refuge","quest","Needed for Punish the Hodes","♾️","Anytime"],
+  [44,"Lightspeed Sonid","Anu Shore","quest","Needed for Challenge 4","♾️","Anytime"],
+  [87,"Stormy Belagon","Kromar Coast","","","♾️","Anytime"],
+  [88,"Bizarre Ragoel","Lower level of Anu Shore","","","♾️","Anytime"],
+  [89,"Sacred Zagamei","Island below Hovering Reef 9","","","♾️","Anytime"],
+  [92,"Clamorous Dablon","Northwest Sleeping Dragon Isle","","","🌦️","Thunderstorm"],
+  [93,"Deadly Medorlo","Central Seal Island","","After Mechonis Core","♾️","Anytime"]
+]],
+["High Entia Tomb","",[
+  [38,"Calm Anzabi","Second Treasury","","","♾️","Anytime"],
+  [96,"Furious Jozan","Telethia Laboratory","","Requires the High Entia Emblem","♾️","Anytime"]
+]],
+["Valak Mountain","",[
+  [45,"Conflagrant Raxeal","Lava Cave","quest","Story quest-exclusive — The Magma Rock","📜","Quest-locked"],
+  [45,"Glorious Buer","South of Sealed Tower, on a plateau","","","♾️","Anytime"],
+  [46,"Moonlight Paimon","Lava Cave","","","♾️","Anytime"],
+  [46,"Vague Barbas","Southwest of Befalgar Pedestal","","","♾️","Anytime"],
+  [47,"Barbaric Sitri","Antol Den","quest","Needed for The Balance of Power","♾️","Anytime"],
+  [47,"Agile Barbatos","Northeast of Ignia Hill","","","🌙","Night"],
+  [48,"Banquet Vassago","Antol Den","quest","Quest-exclusive — The Balance of Power","📜","Quest-locked"],
+  [49,"Hidden Gamigin","Bridge southeast of Ignia Hill","","","🌙","Night"],
+  [50,"North Star Gusion","West of Url Crevasse","","","🌙🌦️","Night, blizzard"],
+  [97,"Exposure Wolfol","Lava Cave","","After The Magma Rock","♾️","Anytime"],
+  [98,"Wandering Amon","Bionis' Right Elbow","","","🌙","Night"],
+  [100,"Final Marcus","Three Sage Summit","boss","Superboss","🌙🌦️","Night, clear/snowy"],
+  [114,"Blizzard Belgazas","Near the Great Glacier","boss","Superboss — after Mechonis Core","♾️","Anytime"],
+  [120,"Avalanche Abaasy","Three Sage Summit","boss","Superboss — after Mechonis Core","🌙🌦️","Night, blizzard"]
+]],
+["Sword Valley","Missable — becomes inaccessible after Mechonis Field",[
+  [49,"Prudent Purson","Dolgan Outpost","","Surprise quest: Secure Dolgan Outpost","♾️","Anytime"],
+  [50,"Tranquil Morax","Enalda Control Base","","Surprise quest: Secure Enalda Control Base","♾️","Anytime"],
+  [50,"Defective Ipos","West of Ether Storage Area","","","♾️","Anytime"],
+  [51,"Fate Labolas","Port Maintenance Bay","","","♾️","Anytime"],
+  [51,"Benevolent Aim","Monado Wound","","","♾️","Anytime"],
+  [53,"Kamikaze Bune","North of Control Tower","","","♾️","Anytime"],
+  [55,"Lightning Ronove","Near Radio Tower","","Surprise quest: Secure the Radio Tower","♾️","Anytime"],
+  [57,"Mischievous Naberius","Behind 3rd Gate","","","♾️","Anytime"]
+]],
+["Galahad Fortress","Missable — becomes inaccessible after Mechonis Field",[
+  [52,"Glacier Acon","1st Turbine Room","","","♾️","Anytime"],
+  [53,"Precious Retrato","3rd Fuel Supply Room","","","♾️","Anytime"],
+  [55,"Glorious Jurom","Ether Blast Furnace","","","♾️","Anytime"]
+]],
+["Fallen Arm","",[
+  [54,"Evil Bathin","Ether Exhaust System","quest","Needed for Scheduled Inspection","♾️","Anytime"],
+  [56,"Aged Leraje","Radiocarpea Coast","","","🌙","Night"],
+  [56,"Prosperous Zepar","Jifum Beach","","","🕐","6:00pm"],
+  [57,"Affluent Beleth","Water at 5th Pulse Zone","","","♾️","Anytime"],
+  [58,"Splendid Botis","Digit 5 Beach","","","♾️","Anytime"],
+  [80,"Powerful Eligos","Digit 1","","","♾️","Anytime"],
+  [95,"Wicked Sallos","Distant Fingertip","","","🌦️","Clear weather"],
+  [105,"Ancient Daedala","Wreckage Beach","boss","Superboss — after Mechonis Core","♾️","Anytime"]
+]],
+["Mechonis Field","Missable — becomes inaccessible after Meyneth Shrine",[
+  [57,"Amorous Arca","Bulkhead Controls","","","♾️","Anytime"],
+  [58,"Infernal Crocell","East of 4F Main Power Switch","quest","Needed for Challenge Quest 2","♾️","Anytime"],
+  [59,"Destroyer Salvacion","2F Observation Post","","","♾️","Anytime"],
+  [60,"Revolutionary Bifrons","Northeast of 4F Main Power Switch","quest","Needed for Challenge Quest 1","♾️","Anytime"],
+  [61,"Commander Oracion","Spent Fuel Tank","","","♾️","Anytime"]
+]],
+["Central Factory","Missable — becomes inaccessible after Mechonis Core",[
+  [58,"Mild Florence","Ramp near Landing Strip 2","","","♾️","Anytime"],
+  [59,"Faithful Lancelot","Next to Control Tower","","","♾️","Anytime"],
+  [60,"Beautiful Vagul","Storage Depot","","Surprise quest: Eliminate the Backup!","♾️","Anytime"],
+  [61,"Synchronised Gaheris","Near Central Tower/Warehouse Lifts","","","♾️","Anytime"],
+  [62,"Balanced Palamedes","NW Central Tower Roof, 3F","","","♾️","Anytime"],
+  [63,"Sinful Lamorak","SW of Tower Boarding Gate","","","♾️","Anytime"],
+  [64,"Venerable Focalor","Training Ground Roof","","Surprise quest: Roof Battle","♾️","Anytime"],
+  [65,"Temporal Gawain","Control Tower","","","♾️","Anytime"],
+  [70,"Magestic Mordred","Northeast of Face Maintenance Bay","","","♾️","Anytime"]
+]],
+["Agniratha","Missable — becomes inaccessible after Meyneth Shrine",[
+  [63,"Vagabond Allocer","North of Helas Pillar","quest","Needed for Military Status 1-1","♾️","Anytime"],
+  [64,"Experienced Tristan","Southwest of 1st Control Platform","","","♾️","Anytime"],
+  [64,"Destructive Bors","Near Telethia Bridge","","","♾️","Anytime"],
+  [65,"Soothed Aglovale","Near Legislative District","","","♾️","Anytime"],
+  [65,"Meditative Varla","Near Telethia Bridge","quest","Needed for Military Status 2-1","♾️","Anytime"],
+  [66,"Sentimental Flamral","Judicial District","","","♾️","Anytime"],
+  [67,"Wrathful Orobas","Southeast of Dios Pilar","quest","Needed for Military Status 2-2","♾️","Anytime"],
+  [68,"Wise Gremory","West of Meyneth Statue","quest","Needed for Military Status 1-2","♾️","Anytime"]
+]],
+["Bionis' Interior","Only appears on the second visit",[
+  [72,"Active Impulso","Second Lung","","","♾️","Anytime"],
+  [72,"Mystical Klesida","Third Lung","","","♾️","Anytime"],
+  [73,"Victorious Gross","Pars Sympathica Tower","","","♾️","Anytime"],
+  [74,"Clandestine Apety","Second Lung","","","♾️","Anytime"],
+  [75,"Vivid Anstan","Third Lung","","","♾️","Anytime"],
+  [75,"Officer Robusto","Platform under Venous Plexus","","","♾️","Anytime"],
+  [76,"Ghostly Mahatos","Platform west of Terminal Nerve Tower","","","♾️","Anytime"],
+  [77,"Dark King Barbarus","Outside Second Lung, flying","","","♾️","Anytime"]
+]],
+["Prison Island","Only appears on the second visit",[
+  [75,"Ageless Moabit","Near Damaged Transporter","","","♾️","Anytime"],
+  [76,"Serene Imlaly","Banquet Hall","","","♾️","Anytime"],
+  [76,"Inferno Heinrich","Back of the Kitchen","","","♾️","Anytime"],
+  [77,"Cold Ageshu","South side of the Kitchen","","","♾️","Anytime"],
+  [77,"Abnormal Clone Barg","First Sanctum","","","♾️","Anytime"],
+  [77,"Majestic Clone Barg","Second Sanctum","","","♾️","Anytime"],
+  [77,"Masterful Gigapur","Travalga Bridge","","","♾️","Anytime"],
+  [78,"Fiendish Auburn","Gravina Bridge","","Requires defeating 3 Babel Deinos + 3 Babeli Bargs first","♾️","Anytime"]
+]],
+["Future Connected","Rewards Arts Coins instead of Affinity Coins. Exact spawn conditions for most of these are not yet fully documented.",[
+  [63,"Phlegmatic Jamir","West of Navvir Crossroads","","","❓","Not yet confirmed"],
+  [64,"Highborn Alexandra","Cinnabar Plateau","","","❓","Not yet confirmed"],
+  [65,"Grotesque Deimis","Barouh Ruins Cave","","","❓","Not yet confirmed"],
+  [66,"Booming Frederick","West of Purifying Falls","","","🌦️","Rain only"],
+  [68,"Buoyant Rostein","West under Xen's Thoroughfare, then south up the slope","","","❓","Not yet confirmed"],
+  [69,"Quondam Grimbellum","Up the slope at Cinnabar Plateau, to the west","","","❓","Not yet confirmed"],
+  [69,"Confluent Uzva","Fyme Lane","","","❓","Not yet confirmed"],
+  [69,"Air Marshal Reisenbach","Clear Sky Bluffs","","","❓","Not yet confirmed"],
+  [70,"Cyclonic Yughana","Old King's Testament","","","❓","Not yet confirmed"],
+  [71,"Custodian Barreldart","Gamaro Hollow","","Fogbeast — after the Ponio Fogbeasts fight at Soltnar Seal Island","❓","Not yet confirmed"],
+  [72,"Deputy Seagal","Zekr Marga Quarry","","","❓","Not yet confirmed"],
+  [73,"Dismal Umya","Nerthis Necropolis","","","❓","Not yet confirmed"],
+  [73,"Caustic Naquatra","Zekr Marga Quarry","","","❓","Not yet confirmed"],
+  [73,"Terpsichorean Cenoth","South of Gran Dell, southmost beach, near Ponspetor Tutu","","","❓","Not yet confirmed"],
+  [74,"Marquis Odesh","Field north of Clear Sky Bluff","","","❓","Not yet confirmed"],
+  [74,"Perceptive Quinops","Hilltop west of Purifying Falls","","","❓","Not yet confirmed"],
+  [74,"Citadel Tostiga","Prayer Rock","","","❓","Not yet confirmed"],
+  [77,"Ravager Apelpisia","Marga's Weeping","","","❓","Not yet confirmed"],
+  [78,"Contemptuous Greymane","Agni's Skygarden Ruins","","Fogbeast — after the Ponio Fogbeasts fight at Soltnar Seal Island","❓","Not yet confirmed"],
+  [80,"Prosecutor Davrum","Nerthis Necropolis","quest","Quest-exclusive","📜","Quest-locked"]
+]]
+];
+
+const STORAGE_KEY = "xc1-unique-monster-progress";
+let state = {};
+
+function slug(area, name){
+  return (area + "::" + name).toLowerCase().replace(/[^a-z0-9]+/g,"-");
+}
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw) state = JSON.parse(raw);
+  }catch(e){ state = {}; }
+}
+function saveState(){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+  catch(e){ /* best effort — e.g. private browsing mode may block storage */ }
+}
+
+function render(){
+  const container = document.getElementById("areas");
+  container.innerHTML = "";
+  let total = 0, done = 0;
+
+  DATA.forEach(([areaName, areaNote, monsters]) => {
+    const areaEl = document.createElement("div");
+    areaEl.className = "area";
+    areaEl.dataset.area = areaName;
+
+    const areaDoneCount = monsters.filter(m => state[slug(areaName, m[1])]).length;
+    total += monsters.length;
+    done += areaDoneCount;
+
+    const allDoneNow = areaDoneCount === monsters.length;
+    const head = document.createElement("div");
+    head.className = "area-head";
+    head.innerHTML = `
+      <h2>${areaName}</h2>
+      <div class="area-meta">
+        <span class="filter-badge">🔎 <span class="filter-badge-count">0</span></span>
+        <button type="button" class="check-all-btn" data-action="check-all">${allDoneNow ? "Uncheck all" : "Check all"}</button>
+        <span class="count">${areaDoneCount}/${monsters.length}</span>
+        <span class="chevron">▶</span>
+      </div>
+    `;
+    head.addEventListener("click", (e) => {
+      if(e.target.closest(".check-all-btn")) return;
+      areaEl.classList.toggle("open");
+    });
+    const checkAllBtn = head.querySelector(".check-all-btn");
+    let checkAllArmed = false;
+    let checkAllTimer = null;
+    checkAllBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const allDone = monsters.every(m => state[slug(areaName, m[1])]);
+      const label = allDone ? "Uncheck all" : "Check all";
+
+      if(!checkAllArmed){
+        checkAllArmed = true;
+        checkAllBtn.textContent = "Click again to confirm";
+        checkAllBtn.style.borderColor = "var(--danger)";
+        checkAllBtn.style.color = "var(--danger)";
+        clearTimeout(checkAllTimer);
+        checkAllTimer = setTimeout(() => {
+          checkAllArmed = false;
+          checkAllBtn.textContent = label;
+          checkAllBtn.style.borderColor = "";
+          checkAllBtn.style.color = "";
+        }, 3000);
+        return;
+      }
+
+      clearTimeout(checkAllTimer);
+      checkAllArmed = false;
+      checkAllBtn.style.borderColor = "";
+      checkAllBtn.style.color = "";
+
+      const target = !allDone;
+      monsters.forEach(m => { state[slug(areaName, m[1])] = target; });
+      saveState();
+      // Update this area's DOM in place so the expand/collapse state is preserved
+      ul.querySelectorAll("li.m").forEach(li => {
+        const chk = li.querySelector(".chk");
+        chk.checked = target;
+        li.classList.toggle("done", target);
+      });
+      checkAllBtn.textContent = target ? "Uncheck all" : "Check all";
+      head.querySelector(".count").textContent = `${target ? monsters.length : 0}/${monsters.length}`;
+      updateProgress();
+    });
+    areaEl.appendChild(head);
+
+    if(areaNote){
+      const note = document.createElement("div");
+      note.className = "area-note";
+      note.textContent = areaNote;
+      areaEl.appendChild(note);
+    }
+
+    const body = document.createElement("div");
+    body.className = "area-body";
+    const ul = document.createElement("ul");
+    ul.className = "monsters";
+
+    monsters.forEach(([lvl, name, loc, tag, note, timeIcon, timeLabel]) => {
+      const id = slug(areaName, name);
+      const li = document.createElement("li");
+      li.className = "m";
+      li.dataset.name = name.toLowerCase();
+      li.dataset.loc = loc.toLowerCase();
+      li.dataset.tag = tag;
+      li.dataset.time = timeLabel.toLowerCase();
+      if(state[id]) li.classList.add("done");
+
+      const badge = tag === "quest" ? '<span class="badge quest">Quest</span>'
+                  : tag === "boss" ? '<span class="badge boss">Superboss</span>' : "";
+
+      li.innerHTML = `
+        <input type="checkbox" class="chk" ${state[id] ? "checked" : ""} data-id="${id}">
+        <div class="mrow">
+          <div class="mtitle">
+            <span class="lvl">Lv ${lvl}</span>
+            <span class="mname">${name}</span>
+            ${badge}
+            <span class="time">${timeIcon} ${timeLabel}</span>
+          </div>
+          <div class="mloc">${loc}</div>
+          ${note ? `<div class="mnote">${note}</div>` : ""}
+        </div>
+      `;
+      const chk = li.querySelector(".chk");
+      chk.addEventListener("change", () => {
+        state[id] = chk.checked;
+        li.classList.toggle("done", chk.checked);
+        saveState();
+        updateProgress();
+        updateAreaCount(areaEl, monsters, areaName);
+      });
+
+      ul.appendChild(li);
+    });
+
+    body.appendChild(ul);
+    const emptyMsg = document.createElement("div");
+    emptyMsg.className = "empty-msg";
+    emptyMsg.textContent = "No monsters match this filter.";
+    body.appendChild(emptyMsg);
+    areaEl.appendChild(body);
+    container.appendChild(areaEl);
+  });
+
+  updateProgress();
+}
+
+function updateAreaCount(areaEl, monsters, areaName){
+  const doneCount = monsters.filter(m => state[slug(areaName, m[1])]).length;
+  areaEl.querySelector(".area-meta .count").textContent = `${doneCount}/${monsters.length}`;
+  const allDoneNow = doneCount === monsters.length;
+  areaEl.querySelector(".check-all-btn").textContent = allDoneNow ? "Uncheck all" : "Check all";
+}
+
+const FC_AREA = "Future Connected";
+
+function updateProgress(){
+  let totalMain = 0, doneMain = 0, totalFC = 0, doneFC = 0;
+  DATA.forEach(([areaName, , monsters]) => {
+    const areaDone = monsters.filter(m => state[slug(areaName, m[1])]).length;
+    if(areaName === FC_AREA){
+      totalFC += monsters.length;
+      doneFC += areaDone;
+    } else {
+      totalMain += monsters.length;
+      doneMain += areaDone;
+    }
+  });
+
+  const pctMain = totalMain ? Math.round((doneMain/totalMain)*100) : 0;
+  const pctFC = totalFC ? Math.round((doneFC/totalFC)*100) : 0;
+
+  document.getElementById("doneMain").textContent = doneMain;
+  document.getElementById("totalMain").textContent = totalMain;
+  document.getElementById("ringMain").style.setProperty("--pct", pctMain);
+  document.getElementById("ringMainPct").textContent = pctMain + "%";
+
+  document.getElementById("doneFC").textContent = doneFC;
+  document.getElementById("totalFC").textContent = totalFC;
+  document.getElementById("ringFC").style.setProperty("--pct", pctFC);
+  document.getElementById("ringFCPct").textContent = pctFC + "%";
+}
+
+function applyFilters(){
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  const mode = document.getElementById("filter").value;
+
+  document.querySelectorAll("li.m").forEach(li => {
+    const matchesSearch = !q || li.dataset.name.includes(q) || li.dataset.loc.includes(q);
+    const isDone = li.classList.contains("done");
+    const t = li.dataset.time;
+    let matchesMode = true;
+    if(mode === "undone") matchesMode = !isDone;
+    else if(mode === "done") matchesMode = isDone;
+    else if(mode === "quest") matchesMode = li.dataset.tag === "quest";
+    else if(mode === "boss") matchesMode = li.dataset.tag === "boss";
+    else if(mode === "night") matchesMode = t.includes("night");
+    else if(mode === "day") matchesMode = t === "day" || t.includes("dawn") || t.includes("am");
+    else if(mode === "weather") matchesMode = /rain|storm|snow|blizzard|clear|fog|shooting|torrid/.test(t);
+
+    li.classList.toggle("hidden", !(matchesSearch && matchesMode));
+  });
+
+  const filterActive = !!q || mode !== "all";
+
+  document.querySelectorAll(".area").forEach(areaEl => {
+    const items = [...areaEl.querySelectorAll("li.m")];
+    const visibleCount = items.filter(li => !li.classList.contains("hidden")).length;
+    const badge = areaEl.querySelector(".filter-badge");
+    const badgeCount = areaEl.querySelector(".filter-badge-count");
+    const emptyMsg = areaEl.querySelector(".empty-msg");
+
+    if(filterActive){
+      badge.classList.add("show");
+      badgeCount.textContent = visibleCount;
+      emptyMsg.classList.toggle("show", visibleCount === 0);
+    } else {
+      badge.classList.remove("show");
+      emptyMsg.classList.remove("show");
+    }
+  });
+}
+
+document.getElementById("search").addEventListener("input", applyFilters);
+document.getElementById("filter").addEventListener("change", applyFilters);
+document.getElementById("expandAll").addEventListener("click", () => {
+  document.querySelectorAll(".area").forEach(a => a.classList.add("open"));
+});
+document.getElementById("collapseAll").addEventListener("click", () => {
+  document.querySelectorAll(".area").forEach(a => a.classList.remove("open"));
+});
+
+const SHOW_CHECKALL_KEY = "xc1-show-checkall";
+const toggleCheckAll = document.getElementById("toggleCheckAll");
+function applyCheckAllVisibility(){
+  document.getElementById("areas").classList.toggle("hide-checkall", !toggleCheckAll.checked);
+}
+(function initToggle(){
+  let show = true;
+  try{
+    const raw = localStorage.getItem(SHOW_CHECKALL_KEY);
+    if(raw !== null) show = raw === "true";
+  }catch(e){ /* default to shown */ }
+  toggleCheckAll.checked = show;
+})();
+toggleCheckAll.addEventListener("change", () => {
+  applyCheckAllVisibility();
+  try{ localStorage.setItem(SHOW_CHECKALL_KEY, toggleCheckAll.checked); }
+  catch(e){ /* best effort */ }
+});
+const resetBtn = document.getElementById("resetBtn");
+let resetArmed = false;
+let resetTimer = null;
+resetBtn.addEventListener("click", () => {
+  if(!resetArmed){
+    resetArmed = true;
+    resetBtn.textContent = "Click again to confirm";
+    resetBtn.style.borderColor = "var(--danger)";
+    resetBtn.style.color = "var(--danger)";
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(() => {
+      resetArmed = false;
+      resetBtn.textContent = "Reset progress";
+      resetBtn.style.borderColor = "";
+      resetBtn.style.color = "";
+    }, 3000);
+    return;
+  }
+  clearTimeout(resetTimer);
+  resetArmed = false;
+  resetBtn.textContent = "Reset progress";
+  resetBtn.style.borderColor = "";
+  resetBtn.style.color = "";
+  state = {};
+  saveState();
+  render();
+});
+
+(function init(){
+  loadState();
+  render();
+  applyCheckAllVisibility();
+})();
+</script>
+<script data-goatcounter="https://nishekan.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
