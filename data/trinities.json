@@ -1,0 +1,721 @@
+{
+  "meta": {"game": "Kingdom Hearts I Final Mix", "provenance": "Extracted unchanged from kh1-trinities-dalmatians-v25.html on 2026-10-01. Maintained by hand from here on."},
+  "trinities": [
+    {
+      "id": "TRN-BLU-01",
+      "world": "Traverse Town",
+      "area": "First District",
+      "loc": [
+        {"text": "In front of the café tables."},
+        {"break": true},
+        {"text": "Activating it transports the party to the upper balcony with a "},
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1},
+        {"text": " in a chest."}
+      ],
+      "ord": 0,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-BLU-02",
+      "world": "Traverse Town",
+      "area": "First District",
+      "loc": [
+        {"text": "In the corner next to the world exit."}
+      ],
+      "ord": 0,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "MUN-munny", "label": "120 Munny", "icon_key": "munny"}
+      ]
+    },
+    {
+      "id": "TRN-BLU-03",
+      "world": "Traverse Town",
+      "area": "Third District",
+      "loc": [
+        {"text": "In the alley behind the Lady and the Tramp fountain."}
+      ],
+      "ord": 0,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CAMP-camping-set", "label": "Camping Set", "icon_key": "camp_item", "qty": 1},
+        {"code": "MUN-munny", "label": "60 Munny", "icon_key": "munny"}
+      ]
+    },
+    {
+      "id": "TRN-BLU-04",
+      "world": "Traverse Town",
+      "area": "Magician's Study",
+      "loc": [
+        {"text": "On the floor near the save point."}
+      ],
+      "ord": 0,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1},
+        {"code": "MUN-munny", "label": "50 Munny", "icon_key": "munny"}
+      ]
+    },
+    {
+      "id": "TRN-GRN-01",
+      "world": "Traverse Town",
+      "area": "Accessory Shop",
+      "loc": [
+        {"text": "In the center of the room."},
+        {"break": true},
+        {"text": "Activating it lowers the ladder to the "},
+        {"code": "ICON-access-door", "label": "Item Workshop", "icon_key": "access_door"},
+        {"text": "."}
+      ],
+      "ord": 0,
+      "color": "green",
+      "name": "Green Trinity",
+      "rew": [
+        {"text": "Access to the "},
+        {"code": "ICON-access-door", "label": "Item Workshop", "icon_key": "access_door"},
+        {"text": "."}
+      ]
+    },
+    {
+      "id": "TRN-RED-01",
+      "world": "Traverse Town",
+      "area": "First District",
+      "loc": [
+        {"text": "Open the chest at the end of the alley, then access the Alleyway with "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": "."}
+      ],
+      "ord": 0,
+      "color": "red",
+      "name": "Red Trinity",
+      "rew": [
+        {"code": "PUP-004_006", "label": "Puppies 4-6", "icon_key": "puppy_group", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-RED-02",
+      "world": "Traverse Town",
+      "area": "Second District",
+      "loc": [
+        {"text": "On top of the Gizmo Shop roof, on the wooden fence along the back wall."},
+        {"break": true},
+        {"text": "Activating it allows access to the bell tower which reveals the world's "},
+        {"code": "ICON-keyhole", "label": "Keyhole", "icon_key": "keyhole"},
+        {"text": "."}
+      ],
+      "ord": 0,
+      "color": "red",
+      "name": "Red Trinity",
+      "rew": [
+        {"text": "World's "},
+        {"code": "ICON-keyhole", "label": "Keyhole", "icon_key": "keyhole"}
+      ]
+    },
+    {
+      "id": "TRN-RED-03",
+      "world": "Traverse Town",
+      "area": "Alleyway",
+      "loc": [
+        {"text": "On the drainage grate on the end of the alley near the Dalmatians' house."},
+        {"break": true},
+        {"text": "Activating it gives access to the "},
+        {"code": "ICON-access-door", "label": "Secret Waterway", "icon_key": "access_door"},
+        {"text": "."}
+      ],
+      "ord": 0,
+      "color": "red",
+      "name": "Red Trinity"
+    },
+    {
+      "id": "TRN-WHT-01",
+      "world": "Traverse Town",
+      "area": "Secret Waterway",
+      "loc": [
+        {"text": "In the middle of the larger section."}
+      ],
+      "ord": 0,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-YLW-01",
+      "world": "Traverse Town",
+      "area": "Mystical House",
+      "loc": [
+        {"text": "At the back of the house, in front of the stack of crates."},
+        {"break": true},
+        {"text": "Allows access to a chest with "},
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1},
+        {"text": "."}
+      ],
+      "ord": 0,
+      "color": "yellow",
+      "name": "Yellow Trinity",
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-BLU-05",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "loc": [
+        {"text": "In the alcove to the right, where you can give a flower a "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1},
+        {"text": "."}
+      ],
+      "ord": 1000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable", "qty": 1},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1},
+        {"code": "CAMP-tent", "label": "Tent", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-BLU-06",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "loc": [
+        {"text": "After the trial, use the flower to grow to your normal size and push the new boulder into the water, which allows access to a hidden area."}
+      ],
+      "ord": 1000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CAMP-camping-set", "label": "Camping Set", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-GRN-02",
+      "world": "Wonderland",
+      "area": "Rabbit Hole",
+      "loc": [
+        {"text": "Behind the save point."}
+      ],
+      "ord": 1000,
+      "color": "green",
+      "name": "Green Trinity",
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-GRN-03",
+      "world": "Wonderland",
+      "area": "Bizarre Room",
+      "loc": [
+        {"text": "In the fireplace."}
+      ],
+      "ord": 1000,
+      "color": "green",
+      "name": "Green Trinity",
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-WHT-02",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "loc": [
+        {"text": "In the closed off area that can be reached through the painting on the wall of the Bizarre Room."}
+      ],
+      "ord": 1000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "WPN-lady-luck", "label": "Lady Luck", "icon_key": "keyblade", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-BLU-07",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "loc": [
+        {"text": "Under the statue in the right corner."}
+      ],
+      "ord": 2000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "PUP-022_024", "label": "Puppies 22-24", "icon_key": "puppy_group", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-BLU-08",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "loc": [
+        {"text": "Under the statue in the left corner."}
+      ],
+      "ord": 2000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-GRN-04",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "loc": [
+        {"text": "To the left of the main entrance in front of the purple banners."}
+      ],
+      "ord": 2000,
+      "color": "green",
+      "name": "Green Trinity",
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-WHT-03",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "loc": [
+        {"text": "In the very center of the area."}
+      ],
+      "ord": 2000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "WPN-violetta", "label": "Violetta", "icon_key": "staff", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-YLW-02",
+      "world": "Olympus Coliseum",
+      "area": "Lobby",
+      "loc": [
+        {"text": "Next to the stone Phil asks you to move."},
+        {"break": true},
+        {"text": "Activating it reveals the world's "},
+        {"code": "ICON-keyhole", "label": "Keyhole", "icon_key": "keyhole"}
+      ],
+      "ord": 2000,
+      "color": "yellow",
+      "name": "Yellow Trinity",
+      "rew": [
+        {"text": "World's "},
+        {"code": "ICON-keyhole", "label": "Keyhole", "icon_key": "keyhole"},
+        {"text": "."}
+      ]
+    },
+    {
+      "id": "TRN-BLU-09",
+      "world": "Deep Jungle",
+      "area": "Camp",
+      "loc": [
+        {"text": "Near the table with the lab equipment."}
+      ],
+      "ord": 3000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "PUP-034_036", "label": "Puppies 34-36", "icon_key": "puppy_group", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-BLU-10",
+      "world": "Deep Jungle",
+      "area": "Climbing Trees",
+      "loc": [
+        {"text": "On the topmost ledge, near the Tree House entrance."}
+      ],
+      "ord": 3000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "GUM-thundara-g", "label": "Thundara-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-GRN-05",
+      "world": "Deep Jungle",
+      "area": "Treetop",
+      "loc": [
+        {"text": "Hidden in the center of the area."}
+      ],
+      "ord": 3000,
+      "color": "green",
+      "name": "Green Trinity",
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-WHT-04",
+      "world": "Deep Jungle",
+      "area": "Cavern of Hearts",
+      "loc": [
+        {"text": "In front of the world's "},
+        {"code": "ICON-keyhole", "label": "Keyhole", "icon_key": "keyhole"},
+        {"text": "."}
+      ],
+      "ord": 3000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-BLU-11",
+      "world": "Agrabah",
+      "area": "Bazaar",
+      "loc": [
+        {"text": "In the center of the area."}
+      ],
+      "ord": 4000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1},
+        {"code": "MUN-munny", "label": "200 Munny", "icon_key": "munny"}
+      ]
+    },
+    {
+      "id": "TRN-BLU-12",
+      "world": "Agrabah",
+      "area": "Silent Chamber",
+      "loc": [
+        {"text": "In front of the steps."}
+      ],
+      "ord": 4000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "GUM-thunder-g", "label": "Thunder-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-GRN-06",
+      "world": "Agrabah",
+      "area": "Storage Room",
+      "loc": [
+        {"text": "In front of the shelf."}
+      ],
+      "ord": 4000,
+      "color": "green",
+      "name": "Green Trinity",
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-RED-04",
+      "world": "Agrabah",
+      "area": "Treasure Room",
+      "loc": [
+        {"text": "In front of the stone statue on the left side."}
+      ],
+      "ord": 4000,
+      "color": "red",
+      "name": "Red Trinity",
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1},
+        {"code": "MUN-munny", "label": "333 Munny", "icon_key": "munny"}
+      ]
+    },
+    {
+      "id": "TRN-WHT-05",
+      "world": "Agrabah",
+      "area": "Entrance",
+      "loc": [
+        {"text": "After entering the Cave of Wonders, in the corner on your left."}
+      ],
+      "ord": 4000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "ACC-ifrit-belt", "label": "Ifrit Belt", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-YLW-03",
+      "world": "Agrabah",
+      "area": "Hall",
+      "loc": [
+        {"text": "In the center of the room, in front of the large stone pillar."}
+      ],
+      "ord": 4000,
+      "color": "yellow",
+      "name": "Yellow Trinity",
+      "hint": [
+        {"text": "After pushing the pillar, it serves as a platform to access the "},
+        {"code": "ICON-access-door", "label": "Hidden Room", "icon_key": "access_door"},
+        {"text": " in the "},
+        {"code": "ICON-access-door", "label": "Silent Chamber", "icon_key": "access_door"},
+        {"text": " (you must also activate the gem to open the entrance). If you have "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": ", you can bypass the pillar entirely."}
+      ]
+    },
+    {
+      "id": "TRN-BLU-13",
+      "world": "Monstro",
+      "area": "Chamber 5",
+      "loc": [
+        {"text": "In front of the lower passage from Chamber 6."}
+      ],
+      "ord": 5000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1},
+        {"code": "MUN-munny", "label": "333 Munny", "icon_key": "munny"}
+      ]
+    },
+    {
+      "id": "TRN-BLU-14",
+      "world": "Monstro",
+      "area": "Mouth",
+      "loc": [
+        {"text": "On a wooden platform at the bottom of the debris pile near the teeth."}
+      ],
+      "ord": 5000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 2},
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1},
+        {"code": "MUN-munny", "label": "50 Munny", "icon_key": "munny"}
+      ],
+      "hint": [
+        {"text": "It is only accessible after defeating Parasite Cage and lowering the water level."}
+      ]
+    },
+    {
+      "id": "TRN-BLU-15",
+      "world": "Monstro",
+      "area": "Throat",
+      "loc": [
+        {"text": "In the center of the room."}
+      ],
+      "ord": 5000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1},
+        {"code": "MUN-munny", "label": "100 Munny", "icon_key": "munny"}
+      ]
+    },
+    {
+      "id": "TRN-GRN-07",
+      "world": "Monstro",
+      "area": "Mouth",
+      "loc": [
+        {"text": "On the roof of Geppetto's ship."}
+      ],
+      "ord": 5000,
+      "color": "green",
+      "name": "Green Trinity",
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRN-WHT-06",
+      "world": "Monstro",
+      "area": "Chamber 6",
+      "loc": [
+        {"text": "In the low-lying area behind the tallest \"step\"."}
+      ],
+      "ord": 5000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-WHT-07",
+      "world": "Atlantica",
+      "area": "Triton's Palace",
+      "loc": [
+        {"text": "On the path in the center of the spiral shell structure."}
+      ],
+      "ord": 6000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-RED-05",
+      "world": "Halloween Town",
+      "area": "Manor Ruins",
+      "loc": [
+        {"text": "On the stone arch on the ground."}
+      ],
+      "ord": 7000,
+      "color": "red",
+      "name": "Red Trinity",
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ],
+      "hint": [
+        {"text": "Unable to activate when Chimera spawns."}
+      ]
+    },
+    {
+      "id": "TRN-WHT-08",
+      "world": "Halloween Town",
+      "area": "Moonlight Hill",
+      "loc": [
+        {"text": "To the left of the hill, near a broken segment of wall."}
+      ],
+      "ord": 7000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "PUP-067_069", "label": "Puppies 67-69", "icon_key": "puppy_group", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-GRN-08",
+      "world": "Neverland",
+      "area": "Cabin",
+      "loc": [
+        {"text": "In front of the door."},
+        {"break": true},
+        {"text": "Activating it allows access to the "},
+        {"code": "ICON-access-door", "label": "Captain's Cabin", "icon_key": "access_door"},
+        {"text": "."}
+      ],
+      "ord": 8000,
+      "color": "green",
+      "name": "Green Trinity"
+    },
+    {
+      "id": "TRN-WHT-09",
+      "world": "Neverland",
+      "area": "Deck",
+      "loc": [
+        {"text": "Near the helm on the ship's deck."}
+      ],
+      "ord": 8000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "PUP-043_045", "label": "Puppies 43-45", "icon_key": "puppy_group", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-YLW-04",
+      "world": "Neverland",
+      "area": "Hold",
+      "loc": [
+        {"text": "On the left-hand door on the upper level."}
+      ],
+      "ord": 8000,
+      "color": "yellow",
+      "name": "Yellow Trinity",
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1},
+        {"code": "PUP-085_087", "label": "Puppies 85-87", "icon_key": "puppy_group", "qty": 1},
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1},
+        {"code": "SPL-aero", "label": "Aero", "icon_key": "spell", "qty": 1},
+        {"text": "upgrade"}
+      ],
+      "hint": [
+        {"text": "Allows access to a room with 4 chests."}
+      ]
+    },
+    {
+      "id": "TRN-BLU-16",
+      "world": "Hollow Bastion",
+      "area": "Dungeon",
+      "loc": [
+        {"text": "In the center of the room."}
+      ],
+      "ord": 9000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1},
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1},
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-BLU-17",
+      "world": "Hollow Bastion",
+      "area": "Great Crest",
+      "loc": [
+        {"text": "At the landing point for the large lift platform."}
+      ],
+      "ord": 9000,
+      "color": "blue",
+      "name": "Blue Trinity",
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1},
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 2}
+      ]
+    },
+    {
+      "id": "TRN-GRN-09",
+      "world": "Hollow Bastion",
+      "area": "Library",
+      "loc": [
+        {"text": "Second floor, next to the desk."}
+      ],
+      "ord": 9000,
+      "color": "green",
+      "name": "Green Trinity",
+      "rew": [
+        {"code": "KEY-azal-vol-3", "label": "Azal vol. 3", "icon_key": "key_item", "qty": 1}
+      ],
+      "hint": [
+        {"text": "Allows access to "},
+        {"code": "KEY-azal-vol-3", "label": "Azal vol. 3", "icon_key": "key_item", "qty": 1},
+        {"text": " which is needed to complete the Library book puzzle."}
+      ]
+    },
+    {
+      "id": "TRN-RED-06",
+      "world": "Hollow Bastion",
+      "area": "Entrance Hall",
+      "loc": [
+        {"text": "Second floor, in front of the tusked stone statue."}
+      ],
+      "ord": 9000,
+      "color": "red",
+      "name": "Red Trinity",
+      "rew": [
+        {"code": "KEY-emblem-piece", "label": "Emblem Piece", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRN-WHT-10",
+      "world": "Hollow Bastion",
+      "area": "Rising Falls",
+      "loc": [
+        {"text": "In the shallow pool in front of the Lift Stop to Castle Gates."}
+      ],
+      "ord": 9000,
+      "color": "white",
+      "name": "White Trinity",
+      "rew": [
+        {"code": "GUM-thundaga-g", "label": "Thundaga-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    }
+  ]
+}

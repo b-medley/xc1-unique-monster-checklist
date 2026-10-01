@@ -1,0 +1,4387 @@
+{
+  "meta": {"game": "Kingdom Hearts I Final Mix", "provenance": "Kingdom Hearts Wiki (kingdomhearts.fandom.com), 'Kingdom Hearts item locations', CC BY-SA 3.0. Hand-curated in kh1_treasures_curation.json, Final Mix contents only; built by resolve_treasures.py.", "total": 278},
+  "treasures": [
+    {
+      "id": "TRS-001",
+      "world": "Dive to the Heart",
+      "area": "Sora’s Heart",
+      "type": "interaction",
+      "name": "Potion",
+      "loc": [
+        {"text": "Follow the tutorial instructions after reaching the third station, then simply pick up the dropped "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": " after destroying the large crate."}
+      ],
+      "ord": 200000,
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-002",
+      "world": "Destiny Islands",
+      "area": "Seashore",
+      "type": "interaction",
+      "name": "Potion",
+      "loc": [
+        {"text": "Gained as a reward by defeating Riku, as well as defeating Selphie, Wakka, and Tidus in a single fight."}
+      ],
+      "ord": 201000,
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-003",
+      "world": "Destiny Islands",
+      "area": "Seashore",
+      "type": "interaction",
+      "name": "Hi-Potion or Potion",
+      "loc": [
+        {"text": "Gained as a reward from Kairi after collecting all the required items."}
+      ],
+      "ord": 201001,
+      "rew": [
+        {"code": "CON-hi-potion", "label": "Hi-Potion", "icon_key": "consumable", "qty": 1},
+        {"text": " or "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1}
+      ],
+      "hint": [
+        {"text": "The reward gets downgraded into a "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": ", or even nothing at all, if you talk to her prior to collecting all items and answer anything other than \"It's all under control.\""}
+      ]
+    },
+    {
+      "id": "TRS-004",
+      "world": "Destiny Islands",
+      "area": "Cove",
+      "type": "interaction",
+      "name": "Pretty Stone",
+      "loc": [
+        {"text": "Received as a reward everytime you beat Riku in a race."}
+      ],
+      "ord": 201002,
+      "rew": [
+        {"code": "KEY-pretty-stone", "label": "Pretty Stone", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-005",
+      "world": "Destiny Islands",
+      "area": "Cove",
+      "type": "chest",
+      "name": "Protect Chain",
+      "loc": [
+        {"text": "In the cove area is a wooden crate next to the watchtower. Lift it up and drop it below the cave entrance in the cliff wall on the left of the tower, then jump on-top and enter it to find a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 201003,
+      "rew": [
+        {"code": "ACC-protect-chain", "label": "Protect Chain", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-006",
+      "world": "Traverse Town",
+      "area": "Item Shop",
+      "type": "interaction",
+      "name": "Postcard",
+      "loc": [
+        {"text": "Attack the ceiling fan in the Item Shop once or twice to receive the item."}
+      ],
+      "ord": 202000,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-007",
+      "world": "Traverse Town",
+      "area": "Accessory Shop",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a shelf next to the counter inside Cid's Accessory Shop."}
+      ],
+      "ord": 202001,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-008",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "chest",
+      "name": "Postcard",
+      "loc": [
+        {"text": "Head up the stairs past the Accessory Shop and turn right to find a bunch of crates. Push the largest one against Cid's shop, then use it to reach the roof with the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ". The crate disappears later, but the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " can still be acquired using the "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " ability later on."}
+      ],
+      "ord": 202002,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-009",
+      "world": "Traverse Town",
+      "area": "Second District",
+      "type": "chest",
+      "name": "Postcard",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", atop the store awning immediately to the right upon entering the district. Can be reached by using the nearby corner lantern as a step-up to catch onto the awning, or later on with "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": "."}
+      ],
+      "ord": 202003,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-010",
+      "world": "Traverse Town",
+      "area": "Second District",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a ledge on the front side of the Gizmo Shop. Reach the ledge by heading to the structure's front door, then jump around the corner and use a mid-air attack to extend your distance and reach the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 202004,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-011",
+      "world": "Traverse Town",
+      "area": "Alleyway",
+      "type": "chest",
+      "name": "Potion",
+      "loc": [
+        {"text": "Upon entering the alleyway, turn left, and left again, to find the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " placed among a few objects."}
+      ],
+      "ord": 202005,
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-012",
+      "world": "Traverse Town",
+      "area": "Alleyway",
+      "type": "chest",
+      "name": "Pretty Stone",
+      "loc": [
+        {"text": "Carry one of the crates next to the previous "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " to the corner of the hotel building, then use it to climb onto the ledge next to the balcony for another "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 202006,
+      "rew": [
+        {"code": "KEY-pretty-stone", "label": "Pretty Stone", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-013",
+      "world": "Traverse Town",
+      "area": "Alleyway",
+      "type": "chest",
+      "name": "Potion",
+      "loc": [
+        {"text": "Located on the far-most balcony, can be reached after the previous "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " by jumping across each balcony."}
+      ],
+      "ord": 202007,
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-014",
+      "world": "Traverse Town",
+      "area": "Green Room",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "Available after fighting Leon, talk to Yuffie to learn about locks, then open the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the table."}
+      ],
+      "ord": 202008,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-015",
+      "world": "Traverse Town",
+      "area": "Green Room",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "In the same room, hit the green clock above the door leading into the Red Room until the clock face reads 7:00 and a reward sound is heard, which signifies the reveal of a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on-top of the dresser on the other side of the room."}
+      ],
+      "ord": 202009,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-016",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "interaction",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Only obtainable prior to entering the Third District after fighting Leon, talk to Aerith for a free "},
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 202010,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-017",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "interaction",
+      "name": "Postcard",
+      "loc": [
+        {"text": "After the fight with Leon, examine the blue safe nearby the door leading to the Second District."}
+      ],
+      "ord": 202011,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-018",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "interaction",
+      "name": "Elixir + 500 Munny",
+      "loc": [
+        {"text": "Only obtainable by defeating Leon, but is not actually given to you until after defeating the Guard Armor boss, after which Leon, Yuffie, and Aerith gift it to you along with "},
+        {"code": "MUN-munny", "label": "500 Munny", "icon_key": "munny"},
+        {"text": "."}
+      ],
+      "ord": 202012,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1},
+        {"code": "MUN-munny", "label": "500 Munny", "icon_key": "munny", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-019",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "chest",
+      "name": "Postcard",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a balcony above the cafe in the First District, requires activation of "},
+        {"code": "TRN-blue", "label": "Trinity Jump", "icon_key": "trinity"},
+        {"text": "."}
+      ],
+      "ord": 202013,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-020",
+      "world": "Traverse Town",
+      "area": "Red Room",
+      "type": "chest",
+      "name": "Pretty Stone",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " inside the Hotel's Red Room."}
+      ],
+      "ord": 202014,
+      "rew": [
+        {"code": "KEY-pretty-stone", "label": "Pretty Stone", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-021",
+      "world": "Traverse Town",
+      "area": "Second District",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on-top of a roof overlooking the alley to the Third District. Reach the roof by using the Gizmo Shop's exit, then climbing the ladder, from there jump across the rooftops to reach it. The ladder is present earlier, but only available to be climbed after beating Guard Armor."}
+      ],
+      "ord": 202015,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-022",
+      "world": "Traverse Town",
+      "area": "Third District",
+      "type": "interaction",
+      "name": "Postcard",
+      "loc": [
+        {"text": "Found by examining a seemingly empty corner on a balcony in the Third District, which is reached by jumping through a hole in a wall above the rooftops in the Second District, where you found the previous item."}
+      ],
+      "ord": 202016,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-023",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "Available after acquiring "},
+        {"code": "SPL-blizzard", "label": "Blizzard", "icon_key": "spell"},
+        {"text": " from Wonderland, use it to extinguish all four candles in the café in time to unlock the nearby "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the window ledge."}
+      ],
+      "ord": 202017,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-026",
+      "world": "Traverse Town",
+      "area": "Gizmo Shop",
+      "type": "interaction",
+      "name": "Postcard ×2",
+      "loc": [
+        {"text": "Use "},
+        {"code": "SPL-thunder", "label": "Thunder", "icon_key": "spell"},
+        {"text": " on the exposed wiring in Third District, then use the moved platforms in the Gizmo Shop to activate the three buttons on the upper walkways. Examine the clock in the center of the room after it stops moving to obtain "},
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 2},
+        {"text": "."}
+      ],
+      "ord": 202018,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 2}
+      ],
+      "req": [
+        {"code": "SPL-thunder", "label": "Thunder", "icon_key": "spell"}
+      ]
+    },
+    {
+      "id": "TRS-028",
+      "world": "Traverse Town",
+      "area": "Item Workshop",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside the right "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a table in the Item Workshop."}
+      ],
+      "ord": 202019,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-029",
+      "world": "Traverse Town",
+      "area": "Item Workshop",
+      "type": "interaction",
+      "name": "Postcard",
+      "loc": [
+        {"text": "Examine the note on the wall behind the left-most Moogle."}
+      ],
+      "ord": 202020,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-030",
+      "world": "Traverse Town",
+      "area": "Geppetto's House",
+      "type": "interaction",
+      "name": "Postcard",
+      "loc": [
+        {"text": "Available after clearing Monstro, examine the last item on the shelf."}
+      ],
+      "ord": 202021,
+      "rew": [
+        {"code": "KEY-postcard", "label": "Postcard", "icon_key": "postcard", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-031",
+      "world": "Traverse Town",
+      "area": "Geppetto's House",
+      "type": "chest",
+      "name": "Wishing Star",
+      "loc": [
+        {"text": "Inside the only "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " in the house."}
+      ],
+      "ord": 202022,
+      "rew": [
+        {"code": "WPN-wishing-star", "label": "Wishing Star", "icon_key": "keyblade", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-032",
+      "world": "Traverse Town",
+      "area": "Magician's Study",
+      "type": "interaction",
+      "name": "Spellbinder",
+      "loc": [
+        {"text": "Talk to Merlin after learning all types of magic."}
+      ],
+      "ord": 202023,
+      "rew": [
+        {"code": "WPN-spellbinder", "label": "Spellbinder", "icon_key": "keyblade", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-034",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Cottage",
+      "loc": [
+        {"text": "Received after sending in your first postcard."}
+      ],
+      "ord": 202500,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-035",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Received after sending in your second postcard."}
+      ],
+      "ord": 202501,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-036",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Received after sending in your third postcard."}
+      ],
+      "ord": 202502,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-037",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "Received after sending in your fourth postcard."}
+      ],
+      "ord": 202503,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-038",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Received after sending in your fifth postcard."}
+      ],
+      "ord": 202504,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-039",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Elixir",
+      "loc": [
+        {"text": "Received after sending in your sixth postcard."}
+      ],
+      "ord": 202505,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-040",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "Received after sending in your seventh postcard."}
+      ],
+      "ord": 202506,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-041",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "Received after sending in your eighth postcard."}
+      ],
+      "ord": 202507,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-042",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "AP Up",
+      "loc": [
+        {"text": "Received after sending in your ninth postcard."}
+      ],
+      "ord": 202508,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-043",
+      "world": "Traverse Town",
+      "area": "First District",
+      "type": "reward",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "Received after sending in your tenth postcard."}
+      ],
+      "ord": 202509,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-044",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Curaga-G",
+      "loc": [
+        {"text": "Requires 12 puppies to be returned."}
+      ],
+      "ord": 202600,
+      "rew": [
+        {"code": "GUM-curaga-g", "label": "Curaga-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-045",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Firaga-G",
+      "loc": [
+        {"text": "Requires 21 puppies to be returned."}
+      ],
+      "ord": 202601,
+      "rew": [
+        {"code": "GUM-firaga-g", "label": "Firaga-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-046",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Thundara-G",
+      "loc": [
+        {"text": "Requires 30 puppies to be returned."}
+      ],
+      "ord": 202602,
+      "rew": [
+        {"code": "GUM-thundara-g", "label": "Thundara-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-047",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Requires 42 puppies to be returned."}
+      ],
+      "ord": 202603,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-048",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Torn Page + Mythril",
+      "loc": [
+        {"text": "Requires 51 puppies to be returned."}
+      ],
+      "ord": 202604,
+      "rew": [
+        {"code": "KEY-torn-page", "label": "Torn Page", "icon_key": "key_item", "qty": 1},
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-049",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "Requires 60 puppies to be returned."}
+      ],
+      "ord": 202605,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-050",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "Requires 72 puppies to be returned."}
+      ],
+      "ord": 202606,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-051",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Ultima-G",
+      "loc": [
+        {"text": "Requires 81 puppies to be returned."}
+      ],
+      "ord": 202607,
+      "rew": [
+        {"code": "GUM-ultima-g", "label": "Ultima-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-052",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Tech Boost",
+      "loc": [
+        {"text": "Requires 90 puppies to be returned."}
+      ],
+      "ord": 202608,
+      "rew": [
+        {"code": "ABL-tech-boost", "label": "Tech Boost", "icon_key": "ability", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-053",
+      "world": "Traverse Town",
+      "area": "Dalmatians' House",
+      "type": "reward",
+      "name": "Aero upgrade + Gummi Blocks full set",
+      "loc": [
+        {"text": "Requires 99 puppies to be returned."}
+      ],
+      "ord": 202609,
+      "rew": [
+        {"code": "SPL-aero", "label": "Aero", "icon_key": "spell", "qty": 1},
+        {"text": "upgrade"},
+        {"code": "GUM-full-set", "label": "Gummi Blocks full set", "icon_key": "gummi_block", "qty": 1}
+      ],
+      "hint": [
+        {"text": "The "},
+        {"code": "GUM-full-set", "label": "Gummi Blocks full set", "icon_key": "gummi_block"},
+        {"text": " does not include Design Gummies."}
+      ]
+    },
+    {
+      "id": "TRS-054",
+      "world": "Wonderland",
+      "area": "Rabbit Hole",
+      "type": "chest",
+      "name": "Camping Set",
+      "loc": [
+        {"text": "Only available prior to presenting the evidence, return to the first area from the Bizarre Room and defeat all the enemies to cause a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " to spawn."}
+      ],
+      "ord": 203000,
+      "rew": [
+        {"code": "CAMP-camping-set", "label": "Camping Set", "icon_key": "camp_item", "qty": 1}
+      ],
+      "missable": true
+    },
+    {
+      "id": "TRS-055",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "interaction",
+      "name": "Camping Set",
+      "loc": [
+        {"text": "Gift an "},
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable"},
+        {"text": " to the first red flower on the right for a "},
+        {"code": "CAMP-camping-set", "label": "Camping Set", "icon_key": "camp_item"},
+        {"text": "."}
+      ],
+      "ord": 203001,
+      "rew": [
+        {"code": "CAMP-camping-set", "label": "Camping Set", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-056",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "interaction",
+      "name": "Hi-Potion",
+      "loc": [
+        {"text": "Gift a "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": " to the yellow flower on the right side, past the red one, for a "},
+        {"code": "CON-hi-potion", "label": "Hi-Potion", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 203002,
+      "rew": [
+        {"code": "CON-hi-potion", "label": "Hi-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-057",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "chest",
+      "name": "Footprints",
+      "loc": [
+        {"text": "Piece of evidence, located behind the tall gras on the right, next to the yellow flower."}
+      ],
+      "ord": 203003,
+      "rew": [
+        {"code": "KEY-footprints", "label": "Footprints", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-058",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "interaction",
+      "name": "Camping Set",
+      "loc": [
+        {"text": "Gift another "},
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable"},
+        {"text": " to the second red flower on the other side of the forest for another "},
+        {"code": "CAMP-camping-set", "label": "Camping Set", "icon_key": "camp_item"},
+        {"text": "."}
+      ],
+      "ord": 203004,
+      "rew": [
+        {"code": "CAMP-camping-set", "label": "Camping Set", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-059",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "chest",
+      "name": "Antenna",
+      "loc": [
+        {"text": "Second piece of evidence, on-top of a platform next to the boulder blocking the passage to the Tea Party Garden, at the other side of the forest."}
+      ],
+      "ord": 203005,
+      "rew": [
+        {"code": "KEY-antenna", "label": "Antenna", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-060",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "chest",
+      "name": "Scan-G",
+      "loc": [
+        {"text": "Atop the previous item's platform, look along the right wall to spot a blue "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", you can just barely reach the platform by jumping off the edge."}
+      ],
+      "ord": 203006,
+      "rew": [
+        {"code": "GUM-scan-g", "label": "Scan-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-062",
+      "world": "Wonderland",
+      "area": "Bizarre Room",
+      "type": "chest",
+      "name": "Stench",
+      "loc": [
+        {"text": "Climb the platforms in the forest to find a gap into a tree trunk, which drops you above the stove in the Bizarre Room with an evidence box nearby."}
+      ],
+      "ord": 203007,
+      "rew": [
+        {"code": "KEY-stench", "label": "Stench", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-063",
+      "world": "Wonderland",
+      "area": "Bizarre Room",
+      "type": "interaction",
+      "name": "Claw Marks",
+      "loc": [
+        {"text": "Inside the Lotus Forest, approach the yellow flower that offers to make you grow and trade it the required "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": ", then step onto the tree stump, which causes a platform to appear. Hit the hazelnut off the tree branch, and the tree itself, and eat it to shrink again. Next, climb up the new platform to enter a passage in the wall to end up in the Bizarre Room again. You will land atop a faucet, with the evidence box on a nearby shelf, which you can just barely reach with a jump."}
+      ],
+      "ord": 203008,
+      "rew": [
+        {"code": "KEY-claw-marks", "label": "Claw Marks", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-064",
+      "world": "Wonderland",
+      "area": "Bizarre Room",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "Climb the platforms in the forest, then use the tree branch, after rotating it once, to reach another hole in the wall behind it that leads to the wall above the bed in the Bizarre Room. In here, light the first lamp to cause a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " with the "},
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item"},
+        {"text": " to pop out of the wall decoration."}
+      ],
+      "ord": 203009,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-065",
+      "world": "Wonderland",
+      "area": "Bizarre Room",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "On the same wall, hit the shelf with the teddy bear to make it fall down, and turn a book three dimensional. Read it after growing to your full size to obtain the "},
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material"},
+        {"text": " inside of it."}
+      ],
+      "ord": 203010,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-066",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "interaction",
+      "name": "Hi-Potion",
+      "loc": [
+        {"text": "On the same wall as where the previous items were acquired, light the second lamp to fill in the painting, then examine it to enter a secret area. In here, give a "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": " to the right flower for a "},
+        {"code": "CON-hi-potion", "label": "Hi-Potion", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 203011,
+      "rew": [
+        {"code": "CON-hi-potion", "label": "Hi-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-067",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "interaction",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside the same secret area, give an "},
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable"},
+        {"text": " to the left flower for a "},
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material"},
+        {"text": "."}
+      ],
+      "ord": 203012,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-068",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "interaction",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "In Lotus Forest use the growth flower to return to your full size and then push the new rock into the pond, letting you access a new area that was previously inaccessible. Shrink back down to enter it, then give a "},
+        {"code": "CON-hi-potion", "label": "Hi-Potion", "icon_key": "consumable"},
+        {"text": " to the red flower for a "},
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 203013,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-069",
+      "world": "Wonderland",
+      "area": "Queen's Castle",
+      "type": "chest",
+      "name": "Meteor-G",
+      "loc": [
+        {"text": "After the first bossfight, return to the Bizarre Room through the same hole used to find the "},
+        {"code": "KEY-claw-marks", "label": "Claw Marks", "icon_key": "key_item"},
+        {"text": "' evidence box. This time you will land atop the wall, where you must hit the faucet to cause a pot on the floor to turn 3D. Enter it to end up in the Queen's Castle, atop a hedge with a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 203014,
+      "rew": [
+        {"code": "GUM-meteor-g", "label": "Meteor-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-071",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "type": "interaction",
+      "name": "Potion",
+      "loc": [
+        {"text": "Only accessible after Alice has been kidnapped, sit on each of the chairs around the table to cause enemies or items to spawn. Going counterclockwise, starting at the painting, the first chair on its left (green man's side) releases a "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 203015,
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-072",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "type": "interaction",
+      "name": "Potion",
+      "loc": [
+        {"text": "The next chair drops another "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 203016,
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-073",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "type": "interaction",
+      "name": "Ether",
+      "loc": [
+        {"text": "The next chair drops an "},
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 203017,
+      "rew": [
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-074",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "type": "interaction",
+      "name": "Potion + Munny",
+      "loc": [
+        {"text": "The center chair spawns enemies, but the one next to it drops a "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": " and "},
+        {"code": "MUN-munny", "label": "Munny", "icon_key": "munny"}
+      ],
+      "ord": 203018,
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1},
+        {"code": "MUN-munny", "label": "Munny", "icon_key": "munny", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-075",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "type": "interaction",
+      "name": "Elixir",
+      "loc": [
+        {"text": "The following chair spawns enemies again, but the last one drops orbs of all kinds, and an "},
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 203019,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-076",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "type": "chest",
+      "name": "Dark Matter",
+      "loc": [
+        {"text": "Earlier you could light several lamps on the wall of the Bizarre Room, while here you could also hit the shelf with the teddy bear, which caused it to drop down. While at full size, move the teddy bear, then move the clock after it pops out of the wall. Shrink yourself, then go through the hole that was hidden behind it to emerge on the balcony in the garden."}
+      ],
+      "ord": 203020,
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-077",
+      "world": "Wonderland",
+      "area": "Queen's Castle",
+      "type": "chest",
+      "name": "Thundara-G",
+      "loc": [
+        {"text": "While on the ceiling of the Bizarre Room, head for the latch on the far side of the wall from the entrance you used, which leads to the hedge in the Queen's Castle room with another "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 203021,
+      "rew": [
+        {"code": "GUM-thundara-g", "label": "Thundara-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-078",
+      "world": "Wonderland",
+      "area": "Bizarre Room",
+      "type": "interaction",
+      "name": "Mythril Shard + Potion ×2",
+      "loc": [
+        {"text": "Lighting the lamps on the ceiling will also turn one of the flowers on the floor 3D, which when examined will drop several items."}
+      ],
+      "ord": 203022,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 2}
+      ]
+    },
+    {
+      "id": "TRS-079",
+      "world": "Wonderland",
+      "area": "Rabbit Hole",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Only available after presenting the evidence and prior to rescuing Kairi, return to the first area from the Bizarre Room and defeat all the enemies to cause a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " to spawn."}
+      ],
+      "ord": 203023,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ],
+      "missable": true
+    },
+    {
+      "id": "TRS-080",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "chest",
+      "name": "Thundara-G",
+      "loc": [
+        {"text": "Use "},
+        {"code": "SPL-thunder", "label": "Thunder", "icon_key": "spell"},
+        {"text": " on the arch-shaped plant in in the area on the left side, which requires two small platforms to be climbed to enter."}
+      ],
+      "ord": 203024,
+      "rew": [
+        {"code": "GUM-thundara-g", "label": "Thundara-G", "icon_key": "gummi_block", "qty": 1}
+      ],
+      "req": [
+        {"code": "SPL-thunder", "label": "Thunder", "icon_key": "spell"}
+      ]
+    },
+    {
+      "id": "TRS-082",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "Climb the platforms in the forest nearest the entrance to Queen's Castle, then "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": " to the one in the other corner, above the pond, for a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 203025,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-083",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "type": "chest",
+      "name": "Flare-G",
+      "loc": [
+        {"text": "After the previous item, head through the nearby passage to emerge on a hedge, facing a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 203026,
+      "rew": [
+        {"code": "GUM-flare-g", "label": "Flare-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-085",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Opposite the previous item as well, on a hedge you can reach with "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": "."}
+      ],
+      "ord": 203027,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-086",
+      "world": "Wonderland",
+      "area": "Rabbit Hole",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "Only available after rescuing Kairi, return to the first area from the Bizarre Room and defeat all the enemies to cause a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " to spawn."}
+      ],
+      "ord": 203028,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-087",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", behind the columns to the left of the lobby entrance."}
+      ],
+      "ord": 204000,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-088",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "type": "chest",
+      "name": "Holy-G",
+      "loc": [
+        {"text": "Use "},
+        {"code": "SPL-blizzara", "label": "Blizzara", "icon_key": "spell"},
+        {"text": " to extinguish all the braziers to cause a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " to spawn on the left side."}
+      ],
+      "ord": 204001,
+      "rew": [
+        {"code": "GUM-holy-g", "label": "Holy-G", "icon_key": "gummi_block", "qty": 1}
+      ],
+      "req": [
+        {"code": "SPL-blizzara", "label": "Blizzara", "icon_key": "spell"}
+      ]
+    },
+    {
+      "id": "TRS-089",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "type": "chest",
+      "name": "Shiva Belt",
+      "loc": [
+        {"text": "Use "},
+        {"code": "SPL-blizzaga", "label": "Blizzaga", "icon_key": "spell"},
+        {"text": " to extinguish all the braziers to cause a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " to spawn on the right side."}
+      ],
+      "ord": 204002,
+      "rew": [
+        {"code": "ACC-shiva-belt", "label": "Shiva Belt", "icon_key": "accessory", "qty": 1}
+      ],
+      "req": [
+        {"code": "SPL-blizzara", "label": "Blizzara", "icon_key": "spell"}
+      ]
+    },
+    {
+      "id": "TRS-090",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "type": "minigame",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "Inside a unique purple pot to the right of the lobby entrance, hidden behind the pillars. It only appears after completing the Hades Cup."}
+      ],
+      "ord": 204003,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-091",
+      "world": "Deep Jungle",
+      "area": "Tree House",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", on-top of the net hanging underneath the Tree House, near the base of the tree."}
+      ],
+      "ord": 205000,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-092",
+      "world": "Deep Jungle",
+      "area": "Tree House",
+      "type": "chest",
+      "name": "Protect Chain",
+      "loc": [
+        {"text": "On-top of the roof of the Tree House, reach this area by jumping on-top of the broken staircase and then following the walkway around the side of the house until you reach a ladder that leads to the top."}
+      ],
+      "ord": 205001,
+      "rew": [
+        {"code": "ACC-protect-chain", "label": "Protect Chain", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-093",
+      "world": "Deep Jungle",
+      "area": "Tree House",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Located inside the rowboat that can be seen hanging from the slanted crow's nest. Reachable by jumping off of the roof, using consecutive mid-air attacks to gain enough distance forwards to land inside."}
+      ],
+      "ord": 205002,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-094",
+      "world": "Deep Jungle",
+      "area": "Tunnel",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the platform above the save point."}
+      ],
+      "ord": 205003,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-095",
+      "world": "Deep Jungle",
+      "area": "Camp",
+      "type": "interaction",
+      "name": "Ether",
+      "loc": [
+        {"text": "Examine the clothesline, then examine the globe next to the tent for the second note. Afterwards head for the table with the chemistry objects and examine them, you need to have a "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": ", which you then have to ice (using "},
+        {"code": "SPL-blizzard", "label": "Blizzard", "icon_key": "spell"},
+        {"text": "), which results in one "},
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 205004,
+      "rew": [
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-096",
+      "world": "Deep Jungle",
+      "area": "Camp",
+      "type": "interaction",
+      "name": "Ether ×2",
+      "loc": [
+        {"text": "After producing a single "},
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable"},
+        {"text": ", examine the gramophone for the third research note. Repeat the experiment, which results in two Ethers now."}
+      ],
+      "ord": 205005,
+      "rew": [
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable", "qty": 2}
+      ]
+    },
+    {
+      "id": "TRS-097",
+      "world": "Deep Jungle",
+      "area": "Camp",
+      "type": "interaction",
+      "name": "Hi-Potion",
+      "loc": [
+        {"text": "Examine the grandfather clock, next examine the flagpole. Afterwards examine the stove in the camp, which results in losing a spare "},
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable"},
+        {"text": ". Light the stove using "},
+        {"code": "SPL-fire", "label": "Fire", "icon_key": "spell"},
+        {"text": " to receive a "},
+        {"code": "CON-hi-potion", "label": "Hi-Potion", "icon_key": "consumable"},
+        {"text": " in return."}
+      ],
+      "ord": 205006,
+      "rew": [
+        {"code": "CON-hi-potion", "label": "Hi-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-098",
+      "world": "Deep Jungle",
+      "area": "Tent",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside the tent."}
+      ],
+      "ord": 205007,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-100",
+      "world": "Deep Jungle",
+      "area": "Hippos' Lagoon",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "On-top of a tree, on the left side of the lagoon, reachable by a series of simple jumps across two other trees."}
+      ],
+      "ord": 205008,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-101",
+      "world": "Deep Jungle",
+      "area": "Hippos' Lagoon",
+      "type": "chest",
+      "name": "Meteor-G",
+      "loc": [
+        {"text": "On-top of a tall tree on the right side of the lagoon, reachable by following a longer series of trees across from the previous "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ". Mid-air attacks can help in gaining enough extra distance to cross the longest jump."}
+      ],
+      "ord": 205009,
+      "rew": [
+        {"code": "GUM-meteor-g", "label": "Meteor-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-102",
+      "world": "Deep Jungle",
+      "area": "Vines",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "On the third platform, reachable by swinging across the vines."}
+      ],
+      "ord": 205010,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-104",
+      "world": "Deep Jungle",
+      "area": "Cliffs",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "On-top of a taller cliff, reached by climbing a vine."}
+      ],
+      "ord": 205011,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-105",
+      "world": "Deep Jungle",
+      "area": "Cliffs",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Next to the previous item."}
+      ],
+      "ord": 205012,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-106",
+      "world": "Deep Jungle",
+      "area": "Waterfall Cavern",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Upon entering, in a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a platform at the other end."}
+      ],
+      "ord": 205013,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-108",
+      "world": "Deep Jungle",
+      "area": "Waterfall Cavern",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "On the higher platform above the Shard "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", opposite and diagonally above the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " with the puppies."}
+      ],
+      "ord": 205014,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-109",
+      "world": "Deep Jungle",
+      "area": "Waterfall Cavern",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "On the platform opposite the previous item, can be reached by using a vine to climb across the wall."}
+      ],
+      "ord": 205015,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-110",
+      "world": "Deep Jungle",
+      "area": "Jungle Slider",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "Collect all ten fruits on the first course."}
+      ],
+      "ord": 205016,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-111",
+      "world": "Deep Jungle",
+      "area": "Jungle Slider",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "Collect all twenty fruits on the first and second courses."}
+      ],
+      "ord": 205017,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-112",
+      "world": "Deep Jungle",
+      "area": "Jungle Slider",
+      "type": "chest",
+      "name": "Dark Matter",
+      "loc": [
+        {"text": "Collect all thirty fruits on the first, second, and third courses."}
+      ],
+      "ord": 205018,
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-113",
+      "world": "Deep Jungle",
+      "area": "Jungle Slider",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "Collect all fourty fruits on the first, second, third, and fourth courses."}
+      ],
+      "ord": 205019,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-114",
+      "world": "Deep Jungle",
+      "area": "Jungle Slider",
+      "type": "chest",
+      "name": "Power Up",
+      "loc": [
+        {"text": "Collect all fifty fruits on all five courses."}
+      ],
+      "ord": 205020,
+      "rew": [
+        {"code": "STAT-power-up", "label": "Power Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-115",
+      "world": "Agrabah",
+      "area": "Plaza",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Facing the main exit, to the right in a corner next to the stall."}
+      ],
+      "ord": 206000,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-116",
+      "world": "Agrabah",
+      "area": "Plaza",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "Facing the main exit, to the left on-top of a small building."}
+      ],
+      "ord": 206001,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-117",
+      "world": "Agrabah",
+      "area": "Storage",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "In the Plaza is a single door that leads to a Storage room, the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " is hidden behind a barrel and placed between rolled up carpets."}
+      ],
+      "ord": 206002,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-118",
+      "world": "Agrabah",
+      "area": "Main Street",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " in the north-east corner, accessible by climbing up to Aladdin's House, then by jumping down from the large red awning."}
+      ],
+      "ord": 206003,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-119",
+      "world": "Agrabah",
+      "area": "Alley",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Available after encountering Jafar in the Alley, can be found in a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the same platform where he stood."}
+      ],
+      "ord": 206004,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-120",
+      "world": "Agrabah",
+      "area": "Aladdin's House",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "Inside a green "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " next to the save point."}
+      ],
+      "ord": 206005,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-121",
+      "world": "Agrabah",
+      "area": "Aladdin's House",
+      "type": "chest",
+      "name": "Scissors-G",
+      "loc": [
+        {"text": "Inside a green "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " next to a hole in the wall."}
+      ],
+      "ord": 206006,
+      "rew": [
+        {"code": "GUM-scissors-g", "label": "Scissors-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-122",
+      "world": "Agrabah",
+      "area": "Plaza",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "Enter Aladdin's House, release the hidden lock behind the cabinet, then use the exit that looks like a normal doorway. Jump across the window shutters and gaps between rooftops to reach the one in the far corner, where a blue "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " hides between two disguised Pot Spiders."}
+      ],
+      "ord": 206007,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-123",
+      "world": "Agrabah",
+      "area": "Main Street",
+      "type": "chest",
+      "name": "Dark Matter",
+      "loc": [
+        {"text": "After the previous item, use the doorway opposite it to enter Main Street, where you can climb two stacked crates to reach a rooftop leading to a ledge with a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 206008,
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-124",
+      "world": "Agrabah",
+      "area": "Bazaar",
+      "type": "chest",
+      "name": "Thundara-G",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the opposite end after using the Main Street doorway."}
+      ],
+      "ord": 206009,
+      "rew": [
+        {"code": "GUM-thundara-g", "label": "Thundara-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-125",
+      "world": "Agrabah",
+      "area": "Bazaar",
+      "type": "chest",
+      "name": "Fire Ring",
+      "loc": [
+        {"text": "In another "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the tallest ledge, on the other side away from the lock."}
+      ],
+      "ord": 206010,
+      "rew": [
+        {"code": "ACC-fire-ring", "label": "Fire Ring", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-126",
+      "world": "Agrabah",
+      "area": "Palace Gates",
+      "type": "chest",
+      "name": "Protera Chain",
+      "loc": [
+        {"text": "Available after the Pot Centipede bossfight, use the upper passage into the Palace Gates area from Main Street and then jump across to the other side of the area using the platforms."}
+      ],
+      "ord": 206011,
+      "rew": [
+        {"code": "ACC-protera-chain", "label": "Protera Chain", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-127",
+      "world": "Agrabah",
+      "area": "Entrance",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a platform."}
+      ],
+      "ord": 206012,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-128",
+      "world": "Agrabah",
+      "area": "Hall",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "On-top of the plateau with three stone heads that spray jets of water, climb the left-most to be able to reach it."}
+      ],
+      "ord": 206013,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-129",
+      "world": "Agrabah",
+      "area": "Hall",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "In an alcove in the far corner of the room, next to the passage to the next area."}
+      ],
+      "ord": 206014,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-130",
+      "world": "Agrabah",
+      "area": "Bottomless Hall",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Upon entering the Hall area, turn to the right and jump onto the stone head attached to a pillar, and from there to a platform with another doorway. This leads to a section in the Bottomless Hall area with a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " and a block, which you can push down for easier access to the "},
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material"},
+        {"text": " in the Relic Chamber."}
+      ],
+      "ord": 206015,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-131",
+      "world": "Agrabah",
+      "area": "Bottomless Hall",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "To the right upon entering, hard to reach, but a normal jump and mid-air attack to gain a little extra distance is enough."}
+      ],
+      "ord": 206016,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-132",
+      "world": "Agrabah",
+      "area": "Bottomless Hall",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "On-top of a plateau in the center of the room."}
+      ],
+      "ord": 206017,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-133",
+      "world": "Agrabah",
+      "area": "Treasure Room",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "In a green "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on-top of the fireplace."}
+      ],
+      "ord": 206018,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-134",
+      "world": "Agrabah",
+      "area": "Treasure Room",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Easy to reach, in a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " to the right of the previous item."}
+      ],
+      "ord": 206019,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-136",
+      "world": "Agrabah",
+      "area": "Treasure Room",
+      "type": "chest",
+      "name": "Thundaga-G",
+      "loc": [
+        {"text": "Use Abu to 'Call' the gem held up by the right monkey statue, after which Sora is blown onto the gold pile with the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 206020,
+      "rew": [
+        {"code": "GUM-thundaga-g", "label": "Thundaga-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-137",
+      "world": "Agrabah",
+      "area": "Relic Chamber",
+      "type": "chest",
+      "name": "Thunder Ring",
+      "loc": [
+        {"text": "Opposite of the stairway, can be reached by swimming."}
+      ],
+      "ord": 206021,
+      "rew": [
+        {"code": "ACC-thunder-ring", "label": "Thunder Ring", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-138",
+      "world": "Agrabah",
+      "area": "Relic Chamber",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "To the right of the stairway, can be reached after pushing down a stone block in Bottomless Hall (which in itself is reached through the Hall area), or with a carefully timed jump and mid-air attack."}
+      ],
+      "ord": 206022,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-139",
+      "world": "Agrabah",
+      "area": "Dark Chamber",
+      "type": "chest",
+      "name": "Protera Chain",
+      "loc": [
+        {"text": "In Relic Chamber, use Abu to 'Call' the gem held up by the monkey statue, then enter the alternate Dark Chamber area to find the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 206023,
+      "rew": [
+        {"code": "ACC-protera-chain", "label": "Protera Chain", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-140",
+      "world": "Agrabah",
+      "area": "Dark Chamber",
+      "type": "chest",
+      "name": "Meteor-G",
+      "loc": [
+        {"text": "While in the same Dark Chamber area as the previous item, swim up the waterfall and 'Call' the second gem to lower the stone wall behind you, with the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on-top with it."}
+      ],
+      "ord": 206024,
+      "rew": [
+        {"code": "GUM-meteor-g", "label": "Meteor-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-141",
+      "world": "Agrabah",
+      "area": "Dark Chamber",
+      "type": "chest",
+      "name": "Torn Page",
+      "loc": [
+        {"text": "Across the water from the previous "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", can be reached by going up the staircase from the water."}
+      ],
+      "ord": 206025,
+      "rew": [
+        {"code": "KEY-torn-page", "label": "Torn Page", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-142",
+      "world": "Agrabah",
+      "area": "Dark Chamber",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "In a red "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", opposite the save point. Can be reached with a jump and mid-air attack."}
+      ],
+      "ord": 206026,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-143",
+      "world": "Agrabah",
+      "area": "Main Street",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Located on a tall ledge between the upper passages to the Palace Gates and Bazaar areas."}
+      ],
+      "ord": 206027,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-145",
+      "world": "Agrabah",
+      "area": "Hidden Room",
+      "type": "chest",
+      "name": "Haste2-G",
+      "loc": [
+        {"text": "Technically requires "},
+        {"code": "TRN-yellow", "label": "Trinity Push", "icon_key": "trinity"},
+        {"text": ", but can be acquired earlier by using "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": ". Enter the Silent Chamber area in the caverns below and have Abu call the gem in the side passage, opening a door in the Silent Chamber. Using "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " you can just barely reach the ledge of the revealed passage, then head through to activate another gem, which will open a large gate nearby with two "},
+        {"code": "ICON-chest", "label": "chests", "icon_key": "chest"},
+        {"text": ", the right one of which contains the gummy item."}
+      ],
+      "ord": 206028,
+      "rew": [
+        {"code": "GUM-haste2-g", "label": "Haste2-G", "icon_key": "gummi_block", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-147",
+      "world": "Agrabah",
+      "area": "Palace Gates",
+      "type": "chest",
+      "name": "Osmose-G",
+      "loc": [
+        {"text": "Accessible by using the upper passage into the Palace Gates area, then jumping to the highest ledge in the corner on the other side. From there use "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": " to reach the corner with the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the far side."}
+      ],
+      "ord": 206029,
+      "rew": [
+        {"code": "GUM-osmose-g", "label": "Osmose-G", "icon_key": "gummi_block", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-149",
+      "world": "100 Acre Wood",
+      "area": "Meadow",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside the hollow tree trunk."}
+      ],
+      "ord": 207000,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-150",
+      "world": "100 Acre Wood",
+      "area": "Pooh's House",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "Hit the chimney on the roof to make a "},
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable"},
+        {"text": " appear inside the house."}
+      ],
+      "ord": 207001,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-151",
+      "world": "100 Acre Wood",
+      "area": "Pooh's House",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "Open the cabinet inside Pooh's house to cause an "},
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable"},
+        {"text": " to fall out."}
+      ],
+      "ord": 207002,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-152",
+      "world": "100 Acre Wood",
+      "area": "Rabbit's House",
+      "type": "chest",
+      "name": "Potion + Elixir",
+      "loc": [
+        {"text": "Underneath any of the pumpkins and cabbages (actual amount is random)."}
+      ],
+      "ord": 207003,
+      "rew": [
+        {"code": "CON-potion", "label": "Potion", "icon_key": "consumable", "qty": 1},
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-153",
+      "world": "100 Acre Wood",
+      "area": "Pooh's House",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Only available after the Pooh's Swing minigame. Light Pooh's campfire in front of his house when he is sitting nearby to receive a "},
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material"},
+        {"text": " from him."}
+      ],
+      "ord": 207004,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-154",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "After clearing Tigger's Giant Pot, jump into the hollow tree stump for a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 207005,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-155",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "You can find a "},
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material"},
+        {"text": " by hitting the center of the hollow log near Pooh."}
+      ],
+      "ord": 207006,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-156",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "Shield2-G",
+      "loc": [
+        {"text": "Have Tigger be your partner on the seesaw, then jump from the tree where you land to the large leafed branch of the tree behind it. There is an item in the hollow interior here, which drops down behind you when you jump inside and slide down."}
+      ],
+      "ord": 207007,
+      "rew": [
+        {"code": "GUM-shield2-g", "label": "Shield2-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-157",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Have Tigger be your partner on the seesaw again, then head for the same branch as the previous, and look left for a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a small clifftop."}
+      ],
+      "ord": 207008,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-158",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "Dark Matter",
+      "loc": [
+        {"text": "Ask Roo to be your partner, then jump down from the platform where you land and use a mid-air attack to redirect yourself to the one hidden beneath it for a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 207009,
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-159",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "Power Up",
+      "loc": [
+        {"text": "Received from Owl after handing in the first "},
+        {"code": "KEY-rare-nut", "label": "Rare Nut", "icon_key": "key_item"},
+        {"text": ", which you can grab after asking Roo to be your partner and taking it from the branches above where you land. Note that you can only hold one nut at a time."}
+      ],
+      "ord": 207010,
+      "rew": [
+        {"code": "STAT-power-up", "label": "Power Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-160",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "Received from Owl after handing in the second "},
+        {"code": "KEY-rare-nut", "label": "Rare Nut", "icon_key": "key_item"},
+        {"text": ", which is located next to the previous one."}
+      ],
+      "ord": 207011,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-161",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "Received from Owl after handing in the third "},
+        {"code": "KEY-rare-nut", "label": "Rare Nut", "icon_key": "key_item"},
+        {"text": ", ask Tigger to be your partner again, and turn right after landing. Jump onto the next two branches, and then the leafy one next to it where the nut is."}
+      ],
+      "ord": 207012,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-162",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Received from Owl after handing in the fourth "},
+        {"code": "KEY-rare-nut", "label": "Rare Nut", "icon_key": "key_item"},
+        {"text": ", which is obtained by finding the hollow leg next to the seesaw, and the two circular tree sections on the floor. Step onto the one farthest from the log to cause the other to rise into the air due to a small geyser, use it as a platform to grab the nut."}
+      ],
+      "ord": 207013,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-163",
+      "world": "100 Acre Wood",
+      "area": "Bouncing Spot",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "Received from Owl after handing in the fifth and final "},
+        {"code": "KEY-rare-nut", "label": "Rare Nut", "icon_key": "key_item"},
+        {"text": ", which is obtained in a similar manner as the previous one. Head for the other hollow low and press the button next to it, which causes a platform to rise into the air at a faster rate. Use "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " to climb the nearby tree stump, followed by the platform, and finally the leafy branch with the nut, next to the cliff plateau."}
+      ],
+      "ord": 207014,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-164",
+      "world": "Monstro",
+      "area": "Chamber 3",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "Available early on by entering from Chamber 1, located at the far end of the room."}
+      ],
+      "ord": 208000,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-165",
+      "world": "Monstro",
+      "area": "Chamber 2",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "On the lower floor."}
+      ],
+      "ord": 208001,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-166",
+      "world": "Monstro",
+      "area": "Chamber 2",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "After using the upper Chamber 3 passage to Chamber 2, look for the two lone platforms, the left one will have a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " hidden behind two barrels."}
+      ],
+      "ord": 208002,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ],
+      "hint": [
+        {"text": "Might require to use a jump and mid-air attack to gain enough distance to reach the platforms."}
+      ]
+    },
+    {
+      "id": "TRS-168",
+      "world": "Monstro",
+      "area": "Chamber 3",
+      "type": "chest",
+      "name": "Osmose-G",
+      "loc": [
+        {"text": "On the other side of Chamber 6, jump down and use the passage to Chamber 3 for a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 208003,
+      "rew": [
+        {"code": "GUM-osmose-g", "label": "Osmose-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-169",
+      "world": "Monstro",
+      "area": "Chamber 5",
+      "type": "chest",
+      "name": "Thundaga-G",
+      "loc": [
+        {"text": "After using the lower passage in Chamber 6 to enter Chamber 5, in the first "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " you see."}
+      ],
+      "ord": 208004,
+      "rew": [
+        {"code": "GUM-thundaga-g", "label": "Thundaga-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-170",
+      "world": "Monstro",
+      "area": "Chamber 5",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "While in the same room, in a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " at a boarded up passage."}
+      ],
+      "ord": 208005,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-171",
+      "world": "Monstro",
+      "area": "Mouth",
+      "type": "chest",
+      "name": "High Jump",
+      "loc": [
+        {"text": "After defeating Parasite Cage and returning to the Mouth area, open the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " next to Geppetto."}
+      ],
+      "ord": 208006,
+      "rew": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-172",
+      "world": "Monstro",
+      "area": "Mouth",
+      "type": "chest",
+      "name": "Scan-G",
+      "loc": [
+        {"text": "On a platform nearby Geppetto's boat."}
+      ],
+      "ord": 208007,
+      "rew": [
+        {"code": "GUM-scan-g", "label": "Scan-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-173",
+      "world": "Monstro",
+      "area": "Mouth",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "From the previous item, jump to the platform sticking out from the central area, then to another platform at the base of the left-most area. Climb it for another "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 208008,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-174",
+      "world": "Monstro",
+      "area": "Mouth",
+      "type": "chest",
+      "name": "Watergleam",
+      "loc": [
+        {"text": "Swim to the exposed platform with the "},
+        {"code": "TRN-blue", "label": "Blue Trinity", "icon_key": "trinity"},
+        {"text": ", then climb the tower closest to the teeth, with the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " Pinocchio was initially searching through upon your arrival, which now contains another item."}
+      ],
+      "ord": 208009,
+      "rew": [
+        {"code": "KEY-watergleam", "label": "Watergleam", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-177",
+      "world": "Monstro",
+      "area": "Chamber 3",
+      "type": "chest",
+      "name": "Flare-G",
+      "loc": [
+        {"text": "On-top of another platform on the other side of the room, closer to the passage to Chamber 6."}
+      ],
+      "ord": 208010,
+      "rew": [
+        {"code": "GUM-flare-g", "label": "Flare-G", "icon_key": "gummi_block", "qty": 1}
+      ],
+      "hint": [
+        {"text": "Can be reached earlier by using a barrel for extra height."}
+      ]
+    },
+    {
+      "id": "TRS-178",
+      "world": "Monstro",
+      "area": "Chamber 6",
+      "type": "chest",
+      "name": "Torn Page",
+      "loc": [
+        {"text": "On the platform closest to the upper passage to Chamber 5, can easily be reached with a "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " from the ground floor, or by using a barrel for extra height prior to that."}
+      ],
+      "ord": 208011,
+      "rew": [
+        {"code": "KEY-torn-page", "label": "Torn Page", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-179",
+      "world": "Monstro",
+      "area": "Chamber 6",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "On the second platform nearby. Can also be reached from the platform with the "},
+        {"code": "KEY-torn-page", "label": "Torn Page", "icon_key": "key_item"},
+        {"text": " item, with a mid-air attack or with "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": "."}
+      ],
+      "ord": 208012,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-180",
+      "world": "Monstro",
+      "area": "Chamber 6",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Simply jump from across the two previous platforms to reach a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a high ledge in the back."}
+      ],
+      "ord": 208013,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-181",
+      "world": "Monstro",
+      "area": "Chamber 5",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Upon entering Chamber 5 through Chamber 6, use "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " to jump to the lowest platform next to the passage to Chamber 4."}
+      ],
+      "ord": 208014,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-183",
+      "world": "Atlantica",
+      "area": "Undersea Valley",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "In a red clam, on-top of a pillar to the right upon entering from the Tranquil Grotto."}
+      ],
+      "ord": 209000,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-184",
+      "world": "Atlantica",
+      "area": "Undersea Valley",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "In a white clam, in a small cave behind the previous clam."}
+      ],
+      "ord": 209001,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-185",
+      "world": "Atlantica",
+      "area": "Undersea Valley",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "In another white clam, in the canyon beneath the pillar with the red one."}
+      ],
+      "ord": 209002,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-186",
+      "world": "Atlantica",
+      "area": "Undersea Valley",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "In another, larger cave, next to the previous clam."}
+      ],
+      "ord": 209003,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-187",
+      "world": "Atlantica",
+      "area": "Undersea Valley",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "In a white clam, on-top of a tall pillar on the other side of the area upon entering."}
+      ],
+      "ord": 209004,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-188",
+      "world": "Atlantica",
+      "area": "Undersea Valley",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "Behind the previous clam, next to the wall."}
+      ],
+      "ord": 209005,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-189",
+      "world": "Atlantica",
+      "area": "Undersea Cave",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "Inside a clam in a small cave."}
+      ],
+      "ord": 209006,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-190",
+      "world": "Atlantica",
+      "area": "Undersea Gorge",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside a blue clam, hidden in a crevice, on the left side upon entering from Undersea Cave."}
+      ],
+      "ord": 209007,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-191",
+      "world": "Atlantica",
+      "area": "Undersea Gorge",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "In a white clam, opposite the entrance to the Undersea Garden"}
+      ],
+      "ord": 209008,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-192",
+      "world": "Atlantica",
+      "area": "Undersea Garden",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Inside a clam."}
+      ],
+      "ord": 209009,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-193",
+      "world": "Atlantica",
+      "area": "Triton's Palace",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "Inside a clam on the right side, directly after entering."}
+      ],
+      "ord": 209010,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-194",
+      "world": "Atlantica",
+      "area": "Triton's Palace",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "Inside a clam on the right side, directly after entering."}
+      ],
+      "ord": 209011,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-195",
+      "world": "Atlantica",
+      "area": "Triton's Palace",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "Inside another clam, behind the large spiral shell."}
+      ],
+      "ord": 209012,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-196",
+      "world": "Atlantica",
+      "area": "Triton's Palace",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside a yellow clam along the right side of the area."}
+      ],
+      "ord": 209013,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-197",
+      "world": "Atlantica",
+      "area": "Ariel's Grotto",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " near the bottom."}
+      ],
+      "ord": 209014,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-198",
+      "world": "Atlantica",
+      "area": "Ariel's Grotto",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " about halfway up."}
+      ],
+      "ord": 209015,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-199",
+      "world": "Atlantica",
+      "area": "Ariel's Grotto",
+      "type": "chest",
+      "name": "Torn Page",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " at the top."}
+      ],
+      "ord": 209016,
+      "rew": [
+        {"code": "KEY-torn-page", "label": "Torn Page", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-200",
+      "world": "Atlantica",
+      "area": "Sunken Ship",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", underneath a partially broken upturned hull lying on the sea floor."}
+      ],
+      "ord": 209017,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-201",
+      "world": "Atlantica",
+      "area": "Sunken Ship",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", behind another partially buried hull next to the previous one."}
+      ],
+      "ord": 209018,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-202",
+      "world": "Atlantica",
+      "area": "Sunken Ship",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Inside the ship are two "},
+        {"code": "ICON-chest", "label": "chests", "icon_key": "chest"},
+        {"text": ", one of which has the story-mandatory "},
+        {"code": "KEY-crystal-trident", "label": "Crystal Trident", "icon_key": "key_item"},
+        {"text": ", next to the window, the other has the "},
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material"},
+        {"text": ", which is located in the opposite corner behind a crate."}
+      ],
+      "ord": 209019,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-203",
+      "world": "Atlantica",
+      "area": "Sunken Ship",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Inside a clam on the sea floor underneath the sunken ship, in the bottom part of the ship's hull."}
+      ],
+      "ord": 209020,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-204",
+      "world": "Atlantica",
+      "area": "Undersea Gorge",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "In Sunken Ship, use the Undersea Gorge exit, then hit the vent and ride the jet stream to knock loose the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " next to Ariel's Grotto, which contains the item."}
+      ],
+      "ord": 209021,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-205",
+      "world": "Atlantica",
+      "area": "Cavern Nook",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "In the lone clam in Cavern Nook, next to the save point, accessed through the right path in Den of Tides."}
+      ],
+      "ord": 209022,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-206",
+      "world": "Atlantica",
+      "area": "Ursula's Lair",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "After her first bossfight, exit and re-enter, then shoot the sea urchin next to the clam to force it to open and drop a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 209023,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-207",
+      "world": "Halloween Town",
+      "area": "Guillotine Square",
+      "type": "chest",
+      "name": "Thundara-G",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " hidden underneath the staircase behind the guillotine."}
+      ],
+      "ord": 210000,
+      "rew": [
+        {"code": "GUM-thundara-g", "label": "Thundara-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-208",
+      "world": "Halloween Town",
+      "area": "Guillotine Square",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "At the same staircase, climb it and ring the doorbell three times to receive an "},
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable"},
+        {"text": "."}
+      ],
+      "ord": 210001,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-209",
+      "world": "Halloween Town",
+      "area": "Guillotine Square",
+      "type": "chest",
+      "name": "Power Up",
+      "loc": [
+        {"text": "Facing the Lab Entryway, head for the second structure on the left. Using "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " you can grasp onto the edge of the stone wall, and from there hoist yourself onto the tip of stone that sticks out. Afterwards you can safely enter the building for the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 210002,
+      "rew": [
+        {"code": "STAT-power-up", "label": "Power Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-210",
+      "world": "Halloween Town",
+      "area": "Research Lab",
+      "type": "interaction",
+      "name": "Torn Page",
+      "loc": [
+        {"text": "Examine the books in the bookcase inside the lab."}
+      ],
+      "ord": 210003,
+      "rew": [
+        {"code": "KEY-torn-page", "label": "Torn Page", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-211",
+      "world": "Halloween Town",
+      "area": "Bridge",
+      "type": "chest",
+      "name": "Meteor-G",
+      "loc": [
+        {"text": "In the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the left-most platform."}
+      ],
+      "ord": 210004,
+      "rew": [
+        {"code": "GUM-meteor-g", "label": "Meteor-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-212",
+      "world": "Halloween Town",
+      "area": "Bridge",
+      "type": "chest",
+      "name": "Flare-G",
+      "loc": [
+        {"text": "Underneath the bridge."}
+      ],
+      "ord": 210005,
+      "rew": [
+        {"code": "GUM-flare-g", "label": "Flare-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-213",
+      "world": "Halloween Town",
+      "area": "Bridge",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the right-most platform. Can be reached using "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " and a mid-air attack, or with "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": "."}
+      ],
+      "ord": 210006,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-214",
+      "world": "Halloween Town",
+      "area": "Oogie's Manor",
+      "type": "chest",
+      "name": "Ether",
+      "loc": [
+        {"text": "At the end of the path after the rope bridge, next to the gray door."}
+      ],
+      "ord": 210007,
+      "rew": [
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-215",
+      "world": "Halloween Town",
+      "area": "Oogie's Manor",
+      "type": "chest",
+      "name": "Ether",
+      "loc": [
+        {"text": "In the next room after opening the aforementioned door."}
+      ],
+      "ord": 210008,
+      "rew": [
+        {"code": "CON-ether", "label": "Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-217",
+      "world": "Halloween Town",
+      "area": "Oogie's Manor",
+      "type": "chest",
+      "name": "Mega-Ether",
+      "loc": [
+        {"text": "Next to the cylinder, on the wooden walkway, jump into the hanging cage at the end to find a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " inside. Alternatively it can be grabbed earlier by using the roof of the nearby structure to jump into the cage."}
+      ],
+      "ord": 210009,
+      "rew": [
+        {"code": "CON-mega-ether", "label": "Mega-Ether", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-218",
+      "world": "Halloween Town",
+      "area": "Oogie's Manor",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "After hitting the lever return to the apparent dead end walkway near the bottom where you can jump through the bars of a hanging cage to find another "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ". Prior to hitting the lever the cage would hang out of reach far above you, next to the one from the previous item."}
+      ],
+      "ord": 210010,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-219",
+      "world": "Halloween Town",
+      "area": "Cemetery",
+      "type": "chest",
+      "name": "Holy-G",
+      "loc": [
+        {"text": "After sealing the world's "},
+        {"code": "ICON-keyhole", "label": "Keyhole", "icon_key": "keyhole"},
+        {"text": ", leave and then return to the Moonlight Hill and look for the crypt door shaped like a christmas tree, enter it to reach the Cemetery, containing four "},
+        {"code": "ICON-chest", "label": "chests", "icon_key": "chest"},
+        {"text": ". You will stand right next to a green one."}
+      ],
+      "ord": 210011,
+      "rew": [
+        {"code": "GUM-holy-g", "label": "Holy-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-220",
+      "world": "Halloween Town",
+      "area": "Cemetery",
+      "type": "chest",
+      "name": "Scissors-G",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on the left."}
+      ],
+      "ord": 210012,
+      "rew": [
+        {"code": "GUM-scissors-g", "label": "Scissors-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-221",
+      "world": "Halloween Town",
+      "area": "Cemetery",
+      "type": "chest",
+      "name": "Dark Matter",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", hidden in the far corner."}
+      ],
+      "ord": 210013,
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-224",
+      "world": "Halloween Town",
+      "area": "Guillotine Square",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "In the other "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " next to the previous item."}
+      ],
+      "ord": 210014,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-225",
+      "world": "Neverland",
+      "area": "Galley",
+      "type": "chest",
+      "name": "Meteor-G",
+      "loc": [
+        {"text": "After climbing up from the Freezer, next to the cooking station, in the corner."}
+      ],
+      "ord": 211000,
+      "rew": [
+        {"code": "GUM-meteor-g", "label": "Meteor-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-227",
+      "world": "Neverland",
+      "area": "Cabin",
+      "type": "chest",
+      "name": "Protera Chain",
+      "loc": [
+        {"text": "After defeating AntiSora, use the closed trapdoor to enter a second Cabin with the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 211001,
+      "rew": [
+        {"code": "ACC-protera-chain", "label": "Protera Chain", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-228",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Flare-G",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " in one of the interior corners."}
+      ],
+      "ord": 211002,
+      "rew": [
+        {"code": "GUM-flare-g", "label": "Flare-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-229",
+      "world": "Neverland",
+      "area": "Hold",
+      "type": "chest",
+      "name": "Paper-G",
+      "loc": [
+        {"text": "On the rafter near the ceiling."}
+      ],
+      "ord": 211003,
+      "rew": [
+        {"code": "GUM-paper-g", "label": "Paper-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-231",
+      "world": "Neverland",
+      "area": "Deck",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "On the front mast's crow's nest."}
+      ],
+      "ord": 211004,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-232",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "Available during 1:00 and 1:59."}
+      ],
+      "ord": 211005,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-233",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Power Up",
+      "loc": [
+        {"text": "Available during 2:00 and 2:59."}
+      ],
+      "ord": 211006,
+      "rew": [
+        {"code": "STAT-power-up", "label": "Power Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-234",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Available during 3:00 and 3:59."}
+      ],
+      "ord": 211007,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-235",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Power Up",
+      "loc": [
+        {"text": "Available during 4:00 and 4:59."}
+      ],
+      "ord": 211008,
+      "rew": [
+        {"code": "STAT-power-up", "label": "Power Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-236",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "Available during 5:00 and 5:59."}
+      ],
+      "ord": 211009,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-237",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Available during 6:00 and 6:59."}
+      ],
+      "ord": 211010,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-238",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "Available during 7:00 and 7:59."}
+      ],
+      "ord": 211011,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-239",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "Available during 8:00 and 8:59."}
+      ],
+      "ord": 211012,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-240",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "Available during 9:00 and 9:59."}
+      ],
+      "ord": 211013,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-241",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "Available during 10:00 and 10:59."}
+      ],
+      "ord": 211014,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-242",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "Available during 11:00 and 11:59."}
+      ],
+      "ord": 211015,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-243",
+      "world": "Neverland",
+      "area": "Clock Tower",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "Available during 12:00 and 12:59 (00:00 and 00:59)"}
+      ],
+      "ord": 211016,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-244",
+      "world": "Hollow Bastion",
+      "area": "Rising Falls",
+      "type": "chest",
+      "name": "Life-G",
+      "loc": [
+        {"text": "After arriving, jump onto the water below and walk behind the rock spikes in front of you."}
+      ],
+      "ord": 212000,
+      "rew": [
+        {"code": "GUM-life-g", "label": "Life-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-246",
+      "world": "Hollow Bastion",
+      "area": "Rising Falls",
+      "type": "chest",
+      "name": "Blizzara Ring",
+      "loc": [
+        {"text": "Use "},
+        {"code": "SPL-blizzard", "label": "Blizzard", "icon_key": "spell"},
+        {"text": " on the third bubble, at the left of the largest central platform, for another "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212001,
+      "rew": [
+        {"code": "ACC-blizzara-ring", "label": "Blizzara Ring", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-247",
+      "world": "Hollow Bastion",
+      "area": "Rising Falls",
+      "type": "chest",
+      "name": "Meteor-G",
+      "loc": [
+        {"text": "Jump into the bubble used to acquire the previous item, then use the limited time you have underwater to open the only "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212002,
+      "rew": [
+        {"code": "GUM-meteor-g", "label": "Meteor-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-248",
+      "world": "Hollow Bastion",
+      "area": "Rising Falls",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "After you meet Riku, turn around to face the area where you came from, where a lone platform with a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " can be easily spotted."}
+      ],
+      "ord": 212003,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-249",
+      "world": "Hollow Bastion",
+      "area": "Base Level",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Jump into the left bubble, then use the nearby stone block to jump to a platform with the "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212004,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-250",
+      "world": "Hollow Bastion",
+      "area": "Base Level",
+      "type": "chest",
+      "name": "Thundara-G",
+      "loc": [
+        {"text": "On a ledge, next to the previous item as well as a switch."}
+      ],
+      "ord": 212005,
+      "rew": [
+        {"code": "GUM-thundara-g", "label": "Thundara-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-251",
+      "world": "Hollow Bastion",
+      "area": "Base Level",
+      "type": "chest",
+      "name": "Paper-G",
+      "loc": [
+        {"text": "Past the previous item, jump onto the platform on the right, followed by another one, for the next "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212006,
+      "rew": [
+        {"code": "GUM-paper-g", "label": "Paper-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-252",
+      "world": "Hollow Bastion",
+      "area": "Waterway",
+      "type": "chest",
+      "name": "Thundaga-G",
+      "loc": [
+        {"text": "Operate the second switch in Base Level, to the left of the first, then enter the alternate Waterway passage and use Call to have Beast smash the gate on the left side."}
+      ],
+      "ord": 212007,
+      "rew": [
+        {"code": "GUM-thundaga-g", "label": "Thundaga-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-253",
+      "world": "Hollow Bastion",
+      "area": "Waterway",
+      "type": "chest",
+      "name": "Fira Ring",
+      "loc": [
+        {"text": "After using the right bubble to enter the main Waterway, found inside a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " next to the save point."}
+      ],
+      "ord": 212008,
+      "rew": [
+        {"code": "ACC-fira-ring", "label": "Fira Ring", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-254",
+      "world": "Hollow Bastion",
+      "area": "Waterway",
+      "type": "chest",
+      "name": "Dark Matter",
+      "loc": [
+        {"text": "After the previous item, have Beast smash the nearby gate and then use "},
+        {"code": "SPL-blizzard", "label": "Blizzard", "icon_key": "spell"},
+        {"text": " to freeze the bubble in the next passage. Jump on-top of the platform, then climb onto the wall separating the two rooms, from where you can reach a well-hidden "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a platform in the corner."}
+      ],
+      "ord": 212009,
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-255",
+      "world": "Hollow Bastion",
+      "area": "Dungeon",
+      "type": "chest",
+      "name": "Ultima-G",
+      "loc": [
+        {"text": "After using the previous bubble, have Beast smash a nearby wall, then enter the new Dungeon room, with this item in the left "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212010,
+      "rew": [
+        {"code": "GUM-ultima-g", "label": "Ultima-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-256",
+      "world": "Hollow Bastion",
+      "area": "Dungeon",
+      "type": "chest",
+      "name": "Thundara-G",
+      "loc": [
+        {"text": "To the right of the previous item"}
+      ],
+      "ord": 212011,
+      "rew": [
+        {"code": "GUM-thundara-g", "label": "Thundara-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-257",
+      "world": "Hollow Bastion",
+      "area": "Entrance Hall",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "After the bossfight, head up the stairs and into the small corridor at the top. Use the small ornament on the right pillar to climb to the top, then jump to the other one for a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212012,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-258",
+      "world": "Hollow Bastion",
+      "area": "Library",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "After moving the K shelf, rotate the compartment in the pillar on the left twice to find a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212013,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-259",
+      "world": "Hollow Bastion",
+      "area": "Library",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "Head up the stairs, then rotate the first pillar's compartment to acquire another item."}
+      ],
+      "ord": 212014,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-260",
+      "world": "Hollow Bastion",
+      "area": "Library",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "Inside the second pillar's compartment."}
+      ],
+      "ord": 212015,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-261",
+      "world": "Hollow Bastion",
+      "area": "Library",
+      "type": "chest",
+      "name": "Ultima-G",
+      "loc": [
+        {"text": "On-top of the bookshelf near the doors leading to the Entrance Hall, can be reached with "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": " from the second floor."}
+      ],
+      "ord": 212016,
+      "rew": [
+        {"code": "GUM-ultima-g", "label": "Ultima-G", "icon_key": "gummi_block", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-262",
+      "world": "Hollow Bastion",
+      "area": "Library",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "After the previous item, walk to the next bookshelf and go along the wall until you run into the upper compartment of the same pillar where the first "},
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable"},
+        {"text": " was found."}
+      ],
+      "ord": 212017,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-264",
+      "world": "Hollow Bastion",
+      "area": "Great Crest",
+      "type": "chest",
+      "name": "Osmose-G",
+      "loc": [
+        {"text": "After the previous item, use the elevator to access a small platform within the Great Crest area with another "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on a floating platform."}
+      ],
+      "ord": 212018,
+      "rew": [
+        {"code": "GUM-osmose-g", "label": "Osmose-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-265",
+      "world": "Hollow Bastion",
+      "area": "Lift Stop",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "After the emblem door, use the elevator to access a lower level, into the Waterway, where you can use the right platform to access another switch that drops a "},
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material"},
+        {"text": "."}
+      ],
+      "ord": 212019,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-266",
+      "world": "Hollow Bastion",
+      "area": "Lift Stop",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "After the previous item, return to the start and activate the second switch nearby to set the elevator platform's destination to the upper level, where you can find an "},
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material"},
+        {"text": "."}
+      ],
+      "ord": 212020,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-268",
+      "world": "Hollow Bastion",
+      "area": "Castle Gates",
+      "type": "chest",
+      "name": "Haste2-G",
+      "loc": [
+        {"text": "Use the same moving platform to jump to a second one, which was activated with a red switch at the passage to base Level. It leads past two "},
+        {"code": "ICON-chest", "label": "chests", "icon_key": "chest"},
+        {"text": "; this "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " sitting on the left pillar."}
+      ],
+      "ord": 212021,
+      "rew": [
+        {"code": "GUM-haste2-g", "label": "Haste2-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-269",
+      "world": "Hollow Bastion",
+      "area": "Castle Gates",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "And this one sitting on the right pillar."}
+      ],
+      "ord": 212022,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-270",
+      "world": "Hollow Bastion",
+      "area": "Great Crest",
+      "type": "chest",
+      "name": "Thundaga-G",
+      "loc": [
+        {"text": "After the great elevator, inside a blue "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212023,
+      "rew": [
+        {"code": "GUM-thundaga-g", "label": "Thundaga-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-271",
+      "world": "Hollow Bastion",
+      "area": "Great Crest",
+      "type": "chest",
+      "name": "Orichalcum",
+      "loc": [
+        {"text": "After the previous item, use the elevator in the Lift Stop to go up, re-enter the Great Crest, then turn left immediately."}
+      ],
+      "ord": 212024,
+      "rew": [
+        {"code": "SYN-orichalcum", "label": "Orichalcum", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-272",
+      "world": "Hollow Bastion",
+      "area": "Great Crest",
+      "type": "chest",
+      "name": "Thundara Ring",
+      "loc": [
+        {"text": "After the previous item, use the next elevator, and after fighting the Heartless, lower the only floating platform in the area with "},
+        {"code": "SPL-gravity", "label": "Gravity", "icon_key": "spell"},
+        {"text": "."}
+      ],
+      "ord": 212025,
+      "rew": [
+        {"code": "ACC-thundara-ring", "label": "Thundara Ring", "icon_key": "accessory", "qty": 1}
+      ],
+      "req": [
+        {"code": "SPL-gravity", "label": "Gravity", "icon_key": "spell"}
+      ]
+    },
+    {
+      "id": "TRS-273",
+      "world": "Hollow Bastion",
+      "area": "Lift Stop",
+      "type": "chest",
+      "name": "Royal Crown",
+      "loc": [
+        {"text": "While at the same area, jump off the edge and "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": " to a hidden passage to the Lift Stop area underneath the large two blocks."}
+      ],
+      "ord": 212026,
+      "rew": [
+        {"code": "ACC-royal-crown", "label": "Royal Crown", "icon_key": "accessory", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-274",
+      "world": "Hollow Bastion",
+      "area": "High Tower",
+      "type": "chest",
+      "name": "Osmose-G",
+      "loc": [
+        {"text": "In a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", atop a floating platform."}
+      ],
+      "ord": 212027,
+      "rew": [
+        {"code": "GUM-osmose-g", "label": "Osmose-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-275",
+      "world": "Hollow Bastion",
+      "area": "Great Crest",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "After lowering the second block and raising it back up, climb it to find a blue "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " in a corner on the right."}
+      ],
+      "ord": 212028,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-276",
+      "world": "Hollow Bastion",
+      "area": "Rising Falls",
+      "type": "chest",
+      "name": "Defense Up",
+      "loc": [
+        {"text": "A new fourth bubble can be used near where you met Riku, which leads to an underwater "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212029,
+      "rew": [
+        {"code": "STAT-defense-up", "label": "Defense Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-277",
+      "world": "Hollow Bastion",
+      "area": "Lift Stop",
+      "type": "chest",
+      "name": "Ramuh Belt",
+      "loc": [
+        {"text": "Technically available much earlier, after you used a switch above the moving blocks to rotate a machine at the Great Crest. Use the platform accessed through the secret passage in the Library to go to the top of the Lift Stop for this "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " on-top of a floating platform."}
+      ],
+      "ord": 212030,
+      "rew": [
+        {"code": "ACC-ramuh-belt", "label": "Ramuh Belt", "icon_key": "accessory", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-278",
+      "world": "Hollow Bastion",
+      "area": "Grand Hall",
+      "type": "chest",
+      "name": "Dark Matter",
+      "loc": [
+        {"text": "On the right side, on a ledge above the stairs."}
+      ],
+      "ord": 212031,
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-280",
+      "world": "Hollow Bastion",
+      "area": "Grand Hall",
+      "type": "chest",
+      "name": "Oblivion",
+      "loc": [
+        {"text": "Atop the walkway above the main area, accessible by going up from either of the previous "},
+        {"code": "ICON-chest", "label": "chests", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 212032,
+      "rew": [
+        {"code": "WPN-oblivion", "label": "Oblivion", "icon_key": "keyblade", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-281",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "In the first "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213000,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-282",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Pretty Stone",
+      "loc": [
+        {"text": "In the second "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213001,
+      "rew": [
+        {"code": "KEY-pretty-stone", "label": "Pretty Stone", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-283",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Mega-Potion",
+      "loc": [
+        {"text": "In the third "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213002,
+      "rew": [
+        {"code": "CON-mega-potion", "label": "Mega-Potion", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-284",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Mythril",
+      "loc": [
+        {"text": "In the fourth "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213003,
+      "rew": [
+        {"code": "SYN-mythril", "label": "Mythril", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-285",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "In the fifth "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213004,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-286",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Mythril Shard",
+      "loc": [
+        {"text": "In the sixth "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213005,
+      "rew": [
+        {"code": "SYN-mythril-shard", "label": "Mythril Shard", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-287",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Pretty Stone",
+      "loc": [
+        {"text": "In the seventh "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213006,
+      "rew": [
+        {"code": "KEY-pretty-stone", "label": "Pretty Stone", "icon_key": "key_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-288",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Cottage",
+      "loc": [
+        {"text": "In the eighth "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213007,
+      "rew": [
+        {"code": "CAMP-cottage", "label": "Cottage", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-289",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "Gale",
+      "loc": [
+        {"text": "In the ninth "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213008,
+      "rew": [
+        {"code": "SYN-gale", "label": "Gale", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-290",
+      "world": "End of the World",
+      "area": "Final Dimension",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "In the tenth "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", behind the ninth "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", opposite the next area's entrance."}
+      ],
+      "ord": 213009,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-291",
+      "world": "End of the World",
+      "area": "Giant Crevasse",
+      "type": "chest",
+      "name": "Dark Matter",
+      "loc": [
+        {"text": "In a blue "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": ", hidden behind a row of crystals on a platform you face upon first entering the area, said platform sits at the same height level and can be reached with "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": "."}
+      ],
+      "ord": 213010,
+      "rew": [
+        {"code": "SYN-dark-matter", "label": "Dark Matter", "icon_key": "synthesis_material", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-292",
+      "world": "End of the World",
+      "area": "Giant Crevasse",
+      "type": "chest",
+      "name": "Meteor Strike",
+      "loc": [
+        {"text": "At the far end is a area that can only be accessed from above, inside of which is a pit (revealed after defeating the enemies) that leads to a blue "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213011,
+      "rew": [
+        {"code": "WPN-meteor-strike", "label": "Meteor Strike", "icon_key": "staff", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-293",
+      "world": "End of the World",
+      "area": "Giant Crevasse",
+      "type": "chest",
+      "name": "Ultima-G",
+      "loc": [
+        {"text": "Face the entrance area again and "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": " to the center of the crevasse, landing on the thin bridge crossing both cliff sides, the left end of which has another "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213012,
+      "rew": [
+        {"code": "GUM-ultima-g", "label": "Ultima-G", "icon_key": "gummi_block", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-294",
+      "world": "End of the World",
+      "area": "Giant Crevasse",
+      "type": "chest",
+      "name": "Drill-G",
+      "loc": [
+        {"text": "Follow the bridge to the other end, then when facing the wall, use the two left platforms to reach a series of thin ledges. Climb them to another platform with a "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213013,
+      "rew": [
+        {"code": "GUM-drill-g", "label": "Drill-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-295",
+      "world": "End of the World",
+      "area": "Giant Crevasse",
+      "type": "chest",
+      "name": "Full-Life-G",
+      "loc": [
+        {"text": "Inside another area similar to where the second "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": " was located, near the bottom and somewhat covered by a large platform placed above it."}
+      ],
+      "ord": 213014,
+      "rew": [
+        {"code": "GUM-full-life-g", "label": "Full-Life-G", "icon_key": "gummi_block", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-296",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "chest",
+      "name": "Spirit Gem",
+      "loc": [
+        {"text": "In Traverse Town's Third District, next to the fountain."}
+      ],
+      "ord": 213015,
+      "rew": [
+        {"code": "SYN-spirit-gem", "label": "Spirit Gem", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-297",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "chest",
+      "name": "Thunder Gem",
+      "loc": [
+        {"text": "In Wonderland's Rabbit Hole, in the starting area."}
+      ],
+      "ord": 213016,
+      "rew": [
+        {"code": "SYN-thunder-gem", "label": "Thunder Gem", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-298",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "minigame",
+      "name": "Frost Gem",
+      "loc": [
+        {"text": "In Olympus Coliseum's Coliseum Gates, behind the right statue's left foot."}
+      ],
+      "ord": 213017,
+      "rew": [
+        {"code": "SYN-frost-gem", "label": "Frost Gem", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-299",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "chest",
+      "name": "Bright Gem",
+      "loc": [
+        {"text": "In Deep Jungle's Bamboo Thicket, atop the stone."}
+      ],
+      "ord": 213018,
+      "rew": [
+        {"code": "SYN-bright-gem", "label": "Bright Gem", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-300",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "chest",
+      "name": "Blaze Gem",
+      "loc": [
+        {"text": "In Agrabah's Palace Gates, atop a high area in a corner, needs to be reached with "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": "."}
+      ],
+      "ord": 213019,
+      "rew": [
+        {"code": "SYN-blaze-gem", "label": "Blaze Gem", "icon_key": "synthesis_material", "qty": 1}
+      ],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "TRS-301",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "chest",
+      "name": "AP Up",
+      "loc": [
+        {"text": "In Atlantica's Calm Depths, on the sea floor next to a blocked passage."}
+      ],
+      "ord": 213020,
+      "rew": [
+        {"code": "STAT-ap-up", "label": "AP Up", "icon_key": "camp_item", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-302",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "chest",
+      "name": "Lucid Gem",
+      "loc": [
+        {"text": "In Halloween Town's Torture Chamber, atop the walkway's highest stage."}
+      ],
+      "ord": 213021,
+      "rew": [
+        {"code": "SYN-lucid-gem", "label": "Lucid Gem", "icon_key": "synthesis_material", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-303",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "chest",
+      "name": "Mighty Shield",
+      "loc": [
+        {"text": "In Neverland's Galley, after fighting the enemies within the room that was locked by a "},
+        {"code": "TRN-yellow", "label": "Yellow Trinity", "icon_key": "trinity"}
+      ],
+      "ord": 213022,
+      "rew": [
+        {"code": "WPN-mighty-shield", "label": "Mighty Shield", "icon_key": "shield", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-304",
+      "world": "End of the World",
+      "area": "World Terminus",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "In 100 Acre Wood's Meadow, right next to you upon entering."}
+      ],
+      "ord": 213023,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-305",
+      "world": "End of the World",
+      "area": "Laboratory",
+      "type": "chest",
+      "name": "Elixir",
+      "loc": [
+        {"text": "In the World Terminus' final portal, in an area resembling Hollow Bastion."}
+      ],
+      "ord": 213024,
+      "rew": [
+        {"code": "CON-elixir", "label": "Elixir", "icon_key": "consumable", "qty": 1}
+      ]
+    },
+    {
+      "id": "TRS-306",
+      "world": "End of the World",
+      "area": "Final Rest",
+      "type": "chest",
+      "name": "Megalixir",
+      "loc": [
+        {"text": "In a blue "},
+        {"code": "ICON-chest", "label": "chest", "icon_key": "chest"},
+        {"text": "."}
+      ],
+      "ord": 213025,
+      "rew": [
+        {"code": "CON-megalixir", "label": "Megalixir", "icon_key": "consumable", "qty": 1}
+      ]
+    }
+  ]
+}

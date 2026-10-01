@@ -3,180 +3,1185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Progress Dial — Xenoblade Chronicles Trackers</title>
+<title>Kingdom Hearts Final Mix — Trinities, Dalmatians &amp; Treasures | ProgressDial</title>
+<meta name="description" content="Track every Trinity mark, Dalmatian puppy and treasure in Kingdom Hearts Final Mix.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #0e1614;
-    --panel: #142420;
-    --panel-2: #16302a;
-    --line: #23413a;
-    --text: #e7f2ee;
-    --dim: #8fada5;
-    --accent: #4fd6b5;
-    --accent-2: #d9a441;
+    --night:#0d1220; --night-soft:#121a2e; --panel:#161f38; --raised:#20294a;
+    --line:#2b3558; --line-soft:#232c4c; --ink:#eef1fa; --dim:#9aa5c8; --faint:#68729a;
+    --gold:#ffd166; --gold-soft:rgba(255,209,102,0.14); --gold-line:rgba(255,209,102,0.35);
+    --danger:#ff7b6e;
   }
   *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{
     margin:0;
     background:
-      radial-gradient(1200px 600px at 10% -10%, rgba(79,214,181,0.08), transparent 60%),
-      radial-gradient(900px 500px at 100% 0%, rgba(217,164,65,0.06), transparent 55%),
-      var(--bg);
-    color:var(--text);
-    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-    line-height:1.4;
-    min-height:100vh;
+      radial-gradient(ellipse 850px 480px at 50% -12%, rgba(90,120,220,0.13), transparent 62%),
+      radial-gradient(ellipse 500px 400px at 95% 8%, rgba(255,209,102,0.05), transparent 55%),
+      var(--night);
+    color:var(--ink); font-family:'Atkinson Hyperlegible',sans-serif; font-size:15px; line-height:1.5;
+    -webkit-font-smoothing:antialiased; min-height:100vh;
   }
-  .wrap{max-width:820px;margin:0 auto;padding:3rem 1.2rem 2rem;}
-  header{margin-bottom:2.2rem; text-align:center;}
-  .eyebrow{
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    font-size:.72rem;
-    color:var(--accent);
-    margin:0 0 .5rem;
-  }
-  h1{
-    margin:0 0 .5rem;
-    font-size:2.4rem;
-    font-weight:600;
-    letter-spacing:.01em;
-  }
-  .sub{
-    color:var(--dim);
-    font-size:1rem;
-    max-width:48ch;
-    margin:0 auto;
-  }
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:.001ms!important;transition-duration:.001ms!important;} }
+  button{font-family:inherit;}
+  button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
 
-  .banners{
-    display:flex;
-    flex-direction:column;
-    gap:1rem;
-  }
+  header.site{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:900px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);}
+  .brand-mark{width:28px;height:28px;flex:0 0 auto;border-radius:50%;border:2.5px solid var(--gold);position:relative;}
+  .brand-mark::after{content:"";position:absolute;left:50%;top:34%;width:6px;height:6px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);}
+  .brand-mark::before{content:"";position:absolute;left:50%;top:54%;width:3.5px;height:9px;background:var(--gold);transform:translateX(-50%);clip-path:polygon(15% 0,85% 0,100% 100%,0 100%);}
+  .brand-name{font-family:'Sora',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.01em;}
+  .brand-name small{display:block;font-family:'Atkinson Hyperlegible',sans-serif;font-weight:400;font-size:11px;color:var(--faint);}
+  nav.site-nav a{color:var(--dim);text-decoration:none;font-size:13px;padding:8px 12px;border-radius:99px;}
+  nav.site-nav a:hover{color:var(--ink);background:var(--panel);}
 
-  .banner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:1.2rem;
-    text-decoration:none;
-    color:var(--text);
-    background:linear-gradient(180deg, var(--panel-2), var(--panel));
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:1.4rem 1.6rem;
-    transition:border-color .15s ease, transform .15s ease;
-  }
-  a.banner:hover{
-    border-color:var(--accent);
-    transform:translateY(-2px);
-  }
-  a.banner:active{transform:translateY(0);}
+  .hero{max-width:900px;margin:0 auto;padding:18px 20px 6px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+  .hero h1{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(21px,4.6vw,28px);letter-spacing:-.02em;margin:0 0 4px;}
+  .hero .sub{color:var(--dim);font-size:14px;margin:0 0 22px;max-width:440px;}
+  .rosette-shell{position:relative;width:min(232px,62vw);aspect-ratio:1;}
+  .rosette{width:100%;height:100%;display:block;}
+  .rosette [data-seg]{cursor:pointer;}
+  .rosette-readout{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;}
+  .ro-key{width:18px;height:18px;color:var(--faint);margin-bottom:4px;transition:color .5s ease;}
+  .ro-key svg{width:100%;height:100%;display:block;}
+  .ro-pct{font-family:'Sora',sans-serif;font-weight:700;font-size:38px;line-height:1;letter-spacing:-.03em;}
+  .ro-pct .u{font-size:16px;font-weight:600;color:var(--faint);margin-left:1px;}
+  .ro-frac{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--faint);margin-top:6px;}
+  .rosette-shell.complete .ro-key,.rosette-shell.complete .ro-pct{color:var(--gold);}
+  .rosette-caption{margin-top:12px;font-size:12px;color:var(--faint);letter-spacing:.09em;text-transform:uppercase;}
+  .rosette-hint{margin-top:4px;font-size:12.5px;color:var(--dim);}
+  .rosette-hint b{color:var(--ink);font-weight:700;}
 
-  .banner-text .eyebrow2{
-    font-family:"Helvetica Neue",Arial,sans-serif;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    font-size:.66rem;
-    color:var(--accent-2);
-    margin:0 0 .3rem;
+  .tabs{max-width:900px;margin:22px auto 0;padding:0 20px;display:flex;flex-direction:column;gap:8px;}
+  .tab-all{
+    width:100%;border:1px solid var(--line);background:var(--panel);color:var(--dim);
+    padding:13px 14px;border-radius:16px;font-size:14px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:8px;transition:background .18s,border-color .18s,color .18s;
   }
-  .banner-text h2{
-    margin:0 0 .35rem;
-    font-size:1.4rem;
-    font-weight:600;
-  }
-  .banner-text p{
-    margin:0;
-    font-family:"Helvetica Neue",Arial,sans-serif;
-    font-size:.85rem;
-    color:var(--dim);
-    max-width:44ch;
-  }
+  .tab-all .tab-count{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--faint);background:var(--night-soft);border-radius:99px;padding:2px 8px;}
+  .tab-all:not(.active):hover{color:var(--ink);border-color:var(--gold-line);}
+  .tab-all.active{background:var(--gold);color:var(--night);border-color:var(--gold);}
+  .tab-all.active .tab-count{background:rgba(13,18,32,.18);color:var(--night);}
+  .tabs-inner{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:4px;gap:4px;}
+  .tab-btn{flex:1;border:none;background:none;color:var(--dim);padding:9px 6px;border-radius:99px;font-size:12.5px;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:background .18s,color .18s;white-space:nowrap;}
+  .tab-btn .tab-count{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--faint);background:var(--night-soft);border-radius:99px;padding:2px 8px;}
+  .tab-btn.active{background:var(--gold-soft);color:var(--gold);}
+  .tab-btn.active .tab-count{color:var(--gold);background:rgba(255,209,102,.12);}
+  .tab-btn:not(.active):hover{color:var(--ink);}
 
-  .banner-arrow{
-    flex:none;
-    width:38px; height:38px;
-    border-radius:50%;
-    border:1px solid var(--line);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--accent);
-    font-size:1.1rem;
-    font-family:"Helvetica Neue",Arial,sans-serif;
-  }
+  .tab-panel{display:none;} .tab-panel.active{display:block;}
+  .panel-body{max-width:900px;margin:0 auto;padding:20px 20px 30px;}
 
-  .banner-dial{
-    flex:none;
-    width:38px; height:38px;
-    border-radius:50%;
-    background: conic-gradient(var(--dim) 0%, #24403a 0%);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-  }
-  .banner-dial::after{
-    content:"";
-    position:absolute; inset:4px;
-    border-radius:50%;
-    background:var(--panel);
-  }
-  .banner-dial span{
-    position:relative; z-index:1;
-    font-family:"Helvetica Neue",Arial,sans-serif;
-    font-size:.62rem;
-    color:var(--dim);
-  }
+  .controls{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:10px;}
+  .search-box{flex:1 1 190px;position:relative;}
+  .search-box input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:99px;color:var(--ink);padding:11px 36px 11px 16px;font-size:14px;font-family:inherit;}
+  .search-box input::placeholder{color:var(--faint);}
+  .search-clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--faint);font-size:17px;line-height:1;cursor:pointer;padding:6px 8px;border-radius:99px;display:none;}
+  .search-clear:hover{color:var(--ink);} .search-clear.show{display:block;}
+  /* Temporary for testing -- remove before final version, per Bruno */
+  .check-all-btn{background:var(--panel);border:1px solid var(--line);border-radius:99px;color:var(--dim);padding:11px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .15s;}
+  .check-all-btn:hover{color:var(--ink);border-color:var(--gold-line);}
+  .check-all-btn.arm{background:rgba(255,123,110,.12);border-color:var(--danger);color:#ffc4bd;}
+  .toolbar-secondary{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--faint);margin-bottom:14px;padding:0 4px;gap:12px;}
 
-  .banner.coming-soon{
-    opacity:.6;
-    cursor:default;
-    pointer-events:none;
-  }
+  .world-legend{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px;margin-bottom:16px;}
+  .legend-head{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:none;color:var(--faint);padding:6px 10px 4px;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;}
+  .legend-head:hover{color:var(--dim);}
+  .legend-head .chev{transition:transform .2s;}
+  .world-legend.collapsed .chev{transform:rotate(-90deg);}
+  .world-legend.collapsed .world-row,.world-legend.collapsed .world-clear,.world-legend.collapsed .filter-section{display:none;}
+  .world-row{display:flex;flex-direction:column;gap:6px;width:100%;text-align:left;background:none;border:none;border-radius:11px;padding:8px 10px;cursor:pointer;transition:background .15s;color:inherit;}
+  .world-row:hover{background:var(--raised);}
+  .world-row.active{background:var(--gold-soft);}
+  .world-row-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .world-row-top .wi{width:18px;height:18px;flex:0 0 auto;}
+  .world-name{font-size:13.5px;font-weight:700;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .world-row.active .world-name{color:var(--gold);}
+  .world-row.done .world-name{color:var(--faint);}
+  .cat-badges{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;}
+  .cat-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:99px;background:var(--night-soft);}
+  .cat-badge svg{width:13px;height:13px;flex:0 0 auto;color:var(--faint);}
+  .cat-badge .cat-frac{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--faint);}
+  .cat-badge.cat-complete{background:var(--gold-soft);}
+  .cat-badge.cat-complete svg{color:var(--gold);}
+  .cat-badge.cat-complete .cat-frac{color:var(--gold);font-weight:700;}
+  .world-bar{height:5px;background:var(--night-soft);border-radius:99px;overflow:hidden;}
+  .world-bar span{display:block;height:100%;border-radius:99px;transition:width .5s cubic-bezier(.4,0,.2,1);}
+  .world-clear{margin:4px 2px 2px;background:none;border:none;color:var(--gold);font-size:12.5px;font-weight:700;cursor:pointer;padding:8px;border-radius:9px;align-self:flex-start;}
+  .world-clear:hover{background:var(--gold-soft);}
+  .world-clear.hidden{display:none;}
 
-  footer{
-    max-width:820px; margin:2.5rem auto 0; padding:0 1.2rem;
-    font-family:"Helvetica Neue",Arial,sans-serif;
-    color:var(--dim); font-size:.76rem;
-    text-align:center;
+  /* ---------- Filters accordion (Needs / Colors) ---------- */
+  .filter-section{padding:4px 0 8px;}
+  .filter-label{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;padding:0 10px 6px;}
+  .filter-chip-row{display:flex;flex-wrap:wrap;gap:6px;padding:0 10px;}
+  .filter-chip{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:6px 12px 6px 8px;border-radius:99px;background:var(--night-soft);color:var(--dim);border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s,color .15s;}
+  .filter-chip svg{width:14px;height:14px;flex:0 0 auto;}
+  .filter-chip:hover{color:var(--ink);}
+  .filter-chip.active{background:var(--gold-soft);color:var(--gold);border-color:var(--gold-line);}
+
+  .card-list{display:flex;flex-direction:column;gap:9px;}
+  .card{display:flex;gap:13px;align-items:flex-start;width:100%;text-align:left;background:linear-gradient(180deg,rgba(255,255,255,.025),transparent 40%),var(--panel);border:1px solid var(--line-soft);border-radius:16px;padding:15px 16px;cursor:pointer;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit;transition:border-color .15s,background .15s,transform .06s;}
+  .card:hover{border-color:var(--line);}
+  .card:active{transform:scale(.994);}
+  .card.checked{background:linear-gradient(180deg,rgba(255,209,102,.05),transparent 55%),var(--panel);border-color:var(--gold-line);}
+  .card.checked .card-title{color:var(--dim);}
+  .card-check{flex:0 0 auto;width:26px;height:26px;border-radius:50%;border:2px solid var(--line);background:var(--night-soft);display:flex;align-items:center;justify-content:center;margin-top:1px;transition:background .15s,border-color .15s;}
+  .card.checked .card-check{background:var(--gold);border-color:var(--gold);}
+  .card-check svg{width:14px;height:14px;opacity:0;transition:opacity .1s;}
+  .card.checked .card-check svg{opacity:1;}
+  .card-main{flex:1;min-width:0;}
+  .card-top-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+  .card-icon{width:23px;height:23px;flex:0 0 auto;}
+  .card-title{font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;letter-spacing:-.01em;flex:1 1 120px;min-width:0;} /* long treasure titles wrap inside the row instead of pushing the icon onto its own line */
+  .card-place{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:var(--faint);white-space:nowrap;}
+  .card-place .wi{width:14px;height:14px;flex:0 0 auto;}
+  .card-loc{margin-top:9px;font-size:13px;color:var(--dim);line-height:1.6;}
+  .card-block{margin-top:10px;}
+  .tag-label{font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;flex:0 0 auto;}
+  /* Inline mentions within flowing text: icon + bold colored label, no pill background.
+     Plain inline (not flex) so the SVG's own vertical-align controls its baseline
+     against the surrounding text -- flex containers ignore vertical-align, which is
+     what was pushing these high before. */
+  .tok{font-weight:700;white-space:nowrap;}
+  .tok svg{width:15px;height:15px;vertical-align:-3px;margin-right:2px;}
+  /* Needs / Reward: tag label sits inline with its chips, wrapping to its own line
+     only once the row runs out of width -- same wrap behaviour as the chips themselves. */
+  .chip-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
+  .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;padding:4px 10px 4px 6px;border-radius:99px;}
+  .chip svg{width:15px;height:15px;flex:0 0 auto;}
+  .chip-need{background:rgba(154,165,200,.12);color:var(--dim);}
+  .chip-rew{background:var(--gold-soft);color:var(--gold);}
+  /* Missable: its own chip, never folded into Needs -- the two are independent. */
+  .chip-miss{background:rgba(255,123,110,.14);color:#ffc4bd;border:1px solid rgba(255,123,110,.45);}
+  .reward-note{font-size:12.5px;color:var(--faint);margin-top:7px;line-height:1.55;}
+  /* Hint: same prose treatment as .card-loc, one step dimmer, with the label inline.
+     Tighter top margin than other blocks -- it reads as a continuation of the
+     location line rather than a separate section. */
+  .hint-block{margin-top:5px;}
+  .hint-block .tag-label{margin-right:7px;}
+  .hint-text{font-size:13px;color:var(--dim);line-height:1.6;}
+  /* Same size/family as location text, italic + slightly dimmer so it reads as a
+     secondary note rather than more of the primary description. */
+  /* card-hint/hint-text removed -- Hint now shares renderNoteBlock's chip-row + note pattern, same as Reward */
+
+  /* Data loads from data/*.json; tabs and panels stay hidden until it arrives. */
+  .load-state{max-width:900px;margin:22px auto 0;padding:0 20px;text-align:center;color:var(--dim);font-size:14px;}
+  .load-state.hidden{display:none;}
+  .load-state.error .load-box{background:rgba(255,123,110,.10);border:1px solid var(--danger);border-radius:16px;padding:16px;color:#ffc4bd;line-height:1.6;}
+  .load-state code{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--ink);}
+  .load-retry{margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:99px;color:var(--ink);padding:10px 22px;font-size:13px;font-weight:700;cursor:pointer;}
+  .load-retry:hover{border-color:var(--gold-line);}
+  body.is-loading .tabs,body.is-loading .tab-panel{display:none;}
+
+  .empty-state{text-align:center;padding:44px 20px;color:var(--faint);font-size:14px;}
+  .empty-state b{color:var(--dim);}
+  .load-more-row{display:flex;justify-content:center;margin-top:18px;}
+  .load-more-btn{background:none;border:1px solid var(--line);color:var(--dim);padding:11px 28px;border-radius:99px;font-size:13px;font-weight:700;cursor:pointer;transition:all .15s;}
+  .load-more-btn:hover{color:var(--gold);border-color:var(--gold-line);background:var(--gold-soft);}
+  .load-more-btn.hidden{display:none;}
+
+  footer.site{max-width:900px;margin:26px auto 0;padding:22px 20px 44px;border-top:1px solid var(--line-soft);font-size:12.5px;color:var(--faint);line-height:1.7;}
+  footer.site a{color:var(--dim);text-decoration:underline;text-underline-offset:2px;}
+  footer.site a:hover{color:var(--gold);}
+  .footer-note{margin:0 0 10px;}
+  .footer-note strong{color:var(--dim);}
+  .footer-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;margin-top:14px;}
+  .footer-links{display:flex;gap:16px;flex-wrap:wrap;}
+  .kofi-btn{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);padding:9px 15px;border-radius:99px;text-decoration:none!important;font-weight:700;color:var(--ink)!important;}
+  .kofi-btn:hover{border-color:var(--gold-line);}
+
+  @media (max-width:520px){
+    .ro-pct{font-size:32px;} .tab-btn{font-size:11.5px;padding:8px 4px;}
+    .panel-body{padding:16px 14px 26px;} .card{padding:13px;}
   }
 </style>
 </head>
-<body>
-<div class="wrap">
-  <header>
-    <p class="eyebrow">Progress Dial</p>
-    <h1>Xenoblade Chronicles Trackers</h1>
-    <p class="sub">Interactive checklists to track your progress through Xenoblade Chronicles (Definitive Edition). Pick a tracker below.</p>
-  </header>
+<body class="is-loading">
 
-  <div class="banners">
-    <a class="banner" href="xc1de_monsters.html">
-      <div class="banner-text">
-        <p class="eyebrow2">Tracker</p>
-        <h2>Unique Monster Checklist</h2>
-        <p>Every Unique Monster from the main game and Future Connected, organized by area, with spawn conditions and progress tracking.</p>
-      </div>
-      <div class="banner-arrow">→</div>
-    </a>
+<header class="site">
+  <a class="brand" href="../">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">ProgressDial<small>Kingdom Hearts</small></span>
+  </a>
+  <nav class="site-nav"><a href="../xc1de_monsters.html">XC1 checklist</a></nav>
+</header>
 
-    <div class="banner coming-soon">
-      <div class="banner-text">
-        <p class="eyebrow2">Coming soon</p>
-        <h2>NPC Affinity &amp; Quest Checklist</h2>
-        <p>Track every named NPC affinity link and quest across Bionis and Mechonis.</p>
-      </div>
-      <div class="banner-dial"><span>0%</span></div>
+<div class="hero">
+  <h1>Trinities, Dalmatians &amp; Treasures</h1>
+  <p class="sub">Every Trinity mark, Dalmatian puppy and treasure in Final Mix. Tap a card when you've found it &mdash; progress saves in this browser.</p>
+
+  <div class="rosette-shell" id="rosette-shell">
+    <svg class="rosette" id="rosette" viewBox="0 0 200 200" aria-hidden="true">
+      <defs>
+        <filter id="rosette-glow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g id="rosette-segs"></g>
+    </svg>
+    <div class="rosette-readout">
+      <span class="ro-key" id="ro-key" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.6"/><path d="M9.4 12.2h5.2l-1.1 8.4a1.5 1.5 0 0 1-3 0z"/></svg></span>
+      <span class="ro-pct" id="ro-pct">0<span class="u">%</span></span>
+      <span class="ro-frac" id="ro-frac">0 / 0</span>
     </div>
+  </div>
+  <div class="rosette-caption" id="rosette-caption">Trinity marks found</div>
+  <div class="rosette-hint" id="rosette-hint">Each pane is a world &mdash; tap one to focus it.</div>
+</div>
+
+<div class="load-state" id="load-state" role="status" aria-live="polite"><div class="load-box">Loading the checklist&hellip;</div></div>
+
+<div class="tabs">
+  <button class="tab-all active" data-tab="all" role="tab" aria-selected="true">
+    All Collectibles <span class="tab-count" id="tabcount-all">0/0</span>
+  </button>
+  <div class="tabs-inner" role="tablist">
+    <button class="tab-btn" data-tab="trinity" role="tab" aria-selected="false">Trinity Marks <span class="tab-count" id="tabcount-trinity">0/46</span></button>
+    <button class="tab-btn" data-tab="puppy" role="tab" aria-selected="false">Dalmatians <span class="tab-count" id="tabcount-puppy">0/99</span></button>
+    <button class="tab-btn" data-tab="treasure" role="tab" aria-selected="false">Treasures <span class="tab-count" id="tabcount-treasure">0/0</span></button>
   </div>
 </div>
 
-<footer>
-  progressdial.com
+<section class="tab-panel active" id="panel-all" role="tabpanel">
+  <div class="panel-body">
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="search-all" placeholder="Search everything&hellip;" autocomplete="off">
+        <button class="search-clear" id="clear-all" aria-label="Clear search">&times;</button>
+      </div>
+      <button class="check-all-btn" id="checkall-all" data-armed="false">Check all shown</button>
+    </div>
+    <div class="toolbar-secondary"><span id="visible-count-all">&mdash;</span></div>
+    <div class="world-legend" id="legend-all">
+      <button class="legend-head" type="button" data-legendtoggle="all"><span>Worlds</span><span class="chev">&#9662;</span></button>
+      <div id="worlds-all" style="display:contents;"></div>
+      <button class="world-clear hidden" id="worldclear-all" type="button">Show all worlds</button>
+    </div>
+    <div class="world-legend" id="filters-all">
+      <button class="legend-head" type="button" data-filtertoggle="all"><span>Filters</span><span class="chev">&#9662;</span></button>
+      <div class="filter-section">
+        <div class="filter-label">Needs</div>
+        <div class="filter-chip-row" id="needs-all"></div>
+      </div>
+      <button class="world-clear hidden" id="filterclear-all" type="button">Clear filters</button>
+    </div>
+    <div class="card-list" id="list-all"></div>
+    <div class="empty-state" id="empty-all" style="display:none;"><b>Nothing matches.</b><br>Try a different search or clear the world filter.</div>
+    <div class="load-more-row"><button class="load-more-btn" id="loadmore-all">Show more</button></div>
+  </div>
+</section>
+
+<section class="tab-panel" id="panel-trinity" role="tabpanel">
+  <div class="panel-body">
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="search-trinity" placeholder="Search marks, areas, rewards&hellip;" autocomplete="off">
+        <button class="search-clear" id="clear-trinity" aria-label="Clear search">&times;</button>
+      </div>
+      <button class="check-all-btn" id="checkall-trinity" data-armed="false">Check all shown</button>
+    </div>
+    <div class="toolbar-secondary"><span id="visible-count-trinity">&mdash;</span></div>
+    <div class="world-legend" id="legend-trinity">
+      <button class="legend-head" type="button" data-legendtoggle="trinity"><span>Worlds</span><span class="chev">&#9662;</span></button>
+      <div id="worlds-trinity" style="display:contents;"></div>
+      <button class="world-clear hidden" id="worldclear-trinity" type="button">Show all worlds</button>
+    </div>
+    <div class="world-legend" id="filters-trinity">
+      <button class="legend-head" type="button" data-filtertoggle="trinity"><span>Filters</span><span class="chev">&#9662;</span></button>
+      <div class="filter-section">
+        <div class="filter-label">Needs</div>
+        <div class="filter-chip-row" id="needs-trinity"></div>
+      </div>
+      <div class="filter-section">
+        <div class="filter-label">Colors</div>
+        <div class="filter-chip-row" id="colors-trinity"></div>
+      </div>
+      <button class="world-clear hidden" id="filterclear-trinity" type="button">Clear filters</button>
+    </div>
+    <div class="card-list" id="list-trinity"></div>
+    <div class="empty-state" id="empty-trinity" style="display:none;"><b>No marks match.</b><br>Try a different search or clear the world filter.</div>
+    <div class="load-more-row"><button class="load-more-btn" id="loadmore-trinity">Show more</button></div>
+  </div>
+</section>
+
+<section class="tab-panel" id="panel-puppy" role="tabpanel">
+  <div class="panel-body">
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="search-puppy" placeholder="Search puppy groups, areas&hellip;" autocomplete="off">
+        <button class="search-clear" id="clear-puppy" aria-label="Clear search">&times;</button>
+      </div>
+      <button class="check-all-btn" id="checkall-puppy" data-armed="false">Check all shown</button>
+    </div>
+    <div class="toolbar-secondary"><span id="visible-count-puppy">&mdash;</span></div>
+    <div class="world-legend" id="legend-puppy">
+      <button class="legend-head" type="button" data-legendtoggle="puppy"><span>Worlds</span><span class="chev">&#9662;</span></button>
+      <div id="worlds-puppy" style="display:contents;"></div>
+      <button class="world-clear hidden" id="worldclear-puppy" type="button">Show all worlds</button>
+    </div>
+    <div class="world-legend" id="filters-puppy">
+      <button class="legend-head" type="button" data-filtertoggle="puppy"><span>Filters</span><span class="chev">&#9662;</span></button>
+      <div class="filter-section">
+        <div class="filter-label">Needs</div>
+        <div class="filter-chip-row" id="needs-puppy"></div>
+      </div>
+      <button class="world-clear hidden" id="filterclear-puppy" type="button">Clear filters</button>
+    </div>
+    <div class="card-list" id="list-puppy"></div>
+    <div class="empty-state" id="empty-puppy" style="display:none;"><b>No puppy groups match.</b><br>Try a different search or clear the world filter.</div>
+    <div class="load-more-row"><button class="load-more-btn" id="loadmore-puppy">Show more</button></div>
+  </div>
+</section>
+
+<section class="tab-panel" id="panel-treasure" role="tabpanel">
+  <div class="panel-body">
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="search-treasure" placeholder="Search items, areas&hellip;" autocomplete="off">
+        <button class="search-clear" id="clear-treasure" aria-label="Clear search">&times;</button>
+      </div>
+      <button class="check-all-btn" id="checkall-treasure" data-armed="false">Check all shown</button>
+    </div>
+    <div class="toolbar-secondary"><span id="visible-count-treasure">&mdash;</span></div>
+    <div class="world-legend" id="legend-treasure">
+      <button class="legend-head" type="button" data-legendtoggle="treasure"><span>Worlds</span><span class="chev">&#9662;</span></button>
+      <div id="worlds-treasure" style="display:contents;"></div>
+      <button class="world-clear hidden" id="worldclear-treasure" type="button">Show all worlds</button>
+    </div>
+    <div class="world-legend" id="filters-treasure">
+      <button class="legend-head" type="button" data-filtertoggle="treasure"><span>Filters</span><span class="chev">&#9662;</span></button>
+      <div class="filter-section">
+        <div class="filter-label">Needs</div>
+        <div class="filter-chip-row" id="needs-treasure"></div>
+      </div>
+      <div class="filter-section">
+        <div class="filter-label">Type</div>
+        <div class="filter-chip-row" id="types-treasure"></div>
+      </div>
+      <div class="filter-section">
+        <div class="filter-label">Missable</div>
+        <div class="filter-chip-row" id="miss-treasure"></div>
+      </div>
+      <button class="world-clear hidden" id="filterclear-treasure" type="button">Clear filters</button>
+    </div>
+    <div class="card-list" id="list-treasure"></div>
+    <div class="empty-state" id="empty-treasure" style="display:none;"><b>No treasures match.</b><br>Try a different search or clear the filters.</div>
+    <div class="load-more-row"><button class="load-more-btn" id="loadmore-treasure">Show more</button></div>
+  </div>
+</section>
+
+<footer class="site">
+  <p class="footer-note"><strong>Final Mix only.</strong> Everything here follows <em>Kingdom Hearts Final Mix</em>. Chest contents and some locations differ in the original release.</p>
+  <p class="footer-note" id="attribution"><strong>Sources.</strong> Checklist text and data are adapted from <a href="https://www.khwiki.com/" target="_blank" rel="noopener">KHWiki</a> and the <a href="https://kingdomhearts.fandom.com/" target="_blank" rel="noopener">Kingdom Hearts Wiki on Fandom</a>, written by their contributors and licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="license noopener">CC BY-SA 3.0</a>. Changes were made: entries were merged, reworded, corrected and limited to the Final Mix version. The adapted text and data on this page remain available under the same licence.</p>
+  <p class="footer-note">Unofficial fan project, not affiliated with or endorsed by Square Enix or Disney. Kingdom Hearts and related names are trademarks of their respective owners. All icons are original.</p>
+  <div class="footer-row">
+    <div class="footer-links"><a href="feedback.html">Feedback</a><a href="../xc1de_monsters.html">XC1 checklist</a></div>
+  </div>
 </footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Data lives in sibling JSON files, one per category, fetched on load. */
+  var DATA_FILES = {trinities:"data/trinities.json", puppies:"data/dalmatians.json", treasures:"data/treasures.json"};
+  var DATA = null;   // {trinities, puppies, treasures}, filled by loadData()
+  var ROWS = null;   // the same rows tagged with their kind, per tab
+  var STORAGE_KEY = "kh1-trinity-dalmatian-checklist";
+  var PAGE_SIZE = 12;
+
+  /* Story order for the world filter and the dial. A world only shows up
+     where it has rows, so the three treasure-only worlds stay out of the
+     Trinity and Dalmatian tabs. */
+  var WORLD_ORDER = ["Dive to the Heart","Destiny Islands","Traverse Town","Wonderland","Olympus Coliseum","Deep Jungle",
+    "Agrabah","100 Acre Wood","Monstro","Atlantica","Halloween Town","Neverland","Hollow Bastion","End of the World"];
+
+  /* ---------- World icons (single silhouette, currentColor) ---------- */
+  var WORLDS = {
+    "Dive to the Heart":{c:"#efe6c8", svg:'<path d="M12 2.4a9.6 9.6 0 1 1-0.01 0Z M12 17.6C9.4 15.4 6.6 13.0 6.6 10.2 6.6 8.4 8.0 7.0 9.7 7.0 10.6 7.0 11.5 7.5 12 8.2 12.5 7.5 13.4 7.0 14.3 7.0 16.0 7.0 17.4 8.4 17.4 10.2 17.4 13.0 14.6 15.4 12 17.6Z"/>', er:1},
+    "Destiny Islands": {c:"#4fd0c4", svg:'<path d="M2.6 20.4C5.6 16.2 18.4 16.2 21.4 20.4Z"/><path d="M11.0 17.2C10.6 13.6 10.0 10.6 8.8 8.2L10.8 7.4C12.0 10.2 12.8 13.4 13.0 17.2Z"/><path d="M10.4 7.8C8.2 5.6 5.4 5.0 3.4 6.0 5.6 6.0 8.0 6.8 9.6 8.4Z"/><path d="M10.6 7.4C10.0 4.6 8.0 2.6 5.8 2.2 7.4 3.8 8.8 5.8 9.6 8.0Z"/><path d="M11.2 7.6C13.2 5.0 16.4 4.0 18.8 4.8 16.4 5.4 14.0 6.6 12.4 8.4Z"/>', er:0},
+    "100 Acre Wood":   {c:"#f0b070", svg:'<path d="M12 7.4C16.7 7.4 19.6 10.8 19.6 15.0 19.6 18.7 16.3 21.4 12 21.4 7.7 21.4 4.4 18.7 4.4 15.0 4.4 10.8 7.3 7.4 12 7.4Z"/><path d="M6.6 5.4H17.4A1.15 1.15 0 0 1 17.4 8.4H6.6A1.15 1.15 0 0 1 6.6 5.4Z"/><path d="M18.8 9.6C19.9 11.4 19.9 13.2 18.8 14.1 17.9 13.2 17.9 11.4 18.8 9.6Z"/>', er:0},
+    "Traverse Town":   {c:"#6a8ae8", svg:'<path d="M4.4 8.4 12 2.0 19.6 8.4Z"/><path d="M6.2 8.4H17.8V18.6H6.2Z M11.1 10.4H12.9V16.6H11.1Z"/><path d="M10.0 18.6H14.0L12 22.0Z"/>', er:1},
+    "Wonderland":      {c:"#e86a8a", svg:'<path d="M7.4 3.4h9.2a1.5 1.5 0 0 1 1.5 1.5v14.2a1.5 1.5 0 0 1-1.5 1.5H7.4a1.5 1.5 0 0 1-1.5-1.5V4.9a1.5 1.5 0 0 1 1.5-1.5Z M12 15.4c-1.7-1.5-3.5-3.1-3.5-5 0-1.2 1-2.1 2.1-2.1.6 0 1.1.3 1.4.7.3-.4.8-.7 1.4-.7 1.1 0 2.1.9 2.1 2.1 0 1.9-1.8 3.5-3.5 5Z"/>', er:1},
+    "Olympus Coliseum":{c:"#e8c04a", svg:'<path d="M7.2 4.0H16.8V6.4H7.2Z"/><path d="M8.9 6.4H15.1L15.7 17.6H8.3Z"/><path d="M6.6 17.6H17.4V20.4H6.6Z"/>', er:0},
+    "Deep Jungle":     {c:"#58c99a", svg:'<path d="M12 2.2C18.8 6.0 21.4 12.2 18.2 17.4 15.6 21.6 8.4 21.6 5.8 17.4 2.6 12.2 5.2 6.0 12 2.2Z M11.35 5.6H12.65V20.0H11.35Z M11.35 8.9 7.3 6.9 6.75 8.1 11.35 10.3Z M12.65 8.9 16.7 6.9 17.25 8.1 12.65 10.3Z M11.35 13.0 6.4 11.0 5.9 12.2 11.35 14.4Z M12.65 13.0 17.6 11.0 18.1 12.2 12.65 14.4Z"/><path d="M11.3 19.2H12.7V22.3H11.3Z"/>', er:1},
+    "Agrabah":         {c:"#e8955a", svg:'<path d="M12 1.6C13.5 4.6 16.4 6.2 16.4 9.2 16.4 11.7 14.5 13.4 12 13.4 9.5 13.4 7.6 11.7 7.6 9.2 7.6 6.2 10.5 4.6 12 1.6Z"/><path d="M5.0 7.4C5.9 9.2 7.3 10.1 7.3 11.9 7.3 13.4 6.3 14.4 5.0 14.4 3.7 14.4 2.7 13.4 2.7 11.9 2.7 10.1 4.1 9.2 5.0 7.4Z"/><path d="M19.0 7.4C19.9 9.2 21.3 10.1 21.3 11.9 21.3 13.4 20.3 14.4 19.0 14.4 17.7 14.4 16.7 13.4 16.7 11.9 16.7 10.1 18.1 9.2 19.0 7.4Z"/><path d="M2.4 14.0H21.6V21.6H2.4Z M10.3 21.6V17.6A1.7 1.7 0 0 1 13.7 17.6V21.6Z"/>', er:1},
+    "Monstro":         {c:"#9a7fe8", svg:'<path d="M2.0 9.4C2.0 8.2 2.9 7.2 4.2 7.0L9.0 6.6C12.0 6.8 14.4 7.6 16.2 9.0L16.9 8.0 17.7 9.7 18.3 8.9 18.9 10.3 18.9 11.0 22.8 6.8C21.4 9.8 20.6 11.4 20.4 12.6 20.6 13.8 21.4 15.4 22.8 18.4L18.9 14.2C17.2 15.6 14.6 16.6 11.6 16.8L4.4 16.4C2.9 16.2 2.0 15.2 2.0 14.0Z M8.7 13.4A1.05 1.05 0 1 0 8.71 13.4Z"/><path d="M9.4 16.7C10.2 18.5 11.6 19.7 13.2 19.9 12.4 18.3 11.2 17.3 9.9 16.8Z"/>', er:1},
+    "Atlantica":       {c:"#3fb0e8", svg:'<path d="M7.6 8.2V4.4L8.9 2.2 10.2 4.4V8.2Z"/><path d="M10.7 8.2V3.2L12 1.2 13.3 3.2V8.2Z"/><path d="M13.8 8.2V4.4L15.1 2.2 16.4 4.4V8.2Z"/><path d="M7.2 8.0H16.8A0.8 0.8 0 0 1 16.8 9.8H7.2A0.8 0.8 0 0 1 7.2 8.0Z"/><path d="M11.2 9.8H12.8V21.8H11.2Z"/>', er:0},
+    "Halloween Town":  {c:"#d85ac4", svg:'<path d="M12 5.4c5.4 0 8.8 3.2 8.8 7.8s-3.4 7.8-8.8 7.8-8.8-3.2-8.8-7.8S6.6 5.4 12 5.4Z M8.2 10.6 11.2 12.8 8.2 14.4Z M15.8 10.6 12.8 12.8 15.8 14.4Z M7.8 16.2H16.2L14.8 18.4H9.2Z"/><path d="M11.0 5.6V3.0C11.0 2.2 12.8 2.0 13.4 2.9V5.6Z"/>', er:1},
+    "Neverland":       {c:"#8fd85a", svg:'<path d="M8.2 8.6 12 1.9 15.8 8.6Z"/><path d="M9.0 8.6H15.0V21.7H9.0Z M12 9.2A2.7 2.7 0 1 0 12.01 9.2Z"/><path d="M7.9 21.0H16.1V22.2H7.9Z"/>', er:1},
+    "Hollow Bastion":  {c:"#b8c4d8", svg:'<path d="M3.4 10.4 6.0 5.6 8.6 10.4Z"/><path d="M15.4 10.4 18.0 5.6 20.6 10.4Z"/><path d="M7.9 8.2 12 2.6 16.1 8.2Z"/><path d="M4.2 10.4H7.8V19.6H4.2Z"/><path d="M16.2 10.4H19.8V19.6H16.2Z"/><path d="M8.5 8.2H15.5V19.6H8.5Z M10.3 19.6V15.3A1.7 1.7 0 0 1 13.7 15.3V19.6Z"/><path d="M3.6 19.6H20.4L17.2 22.1 12.4 22.9 7.4 21.9Z"/>', er:1},
+    "End of the World":{c:"#8e7fb0", svg:'<path d="M12 3.0a9.0 9.0 0 1 1-0.01 0Z M10.4 4.4 13.4 9.2 10.0 11.6 13.8 14.8 10.6 20.6 12.4 20.4 15.4 14.6 11.6 11.8 14.8 9.4 12.2 3.8Z"/>', er:1}
+  };
+  var WORLD_FALLBACK = {c:"#a9a3c4", svg:'<circle cx="12" cy="12" r="7"/>', er:0};
+  function worldMeta(w){ return WORLDS[w] || WORLD_FALLBACK; }
+  function worldIcon(w, size){
+    var m = worldMeta(w);
+    return '<svg class="wi" viewBox="0 0 24 24" fill="'+m.c+'"'+(m.er?' fill-rule="evenodd"':'')+
+           (size?' style="width:'+size+'px;height:'+size+'px"':'')+'>'+m.svg+'</svg>';
+  }
+
+  /* Category badge icons: simple monochrome silhouettes using currentColor, so a
+     single colour change (faint -> gold) recolors icon and fraction together
+     when that category is fully complete for a world. */
+  var ICON_CAT_TRINITY = '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="7" r="2.3"/><circle cx="7.5" cy="15" r="2.3"/><circle cx="16.5" cy="15" r="2.3"/></svg>';
+  var ICON_CAT_PUPPY = '<svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="5.8" cy="8.6" rx="2.3" ry="3.1"/><ellipse cx="18.2" cy="8.6" rx="2.3" ry="3.1"/><path d="M12 6.4c3.7 0 6.3 3.1 6.3 7 0 3.7-2.6 6.1-6.3 6.1s-6.3-2.4-6.3-6.1c0-3.9 2.6-7 6.3-7Z"/><circle cx="9.4" cy="12.6" r="1.05" fill-opacity="0.55"/><circle cx="14.6" cy="12.6" r="1.05" fill-opacity="0.55"/><ellipse cx="12" cy="15.6" rx="1.7" ry="1.3" fill-opacity="0.55"/></svg>';
+  var ICON_CAT_TREASURE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.2 11.4C3.2 6.6 7.2 3.6 12 3.6S20.8 6.6 20.8 11.4H3.2Z"/><path d="M3.2 11.4H20.8V18.6a1.8 1.8 0 0 1-1.8 1.8H5a1.8 1.8 0 0 1-1.8-1.8Z" fill-opacity="0.85"/><rect x="10.1" y="12.6" width="3.8" height="3.6" rx="0.7" fill-opacity="0.55"/></svg>';
+  var ICON_CAT_ALL = '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.6"/><path d="M9.4 12.2h5.2l-1.1 8.4a1.5 1.5 0 0 1-3 0z"/></svg>'; // keyhole -- the brand mark, kept for the combined view
+  var DIAL_ICON = {all: ICON_CAT_ALL, trinity: ICON_CAT_TRINITY, puppy: ICON_CAT_PUPPY, treasure: ICON_CAT_TREASURE};
+
+  /* ---------- Trinity glyphs ---------- */
+  var TRINITY_COLOR = {blue:"#5aabe8", red:"#e8635a", green:"#5fcf9a", yellow:"#f0c04a", white:"#dfe6f5"};
+
+  /* Trinity tokens identify their colour differently depending on where they
+     came from: rows carry `color`, while `requires`/`reward` tokens now use a
+     `TRN-<colour>` code (the older schema had a `color` field). Resolve all
+     shapes in one place so a schema tweak can't silently blank the tint again. */
+  function trinityColorOf(tok){
+    if (tok.color) return tok.color;
+    var m = /^TRN-([a-z]+)$/i.exec(tok.code || "");
+    if (m) return m[1].toLowerCase();
+    m = /^(blue|red|green|yellow|white)\b/i.exec(tok.label || "");
+    return m ? m[1].toLowerCase() : "";
+  }
+  function trinityLabelOf(tok){
+    if (tok.label) return tok.label;
+    var c = trinityColorOf(tok);
+    return c ? (c.charAt(0).toUpperCase()+c.slice(1)+" Trinity") : "Trinity";
+  }
+  /* Card title icon: dots plus a faint ring, used only there. Chips and inline
+     mentions elsewhere stay plain dots (trinityDots), per the earlier request. */
+  function trinityDots(color){
+    return '<svg viewBox="0 0 48 48" fill="none" style="color:'+TRINITY_COLOR[color]+'">'+
+      '<circle cx="24" cy="14" r="4.4" fill="currentColor"/><circle cx="15" cy="30" r="4.4" fill="currentColor"/><circle cx="33" cy="30" r="4.4" fill="currentColor"/></svg>';
+  }
+  function trinityDotsRing(color){
+    return '<svg viewBox="0 0 48 48" fill="none" style="color:'+TRINITY_COLOR[color]+'">'+
+      '<circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2" opacity="0.35"/>'+
+      '<circle cx="24" cy="14" r="4.4" fill="currentColor"/><circle cx="15" cy="30" r="4.4" fill="currentColor"/><circle cx="33" cy="30" r="4.4" fill="currentColor"/></svg>';
+  }
+
+  /* ---------- Item / reward icons ---------- */
+  var ICON_ACCESS = '<svg viewBox="0 0 24 24"><path d="M5.2 20.6V7.6a6.8 6.8 0 0 1 13.6 0v13Z" fill="#a8703c" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M5.2 20.6V7.6a6.8 6.8 0 0 1 6.8-6.8v19.8Z" fill="#0d1220" fill-opacity="0.14"/><path d="M3.6 20.6h16.8" stroke="#0d1220" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="13.4" r="1.5" fill="#e8c45a" stroke="#0d1220" stroke-width="1.2"/></svg>';
+
+  var ICON_ABILITY = '<svg viewBox="0 0 24 24"><path d="M12.2 9.2C7.8 11.8 4.2 15.4 2.4 21.4 4.0 18.2 8.0 14.8 13.0 12.4Z" fill="#ffd85c" fill-opacity="0.85"/><path d="M14.6 2.8 16.19 6.62 20.31 6.95 17.17 9.63 18.13 13.65 14.6 11.5 11.07 13.65 12.03 9.63 8.89 6.95 13.01 6.62Z" fill="#ffd85c"/><path d="M4.6 2.3 5.26 3.89 6.98 4.03 5.67 5.15 6.07 6.82 4.6 5.93 3.13 6.82 3.53 5.15 2.22 4.03 3.94 3.89Z" fill="#ffd85c"/><path d="M20.2 15.1 20.81 16.56 22.39 16.69 21.19 17.72 21.55 19.26 20.2 18.44 18.85 19.26 19.21 17.72 18.01 16.69 19.59 16.56Z" fill="#ffd85c"/></svg>';
+
+  /* Tilted mage hat, as confirmed */
+  var ICON_SPELL = '<svg viewBox="0 0 24 24"><path d="M6.4 15.2C8.6 10.6 11.8 5.8 16.0 2.4 16.2 7.0 16.8 11.4 17.6 15.2Z" fill="#4a7fd6" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M7.42 13.2 17.21 13.2 17.6 15.2 6.4 15.2Z" fill="#3a67b8" stroke="#0d1220" stroke-width="1.3" stroke-linejoin="round"/><ellipse cx="12" cy="16.6" rx="8.6" ry="3.0" fill="#3a67b8" stroke="#0d1220" stroke-width="1.5"/><path d="M9.6 11.4C11.2 8.2 13.2 5.4 15.4 3.2" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1.3" stroke-linecap="round"/></svg>';
+
+  var ICON_PUPPY = '<svg viewBox="0 0 24 24"><ellipse cx="5.6" cy="8.4" rx="2.5" ry="3.4" fill="#f0f2f8" stroke="#0d1220" stroke-width="1.5"/><ellipse cx="18.4" cy="8.4" rx="2.5" ry="3.4" fill="#f0f2f8" stroke="#0d1220" stroke-width="1.5"/><path d="M12 6.2c4 0 6.8 3.4 6.8 7.6 0 4-2.8 6.6-6.8 6.6s-6.8-2.6-6.8-6.6c0-4.2 2.8-7.6 6.8-7.6Z" fill="#f0f2f8" stroke="#0d1220" stroke-width="1.5"/><circle cx="9.2" cy="12.6" r="1.15" fill="#0d1220"/><circle cx="14.8" cy="12.6" r="1.15" fill="#0d1220"/><ellipse cx="12" cy="15.8" rx="1.9" ry="1.5" fill="#0d1220"/><circle cx="7.4" cy="17.4" r="1.2" fill="#0d1220" fill-opacity="0.35"/></svg>';
+
+  var ICON_TENT = '<svg viewBox="0 0 24 24"><path d="M12 3.4 21 19.6H3L12 3.4Z" fill="#e8a05a" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 8.4l4.6 11.2H7.4L12 8.4Z" fill="#c47a34" stroke="#0d1220" stroke-width="1.4" stroke-linejoin="round"/><circle cx="12" cy="2.6" r="1.5" fill="#ffd166" stroke="#0d1220" stroke-width="1.3"/></svg>';
+
+  var ICON_KEYITEM = '<svg viewBox="0 0 24 24"><path d="M12 2.2 20.2 5.6v6.6c0 4.8-3.4 8.2-8.2 9.6-4.8-1.4-8.2-4.8-8.2-9.6V5.6L12 2.2Z" fill="#c98a3a" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="10.2" r="2.6" fill="#0d1220"/><path d="M10.6 11.6h2.8l.9 5.2h-4.6l.9-5.2Z" fill="#0d1220"/></svg>';
+
+  var ICON_POSTCARD = '<svg viewBox="0 0 24 24"><g transform="rotate(-7 12 12)"><rect x="2.6" y="6.2" width="18.8" height="12.4" rx="1.5" fill="#f2e8d5" stroke="#0d1220" stroke-width="1.5"/><rect x="15.6" y="8.0" width="4.4" height="4.2" rx="0.5" fill="#e8635a" stroke="#0d1220" stroke-width="1.3"/><path d="M4.6 9.6h7.8M4.6 12.4h6.2M4.6 15.2h8.6M15.2 15.2h4.4" stroke="#0d1220" stroke-width="1.3" stroke-opacity="0.6" stroke-linecap="round"/></g></svg>';
+
+  var ICON_GUMMI = '<svg viewBox="0 0 24 24"><path d="M12 2.6 20.6 7.4v9.2L12 21.4 3.4 16.6V7.4L12 2.6Z" fill="#5ad6e8" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M3.4 7.4 12 12.2l8.6-4.8M12 12.2v9.2" stroke="#0d1220" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 12.2v9.2l8.6-4.8V7.4L12 12.2Z" fill="#0d1220" fill-opacity="0.17"/></svg>';
+
+  var ICON_MUNNY = '<svg viewBox="0 0 24 24"><path d="M13.13 3.05 18.87 6.35Q20 7 20 8.3L20 15.7Q20 17 18.87 17.65L13.13 20.95Q12 21.6 10.87 20.95L5.13 17.65Q4 17 4 15.7L4 8.3Q4 7 5.13 6.35L10.87 3.05Q12 2.4 13.13 3.05Z" fill="#e8d45a" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M12.9 3.3 19.3 7Q19.8 7.3 19.3 7.6L12.6 11.4Q12 11.75 11.4 11.4L4.7 7.6Q4.2 7.3 4.7 7L11.1 3.3Q12 2.8 12.9 3.3Z" fill="#fff0a0" stroke="#0d1220" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 11.7v9.6" stroke="#0d1220" stroke-width="1.3" stroke-linecap="round"/></svg>';
+
+  var ICON_ACCESSORY = '<svg viewBox="0 0 24 24"><circle cx="12" cy="14.6" r="6.6" fill="none" stroke="#e8c45a" stroke-width="3.2"/><circle cx="12" cy="14.6" r="6.6" fill="none" stroke="#0d1220" stroke-width="1.4"/><circle cx="12" cy="14.6" r="4.9" fill="none" stroke="#0d1220" stroke-width="1.3"/><path d="M12 2.6 15.4 8H8.6L12 2.6Z" fill="#e8635a" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/></svg>';
+
+  var ICON_KEYBLADE = '<svg viewBox="0 0 24 24"><path d="M6.2 20.4 3.4 17.6 14.2 6.8l2.8 2.8L6.2 20.4Z" fill="#c9d3e8" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M7.39 19.18 9.96 21.70 11.78 19.85 9.21 17.33Z" fill="#c9d3e8" stroke="#0d1220" stroke-width="1.4" stroke-linejoin="round"/><path d="M10.54 15.97 13.11 18.49 14.79 16.77 12.22 14.25Z" fill="#c9d3e8" stroke="#0d1220" stroke-width="1.4" stroke-linejoin="round"/><circle cx="17.8" cy="6" r="3.8" fill="#ffd166" stroke="#0d1220" stroke-width="1.5"/><circle cx="17.8" cy="6" r="1.4" fill="#0d1220"/></svg>';
+
+  var ICON_STAFF = '<svg viewBox="0 0 24 24"><rect x="10.9" y="8.6" width="2.4" height="13.2" rx="1" fill="#a8703c" stroke="#0d1220" stroke-width="1.5"/><circle cx="12.1" cy="6.4" r="4.6" fill="#5aa7e8" stroke="#0d1220" stroke-width="1.5"/><rect x="9.4" y="11.4" width="5.4" height="2" rx="1" fill="#ffd166" stroke="#0d1220" stroke-width="1.4"/></svg>';
+
+  var ICON_SHIELD = '<svg viewBox="0 0 24 24"><path d="M12 2.4c3 1.2 5.6 1.6 8 1.6v8.2c0 4.6-3.4 7.8-8 9.4-4.6-1.6-8-4.8-8-9.4V4c2.4 0 5-.4 8-1.6Z" fill="#58a85e" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 2.4c3 1.2 5.6 1.6 8 1.6v8.2c0 4.6-3.4 7.8-8 9.4V2.4Z" fill="#0d1220" fill-opacity="0.16"/><circle cx="12" cy="8.6" r="2.1" fill="#ffd166" stroke="#0d1220" stroke-width="1.3"/><circle cx="8.6" cy="13.6" r="1.5" fill="#ffd166" stroke="#0d1220" stroke-width="1.2"/><circle cx="15.4" cy="13.6" r="1.5" fill="#ffd166" stroke="#0d1220" stroke-width="1.2"/></svg>';
+
+  /* Chest: the coloured counterpart of the Treasure category badge, for inline mentions and card titles. */
+  var ICON_CHEST = '<svg viewBox="0 0 24 24"><path d="M3.4 11.2C3.4 6.9 7.0 4.2 12 4.2s8.6 2.7 8.6 7Z" fill="#c98a3a" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M3.4 11.2h17.2v7.2a1.6 1.6 0 0 1-1.6 1.6H5a1.6 1.6 0 0 1-1.6-1.6Z" fill="#a8703c" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><rect x="10.1" y="9.5" width="3.8" height="4.4" rx="0.8" fill="#ffd166" stroke="#0d1220" stroke-width="1.3"/></svg>';
+
+  var ICON_MISSABLE = '<svg viewBox="0 0 24 24"><path d="M12 3.2 21.4 19.6H2.6L12 3.2Z" fill="#ff7b6e" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 9.2v5.2" stroke="#0d1220" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.1" fill="#0d1220"/></svg>';
+
+  function synthOrb(fill){
+    return '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="'+fill+'" stroke="#0d1220" stroke-width="1.5"/>'+
+      '<path d="M12 4.2c2.6 2.4 2.2 4.6 0 6.4-2.4 2-3.4 4.8-.4 7.4-4-.6-6.2-3.6-5.6-7 .5-3 3-4.8 6-6.8Z" fill="#ffffff" fill-opacity="0.35"/></svg>';
+  }
+  var ICON_KEYHOLE = '<svg viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="5.0" fill="#ffd85c"/><path d="M9.7 12.4H14.3L15.6 19.8Q15.6 20.8 14.6 20.8H9.4Q8.4 20.8 8.4 19.8Z" fill="#ffd85c"/></svg>';
+
+  /* All synthesis materials share one purple orb (Dark Matter's tint), per Bruno.
+     Keyed by icon_key alone now, so new materials inherit it automatically. */
+  var SYNTH_FILL = "#4a3d7a";
+
+  /* Consumable tint keyed off the stable `code`, not the label -- label-sniffing
+     mis-coloured Megalixir green because "megalixir" doesn't contain "elixir". */
+  var CONSUMABLE_STYLE = {
+    "CON-potion":      {base:"#4fbf8b", dark:"#2f9c6c", cap:"#c9d3e8"},
+    "CON-mega-potion": {base:"#4fbf8b", dark:"#2f9c6c", cap:"#ffd166"},
+    "CON-ether":       {base:"#5aa7e8", dark:"#2f77c4", cap:"#c9d3e8"},
+    "CON-mega-ether":  {base:"#5aa7e8", dark:"#2f77c4", cap:"#ffd166"},
+    "CON-elixir":      {base:"#c98ae8", dark:"#a25fcc", cap:"#c9d3e8"},
+    "CON-megalixir":   {base:"#c98ae8", dark:"#a25fcc", cap:"#ffd166"}
+  };
+  function consumableIcon(code){
+    var s = CONSUMABLE_STYLE[code] || CONSUMABLE_STYLE["CON-potion"];
+    return '<svg viewBox="0 0 24 24"><path d="M9.2 3.4h5.6v3.3l3.5 8.1c.9 2.1-.6 4.4-2.9 4.4H8.6c-2.3 0-3.8-2.3-2.9-4.4l3.5-8.1V3.4Z" fill="'+s.base+'" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><path d="M7.3 13.4h9.4l1.6 3.6c.5 1.5-.4 2.7-1.9 2.7H7.6c-1.5 0-2.4-1.2-1.9-2.7l1.6-3.6Z" fill="'+s.dark+'" stroke="#0d1220" stroke-width="1.5" stroke-linejoin="round"/><rect x="8.4" y="1.8" width="7.2" height="2.6" rx="1.1" fill="'+s.cap+'" stroke="#0d1220" stroke-width="1.5"/></svg>';
+  }
+
+  /* Label-based override: KEY-postcard gets the dedicated postcard icon
+     rather than the generic key-item crest, since we designed one specifically for it. */
+  function iconForToken(tok){
+    var key = tok.icon_key;
+    if (key === "consumable") return consumableIcon(tok.code);
+    if (key === "synthesis_material") return synthOrb(SYNTH_FILL);
+    if (key === "key_item") return ICON_KEYITEM;
+    if (key === "postcard") return ICON_POSTCARD;
+    if (key === "keyhole") return ICON_KEYHOLE;
+    if (key === "access_door") return ICON_ACCESS;
+    if (key === "camp_item") return ICON_TENT;
+    if (key === "gummi_block") return ICON_GUMMI;
+    if (key === "munny") return ICON_MUNNY;
+    if (key === "accessory") return ICON_ACCESSORY;
+    if (key === "keyblade") return ICON_KEYBLADE;
+    if (key === "staff") return ICON_STAFF;
+    if (key === "shield") return ICON_SHIELD;
+    if (key === "chest") return ICON_CHEST;
+    if (key === "ability") return ICON_ABILITY;
+    if (key === "spell") return ICON_SPELL;
+    if (key === "puppy_group") return ICON_PUPPY;
+    return null;
+  }
+
+  function checkIcon(){
+    return '<svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="#0d1220" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  }
+
+  /* ---------- Helpers ---------- */
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function safeId(id){ return id.replace(/[^A-Za-z0-9_-]/g, "_"); }
+
+  /* location renders as flowing prose since token order there is reliable.
+     Inline mentions are icon + bold colored label, no pill background:
+     trinity moves keep their trinity colour, everything else uses the gold accent
+     so a reader can spot "this is a tracked thing" without a chip fragmenting the sentence. */
+  function renderLocation(segments){
+    var out = "";
+    for (var i=0;i<segments.length;i++){
+      var t = segments[i];
+      /* Explicit break segment: {"break": true} between two other segments. */
+      if (t.break){ out += "<br>"; continue; }
+      /* A literal newline inside a text segment also becomes a line break --
+         convenient when a pipeline naturally emits multi-line text blocks. */
+      if (t.text !== undefined){ out += esc(t.text).replace(/\n/g, "<br>"); continue; }
+      if (t.type === "trinity_move" || t.icon_key === "trinity"){
+        var col = trinityColorOf(t), lbl = trinityLabelOf(t);
+        out += '<span class="tok" style="color:'+TRINITY_COLOR[col]+'">'+trinityDots(col)+esc(lbl)+'</span>';
+        continue;
+      }
+      var svg = iconForToken(t);
+      var qty = (t.qty && t.qty > 1) ? " \u00d7"+t.qty : "";
+      out += '<span class="tok" style="color:var(--gold)">'+(svg||"")+esc(formatTokenLabel(t)+qty)+'</span>';
+    }
+    return out;
+  }
+
+  /* Needs and Reward share one template: a small caps tag label over a row of chips.
+     Reward's item order is unreliable relative to its narrative text (data issue,
+     flagged for the pipeline), so any leftover text renders as a muted note below
+     the chips rather than being woven into a sentence that might read wrong. */
+  function chipFor(t, variant, suffix){
+    if (t.type === "trinity_move" || t.icon_key === "trinity"){
+      var col = trinityColorOf(t), lbl = trinityLabelOf(t);
+      return '<span class="chip chip-'+variant+'" style="color:'+TRINITY_COLOR[col]+
+             ';background:'+TRINITY_COLOR[col]+'22">'+trinityDots(col)+esc(lbl)+'</span>';
+    }
+    var svg = iconForToken(t);
+    var label = formatTokenLabel(t);
+    if (suffix) label += " " + suffix;
+    if (t.qty && t.qty > 1) label += " \u00d7" + t.qty;
+    return '<span class="chip chip-'+variant+'">'+(svg||"")+esc(label)+'</span>';
+  }
+
+  function renderRequires(reqs){
+    if (!reqs || !reqs.length) return "";
+    var chips = reqs.map(function(t){ return chipFor(t, "need"); }).join("");
+    return '<div class="card-block"><div class="chip-row"><span class="tag-label">Needs</span>'+chips+'</div></div>';
+  }
+
+  /* A text fragment that *modifies* the token before it belongs inside that
+     chip ("Aero" + "upgrade" -> one chip). The tell is leading whitespace:
+     prose fragments meant to flow around a token carry it ("Access to the
+     world "), a bare modifier does not. Pure punctuation is never a modifier. */
+  function isModifierText(raw, hasPrecedingToken){
+    if (!hasPrecedingToken) return false;
+    if (/^\s/.test(raw)) return false;
+    if (!/[a-z0-9]/i.test(raw)) return false;
+    return true;
+  }
+
+  /* Reward now arrives in one of two shapes:
+     - a sentence with an inline reference ("Access to the [Item Workshop].")
+       -> render as flowing prose, identical to location/hint
+     - a plain list of items, maybe with a trailing bare modifier ("Aero" + "upgrade")
+       -> render as chips, merging the modifier into its chip
+     The tell: prose has text before the first token, or text with leading
+     whitespace between tokens (meant to flow around them). A bare modifier has
+     neither -- it sits immediately after its token with no leading space. */
+  function rewardIsProse(segments){
+    var seenToken = false;
+    for (var i=0;i<segments.length;i++){
+      var s = segments[i];
+      if (s.text === undefined){ seenToken = true; continue; }
+      if (!seenToken) return true;
+      if (/^\s/.test(s.text)) return true;
+    }
+    return false;
+  }
+  function renderReward(segments){
+    if (!segments || !segments.length) return "";
+
+    if (rewardIsProse(segments)){
+      var body = renderLocation(segments);
+      if (!body.trim()) return "";
+      return '<div class="card-block hint-block"><span class="tag-label">Reward</span><span class="hint-text">'+body+'</span></div>';
+    }
+
+    var chips = [], leftover = [], last = null;
+    segments.forEach(function(seg){
+      if (seg.text === undefined){
+        last = {tok: seg, suffix: ""};
+        chips.push(last);
+        return;
+      }
+      if (isModifierText(seg.text, !!last) && !last.suffix){
+        last.suffix = seg.text.trim();
+      } else {
+        leftover.push(seg.text);
+      }
+    });
+    var note = leftover.join("").replace(/\s+/g," ").replace(/\s+([.,;:!?])/g,"$1").trim();
+
+    var html = '<div class="card-block"><div class="chip-row"><span class="tag-label">Reward</span>';
+    if (chips.length){
+      html += chips.map(function(c){ return chipFor(c.tok, "rew", c.suffix); }).join("");
+      html += '</div>';
+      if (note) html += '<div class="reward-note">'+esc(note)+'</div>';
+    } else if (note){
+      html += '<span class="chip chip-rew">'+ICON_ACCESS+esc(note)+'</span></div>';
+    } else {
+      html += '</div>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  /* Hint segments are correctly interleaved in the data (unlike reward, which
+     needed the chip+note workaround), so render as flowing prose with inline
+     icon+label mentions -- identical treatment to the location line. */
+  function renderHint(segments){
+    if (!segments || !segments.length) return "";
+    var body = renderLocation(segments);
+    if (!body.trim()) return "";
+    return '<div class="card-block hint-block"><span class="tag-label">Hint</span>'+
+           '<span class="hint-text">'+body+'</span></div>';
+  }
+
+  function puppyTitle(nums){ return nums.length ? ("Puppies "+nums[0]+"\u2013"+nums[nums.length-1]) : "Puppies"; }
+
+  /* Data labels now use the dash range ("Puppies 4-6") matching card titles, so
+     the old code-derivation workaround is gone. Kept as a thin passthrough that
+     normalises the plain hyphen to an en dash for typographic consistency. */
+  function formatTokenLabel(t){
+    var label = t.label || t.code || "";
+    if (t.icon_key === "puppy_group") label = label.replace(/(\d)\s*-\s*(\d)/, "$1\u2013$2");
+    return label;
+  }
+
+  /* ---------- State ---------- */
+  var state = load();
+  function load(){ try{ var r=localStorage.getItem(STORAGE_KEY); if(r) return JSON.parse(r); }catch(e){} return {checked:{}}; }
+  function save(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){} }
+
+  var runtime = {
+    sharedWorld:"", activeTab:"all",
+    all:{visible:PAGE_SIZE, search:"", need:""},
+    trinity:{visible:PAGE_SIZE, search:"", need:"", color:""},
+    puppy:{visible:PAGE_SIZE, search:"", need:""},
+    treasure:{visible:PAGE_SIZE, search:"", need:"", type:"", missable:false}
+  };
+
+  var TAB_CAPTION = {all:"Collectibles tracked", trinity:"Trinity marks found", puppy:"Puppies rescued", treasure:"Treasures found"};
+
+  /* Rows carry their own kind so the "All" tab can mix trinities, puppies and
+     treasures in one list, one dial, one legend. Built once, after the data loads. */
+  function buildRows(){
+    var t = DATA.trinities.map(function(r){ return withKind(r,"trinity"); }),
+        p = DATA.puppies.map(function(r){ return withKind(r,"puppy"); }),
+        c = DATA.treasures.map(function(r){ return withKind(r,"treasure"); });
+    ROWS = {trinity:t, puppy:p, treasure:c, all:t.concat(p, c)};
+  }
+  function rowsFor(tab){ return ROWS[tab] || ROWS.all; }
+  function withKind(r, kind){ var o = Object.assign({}, r); o.kind = kind; return o; }
+  function weightOf(r){ return r.kind === "puppy" ? r.nums.length : 1; }
+
+  function searchText(r){
+    var parts = [r.world, r.area];
+    if (r.kind === "trinity") parts.push(r.name, r.color);
+    else if (r.kind === "treasure") parts.push(r.name, r.type, r.missable ? "missable" : "");
+    else { parts.push(puppyTitle(r.nums), r.nums.join(" ")); }
+    r.loc.forEach(function(t){ parts.push(t.text !== undefined ? t.text : (t.label||t.color||"")); });
+    (r.req||[]).forEach(function(t){ parts.push(t.label||t.color||""); });
+    (r.rew||[]).forEach(function(t){ parts.push(t.text !== undefined ? t.text : (t.label||"")); });
+    (r.hint||[]).forEach(function(t){ parts.push(t.text !== undefined ? t.text : (t.label||"")); });
+    return parts.join(" ").toLowerCase();
+  }
+  function matches(r, q, world){
+    if (world && r.world !== world) return false;
+    if (!q) return true;
+    return searchText(r).indexOf(q.toLowerCase()) !== -1;
+  }
+
+  /* ---------- Needs / Colors facet filters ----------
+     Tab-scoped (unlike the shared world filter): Trinity gets Needs + Colors,
+     Puppy gets Needs only, Treasure gets Needs + Type + Missable. */
+  function needKeyOf(tok){
+    if (tok.type === "trinity_move" || tok.icon_key === "trinity") return "trinity:"+trinityColorOf(tok);
+    return (tok.icon_key||"x")+":"+(tok.label||tok.code||"");
+  }
+  function needDisplay(tok){
+    if (tok.type === "trinity_move" || tok.icon_key === "trinity"){
+      return {icon: trinityDots(trinityColorOf(tok)), label: trinityLabelOf(tok)};
+    }
+    return {icon: iconForToken(tok) || "", label: formatTokenLabel(tok)};
+  }
+  var COLOR_ORDER = ["blue","red","green","yellow","white"];
+  function buildNeedOptions(tab){
+    var seen = {}, list = [];
+    rowsFor(tab).forEach(function(r){
+      (r.req||[]).forEach(function(tok){
+        var k = needKeyOf(tok);
+        if (!seen[k]){ seen[k] = true; var d = needDisplay(tok); list.push({key:k, icon:d.icon, label:d.label}); }
+      });
+    });
+    list.sort(function(a,b){
+      var ai = a.key.indexOf("trinity:")===0 ? COLOR_ORDER.indexOf(a.key.slice(8)) : 99;
+      var bi = b.key.indexOf("trinity:")===0 ? COLOR_ORDER.indexOf(b.key.slice(8)) : 99;
+      if (ai !== bi) return ai - bi;
+      return a.label.localeCompare(b.label);
+    });
+    return list;
+  }
+  function passesNeed(r, needKey){
+    if (!needKey) return true;
+    return (r.req||[]).some(function(tok){ return needKeyOf(tok) === needKey; });
+  }
+  function passesColor(r, color){
+    return !color || r.color === color;
+  }
+  /* Treasure-only facets. Both read straight off the row; other kinds always pass. */
+  var TYPE_ORDER = ["chest","interaction","reward","minigame"];
+  var TYPE_LABEL = {chest:"Chests", interaction:"Interactions", reward:"Rewards", minigame:"Minigames"};
+  function passesType(r, type){ return !type || r.type === type; }
+  function passesMissable(r, only){ return !only || !!r.missable; }
+  function passesFacets(r, tab){
+    var s = runtime[tab];
+    return passesNeed(r, s.need) && passesColor(r, tab==="trinity" ? s.color : "") &&
+           passesType(r, tab==="treasure" ? s.type : "") && passesMissable(r, tab==="treasure" && s.missable);
+  }
+  function filtersActive(tab){
+    var s = runtime[tab];
+    return !!s.need || !!s.color || !!s.type || !!s.missable;
+  }
+  function facetChip(box, html, active, onClick){
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "filter-chip"+(active ? " active" : "");
+    btn.innerHTML = html;
+    btn.addEventListener("click", onClick);
+    box.appendChild(btn);
+  }
+  function renderFilters(tab){
+    var needBox = document.getElementById("needs-"+tab);
+    if (!needBox) return;
+    var options = buildNeedOptions(tab);
+    needBox.innerHTML = "";
+    options.forEach(function(opt){
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "filter-chip"+(runtime[tab].need===opt.key ? " active" : "");
+      btn.innerHTML = opt.icon + esc(opt.label);
+      btn.addEventListener("click", function(){
+        runtime[tab].need = (runtime[tab].need === opt.key) ? "" : opt.key;
+        runtime[tab].visible = PAGE_SIZE;
+        renderList(tab); renderFilters(tab);
+      });
+      needBox.appendChild(btn);
+    });
+
+    if (tab === "trinity"){
+      var colorBox = document.getElementById("colors-trinity");
+      colorBox.innerHTML = "";
+      COLOR_ORDER.forEach(function(c){
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "filter-chip"+(runtime.trinity.color===c ? " active" : "");
+        btn.innerHTML = trinityDots(c) + esc(c.charAt(0).toUpperCase()+c.slice(1));
+        btn.addEventListener("click", function(){
+          runtime.trinity.color = (runtime.trinity.color === c) ? "" : c;
+          runtime.trinity.visible = PAGE_SIZE;
+          renderList("trinity"); renderFilters("trinity");
+        });
+        colorBox.appendChild(btn);
+      });
+    }
+
+    if (tab === "treasure"){
+      var s = runtime.treasure, present = {};
+      rowsFor("treasure").forEach(function(r){ present[r.type] = true; });
+      var typeBox = document.getElementById("types-treasure");
+      typeBox.innerHTML = "";
+      TYPE_ORDER.filter(function(t){ return present[t]; }).forEach(function(t){
+        facetChip(typeBox, (t==="chest" ? ICON_CHEST : "") + esc(TYPE_LABEL[t] || t), s.type===t, function(){
+          s.type = (s.type === t) ? "" : t;
+          s.visible = PAGE_SIZE;
+          renderList("treasure"); renderFilters("treasure");
+        });
+      });
+      var missBox = document.getElementById("miss-treasure");
+      missBox.innerHTML = "";
+      facetChip(missBox, ICON_MISSABLE + "Missable only", s.missable, function(){
+        s.missable = !s.missable;
+        s.visible = PAGE_SIZE;
+        renderList("treasure"); renderFilters("treasure");
+      });
+    }
+
+    document.getElementById("filterclear-"+tab).classList.toggle("hidden", !filtersActive(tab));
+  }
+
+  function sortRows(rows){
+    return rows.slice().sort(function(a,b){
+      if (a.ord !== b.ord) return a.ord - b.ord;
+      return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+    });
+  }
+  function worldStats(tab){
+    var s = {};
+    rowsFor(tab).forEach(function(r){
+      if (!s[r.world]) s[r.world] = {checked:0,total:0};
+      var w = weightOf(r); s[r.world].total += w;
+      if (state.checked[safeId(r.id)]) s[r.world].checked += w;
+    });
+    return s;
+  }
+  function totals(tab){
+    var c=0,t=0;
+    rowsFor(tab).forEach(function(r){ var w=weightOf(r); t+=w; if(state.checked[safeId(r.id)]) c+=w; });
+    return {checked:c,total:t};
+  }
+
+  function setSharedWorld(world){
+    runtime.sharedWorld = world;
+    ["all","trinity","puppy","treasure"].forEach(function(t){ runtime[t].visible = PAGE_SIZE; });
+    renderAll();
+  }
+
+  /* ---------- Rosette ---------- */
+  var ROSETTE = {cx:100, cy:100, r:82, stroke:15, gapDeg:2.6};
+  function polar(cx,cy,r,deg){ var rad=(deg-90)*Math.PI/180; return [cx+r*Math.cos(rad), cy+r*Math.sin(rad)]; }
+  function arcPath(cx,cy,r,a0,a1){
+    var p0=polar(cx,cy,r,a0), p1=polar(cx,cy,r,a1), large=(a1-a0)>180?1:0;
+    return "M "+p0[0].toFixed(3)+" "+p0[1].toFixed(3)+" A "+r+" "+r+" 0 "+large+" 1 "+p1[0].toFixed(3)+" "+p1[1].toFixed(3);
+  }
+  function renderRosette(){
+    var tab = runtime.activeTab;
+    var stats = worldStats(tab);
+    var worlds = WORLD_ORDER.filter(function(w){ return stats[w]; });
+    var tot = totals(tab);
+    var svgNS = "http://www.w3.org/2000/svg";
+    var g = document.getElementById("rosette-segs");
+    g.innerHTML = "";
+    var gap = ROSETTE.gapDeg, usable = 360 - gap*worlds.length, angle = 0;
+
+    worlds.forEach(function(w){
+      var st = stats[w];
+      var span = tot.total ? (st.total/tot.total)*usable : 0;
+      if (span <= 0) return;
+      var a0=angle, a1=angle+span; angle = a1+gap;
+      var color = worldMeta(w).c;
+      var pct = st.total ? st.checked/st.total : 0;
+      var isActive = runtime.sharedWorld === w, dim = runtime.sharedWorld && !isActive;
+
+      var seg = document.createElementNS(svgNS,"g");
+      seg.setAttribute("data-seg", w);
+      var title = document.createElementNS(svgNS,"title"); title.textContent = w+": "+st.checked+" of "+st.total;
+      seg.appendChild(title);
+
+      var bg = document.createElementNS(svgNS,"path");
+      bg.setAttribute("d", arcPath(ROSETTE.cx,ROSETTE.cy,ROSETTE.r,a0,a1));
+      bg.setAttribute("fill","none"); bg.setAttribute("stroke",color);
+      bg.setAttribute("stroke-opacity", dim?"0.10":"0.20"); bg.setAttribute("stroke-width",ROSETTE.stroke);
+      seg.appendChild(bg);
+
+      if (pct > 0){
+        var fillEnd = a0 + span*pct;
+        var fg = document.createElementNS(svgNS,"path");
+        fg.setAttribute("d", arcPath(ROSETTE.cx,ROSETTE.cy,ROSETTE.r,a0,Math.max(fillEnd,a0+0.8)));
+        fg.setAttribute("fill","none"); fg.setAttribute("stroke",color);
+        fg.setAttribute("stroke-opacity", dim?"0.35":"1"); fg.setAttribute("stroke-width",ROSETTE.stroke);
+        seg.appendChild(fg);
+      }
+      if (isActive){
+        var sel = document.createElementNS(svgNS,"path");
+        sel.setAttribute("d", arcPath(ROSETTE.cx,ROSETTE.cy,ROSETTE.r+11,a0,a1));
+        sel.setAttribute("fill","none"); sel.setAttribute("stroke","#ffd166");
+        sel.setAttribute("stroke-width",2.5); sel.setAttribute("stroke-linecap","round");
+        seg.appendChild(sel);
+      }
+      seg.addEventListener("click", function(){ setSharedWorld(runtime.sharedWorld===w ? "" : w); });
+      g.appendChild(seg);
+    });
+
+    var pctAll = tot.total ? tot.checked/tot.total : 0;
+    var shown = Math.round(pctAll*100);
+    if (shown===100 && tot.checked<tot.total) shown = 99;
+    document.getElementById("ro-pct").innerHTML = shown+'<span class="u">%</span>';
+    document.getElementById("ro-frac").textContent = tot.checked+" / "+tot.total;
+    document.getElementById("rosette-caption").textContent = TAB_CAPTION[tab];
+    document.getElementById("ro-key").innerHTML = DIAL_ICON[tab] || DIAL_ICON.all;
+
+    var complete = pctAll>=1 && tot.total>0;
+    document.getElementById("rosette-shell").classList.toggle("complete", complete);
+    if (complete) g.setAttribute("filter","url(#rosette-glow)"); else g.removeAttribute("filter");
+
+    var hint = document.getElementById("rosette-hint");
+    if (!tot.total){
+      hint.innerHTML = "No data here yet.";
+    } else if (runtime.sharedWorld){
+      var st2 = stats[runtime.sharedWorld];
+      hint.innerHTML = "Focused on <b>"+esc(runtime.sharedWorld)+"</b>"+(st2?" \u2014 "+st2.checked+" / "+st2.total:"")+". Tap the pane again to clear.";
+    } else hint.innerHTML = "Each pane is a world &mdash; tap one to focus it.";
+  }
+
+  /* ---------- Legend ----------
+     Each row shows the same category breakdown everywhere, so the world list
+     reads as one shared navigation element. Which worlds are listed depends on
+     the tab: Trinity and Dalmatian tabs keep to worlds that have marks or
+     puppies, so the treasure-only worlds appear only on Treasures and All. */
+  function catBadge(iconSvg, st){
+    if (!st || !st.total) return "";
+    var complete = st.checked >= st.total && st.total > 0;
+    return '<span class="cat-badge'+(complete?" cat-complete":"")+'">'+iconSvg+
+           '<span class="cat-frac">'+st.checked+"/"+st.total+'</span></span>';
+  }
+  function buildLegendRows(tab){
+    var trin = worldStats("trinity"), pup = worldStats("puppy"),
+        tre = worldStats("treasure"), agg = worldStats("all");
+    var order = WORLD_ORDER.filter(function(w){
+      if (tab === "treasure") return tre[w];
+      if (tab === "trinity" || tab === "puppy") return trin[w] || pup[w];
+      return trin[w] || pup[w] || tre[w];
+    });
+    return order.map(function(w){
+      var overall = agg[w] || {checked:0,total:0};
+      var pct = overall.total ? overall.checked/overall.total : 0;
+      var cls = "world-row";
+      if (runtime.sharedWorld===w) cls += " active";
+      if (pct>=1) cls += " done";
+      var badges = catBadge(ICON_CAT_TRINITY, trin[w]) + catBadge(ICON_CAT_PUPPY, pup[w]) + catBadge(ICON_CAT_TREASURE, tre[w]);
+      var ariaBits = [];
+      if (trin[w]) ariaBits.push(trin[w].checked+"/"+trin[w].total+" trinities");
+      if (pup[w]) ariaBits.push(pup[w].checked+"/"+pup[w].total+" puppies");
+      if (tre[w]) ariaBits.push(tre[w].checked+"/"+tre[w].total+" treasures");
+      return {w:w, cls:cls, color:worldMeta(w).c, pct:pct, badges:badges, aria:w+": "+ariaBits.join(", ")+". Filter to this world."};
+    });
+  }
+  function renderLegend(tab){
+    var box = document.getElementById("worlds-"+tab);
+    var rows = buildLegendRows(tab);
+    box.innerHTML = "";
+    rows.forEach(function(r){
+      var row = document.createElement("button");
+      row.type="button"; row.className=r.cls;
+      row.setAttribute("aria-pressed", runtime.sharedWorld===r.w ? "true" : "false");
+      row.setAttribute("aria-label", r.aria);
+      row.innerHTML =
+        '<span class="world-row-top">'+worldIcon(r.w)+
+          '<span class="world-name">'+esc(r.w)+'</span>'+
+          '<span class="cat-badges">'+r.badges+'</span>'+
+        '</span>'+
+        '<span class="world-bar"><span style="width:'+(r.pct*100).toFixed(1)+'%;background:'+r.color+'"></span></span>';
+      row.addEventListener("click", function(){ setSharedWorld(runtime.sharedWorld===r.w ? "" : r.w); });
+      box.appendChild(row);
+    });
+    document.getElementById("legend-"+tab).style.display = rows.length ? "" : "none";
+    document.getElementById("worldclear-"+tab).classList.toggle("hidden", !runtime.sharedWorld);
+  }
+
+  /* ---------- Cards ---------- */
+  function cardHtml(r){
+    var sid = safeId(r.id), isChecked = !!state.checked[sid], icon, title;
+    var rewTokens = (r.rew||[]).filter(function(t){ return t.text === undefined; });
+    if (r.kind === "trinity"){ icon='<span class="card-icon">'+trinityDotsRing(r.color)+'</span>'; title=esc(r.name); }
+    else if (r.kind === "treasure"){
+      /* Title is the item itself, with that item's icon. */
+      icon='<span class="card-icon">'+((rewTokens[0] && iconForToken(rewTokens[0])) || ICON_CHEST)+'</span>'; title=esc(r.name);
+    }
+    else { icon='<span class="card-icon">'+ICON_PUPPY+'</span>'; title=puppyTitle(r.nums); }
+
+    var placeHtml = '<span class="card-place" aria-label="'+esc(r.world)+', '+esc(r.area)+'">'+
+      worldIcon(r.world,14)+esc(r.area)+'</span>';
+    var reqHtml = renderRequires(r.req);
+    /* A single-item treasure already says everything in its title; the Reward
+       row only earns its place when there are several items to tell apart. */
+    var showRew = r.rew && (r.kind === "trinity" || (r.kind === "treasure" && r.rew.length > 1));
+    var rewHtml = showRew ? renderReward(r.rew) : "";
+    var missHtml = r.missable ? '<div class="card-block"><div class="chip-row"><span class="chip chip-miss">'+ICON_MISSABLE+'Missable</span></div></div>' : "";
+    var hintHtml = renderHint(r.hint);
+
+    /* Order: what it is + where it is (same row) -> missable -> what you need -> how to find it -> hint -> what you get */
+    return '<button type="button" class="card'+(isChecked?" checked":"")+'" data-id="'+sid+'" aria-pressed="'+(isChecked?"true":"false")+'">'+
+      '<span class="card-check" aria-hidden="true">'+checkIcon()+'</span>'+
+      '<span class="card-main">'+
+        '<span class="card-top-row">'+icon+'<span class="card-title">'+title+'</span>'+placeHtml+'</span>'+
+        missHtml+
+        reqHtml+
+        '<span class="card-loc">'+renderLocation(r.loc)+'</span>'+
+        hintHtml+
+        rewHtml+
+      '</span></button>';
+  }
+
+  function renderList(tab){
+    var s = runtime[tab];
+    var all = sortRows(rowsFor(tab).filter(function(r){
+      return matches(r, s.search, runtime.sharedWorld) && passesFacets(r, tab);
+    }));
+    var vis = all.slice(0, s.visible);
+    var list = document.getElementById("list-"+tab);
+
+    list.innerHTML = vis.map(cardHtml).join("");
+    list.querySelectorAll(".card").forEach(function(el){
+      el.addEventListener("click", function(){
+        var id = el.dataset.id;
+        if (state.checked[id]) delete state.checked[id]; else state.checked[id] = true;
+        save(); renderAll();
+      });
+    });
+
+    document.getElementById("empty-"+tab).style.display = all.length ? "none" : "block";
+    var unit = tab==="puppy" ? (all.length===1?"group":"groups") : (all.length===1?"item":"items");
+    document.getElementById("visible-count-"+tab).textContent =
+      all.length ? (all.length+" "+unit+(runtime.sharedWorld ? " \u00b7 "+runtime.sharedWorld : "")) : "";
+    document.getElementById("loadmore-"+tab).classList.toggle("hidden", s.visible >= all.length);
+
+    var t = totals(tab);
+    document.getElementById("tabcount-"+tab).textContent = t.checked+"/"+t.total;
+  }
+
+  function renderAll(){
+    ["all","trinity","puppy","treasure"].forEach(renderList);
+    ["all","trinity","puppy","treasure"].forEach(renderLegend);
+    ["all","trinity","puppy","treasure"].forEach(renderFilters);
+    renderRosette();
+  }
+
+  /* ---------- Wiring ---------- */
+  function wireTab(tab){
+    var si=document.getElementById("search-"+tab), cb=document.getElementById("clear-"+tab),
+        lm=document.getElementById("loadmore-"+tab), ca=document.getElementById("checkall-"+tab);
+
+    si.addEventListener("input", function(){
+      runtime[tab].search = si.value; runtime[tab].visible = PAGE_SIZE;
+      cb.classList.toggle("show", si.value.length>0); renderList(tab);
+    });
+    cb.addEventListener("click", function(){ si.value=""; runtime[tab].search=""; cb.classList.remove("show"); renderList(tab); si.focus(); });
+    lm.addEventListener("click", function(){ runtime[tab].visible += PAGE_SIZE; renderList(tab); });
+
+    /* Temporary for testing (arm-then-confirm, no browser confirm() -- those
+       are blocked in sandboxed iframes) -- remove before final version. */
+    var armT=null;
+    ca.addEventListener("click", function(){
+      if (ca.dataset.armed === "true"){
+        rowsFor(tab).filter(function(r){ return matches(r, runtime[tab].search, runtime.sharedWorld); })
+          .forEach(function(r){ state.checked[safeId(r.id)] = true; });
+        save(); renderAll(); resetArm();
+      } else {
+        ca.dataset.armed="true"; ca.classList.add("arm"); ca.textContent="Sure? Tap again";
+        armT = setTimeout(resetArm, 3000);
+      }
+    });
+    document.addEventListener("click", function(e){ if (e.target !== ca) resetArm(); });
+    function resetArm(){ clearTimeout(armT); ca.dataset.armed="false"; ca.classList.remove("arm"); ca.textContent="Check all shown"; }
+  }
+
+  document.querySelectorAll("[data-legendtoggle]").forEach(function(b){
+    b.addEventListener("click", function(){ document.getElementById("legend-"+b.dataset.legendtoggle).classList.toggle("collapsed"); });
+  });
+  document.querySelectorAll("[data-filtertoggle]").forEach(function(b){
+    b.addEventListener("click", function(){ document.getElementById("filters-"+b.dataset.filtertoggle).classList.toggle("collapsed"); });
+  });
+  ["all","trinity","puppy","treasure"].forEach(function(tab){
+    document.getElementById("worldclear-"+tab).addEventListener("click", function(){ setSharedWorld(""); });
+  });
+  ["all","trinity","puppy","treasure"].forEach(function(tab){
+    document.getElementById("filterclear-"+tab).addEventListener("click", function(){
+      runtime[tab].need = "";
+      if (tab === "trinity") runtime.trinity.color = "";
+      if (tab === "treasure"){ runtime.treasure.type = ""; runtime.treasure.missable = false; }
+      runtime[tab].visible = PAGE_SIZE;
+      renderList(tab); renderFilters(tab);
+    });
+  });
+  document.querySelectorAll("[data-tab]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelectorAll("[data-tab]").forEach(function(b){ b.classList.remove("active"); b.setAttribute("aria-selected","false"); });
+      document.querySelectorAll(".tab-panel").forEach(function(p){ p.classList.remove("active"); });
+      btn.classList.add("active"); btn.setAttribute("aria-selected","true");
+      document.getElementById("panel-"+btn.dataset.tab).classList.add("active");
+      runtime.activeTab = btn.dataset.tab; renderRosette();
+    });
+  });
+
+  ["all","trinity","puppy","treasure"].forEach(wireTab);
+
+  /* ---------- Loading ----------
+     fetch() needs http(s): opened straight from disk (file://) the browser
+     blocks it, so that case gets its own explanation. */
+  function fetchJson(url){
+    return fetch(url).then(function(res){
+      if (!res.ok) throw new Error(url+" ("+res.status+")");
+      return res.json();
+    });
+  }
+  function showLoadError(err){
+    var box = document.getElementById("load-state");
+    var why = location.protocol === "file:"
+      ? "This page can't read its data when opened straight from a file. Start a local server in this folder (<code>uv run python -m http.server</code>) and open <code>http://localhost:8000</code>."
+      : "Check your connection and try again.";
+    box.className = "load-state error";
+    box.innerHTML = '<div class="load-box"><b>Couldn\u2019t load the checklist data.</b><br>'+why+
+      '<br><button class="load-retry" type="button" id="load-retry">Try again</button></div>';
+    document.getElementById("load-retry").addEventListener("click", loadData);
+    if (window.console) console.error("Checklist data failed to load:", err);
+  }
+  function loadData(){
+    var box = document.getElementById("load-state");
+    box.className = "load-state";
+    box.innerHTML = '<div class="load-box">Loading the checklist&hellip;</div>';
+    return Promise.all([fetchJson(DATA_FILES.trinities), fetchJson(DATA_FILES.puppies), fetchJson(DATA_FILES.treasures)])
+      .then(function(res){
+        DATA = {trinities:res[0].trinities, puppies:res[1].puppies, treasures:res[2].treasures};
+        if (!DATA.trinities || !DATA.puppies || !DATA.treasures) throw new Error("data file is missing its list");
+        buildRows();
+        box.className = "load-state hidden";
+        document.body.classList.remove("is-loading");
+        renderAll();
+      })
+      .catch(showLoadError);
+  }
+  loadData();
+})();
+
+</script>
+<script data-goatcounter="https://nishekan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
