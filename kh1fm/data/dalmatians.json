@@ -1,0 +1,468 @@
+{
+  "meta": {"game": "Kingdom Hearts I Final Mix", "provenance": "Extracted unchanged from kh1-trinities-dalmatians-v25.html on 2026-10-01. Maintained by hand from here on."},
+  "puppies": [
+    {
+      "id": "PUP-001_003",
+      "world": "Traverse Town",
+      "area": "Mystical House",
+      "loc": [
+        {"text": "On the island behind Merlin's house, can be reached with "},
+        {"code": "ABL-mermaid-kick", "label": "Mermaid Kick", "icon_key": "ability"},
+        {"text": " or "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": "."}
+      ],
+      "ord": 100000,
+      "nums": [1, 2, 3],
+      "req": [
+        {"code": "ABL-mermaid-kick", "label": "Mermaid Kick", "icon_key": "ability"},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "PUP-004_006",
+      "world": "Traverse Town",
+      "area": "Alleyway",
+      "loc": [
+        {"text": "Behind a wall of crates, activate the "},
+        {"code": "TRN-red", "label": "Red Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": " in the alley from the First District to enter."}
+      ],
+      "ord": 100000,
+      "nums": [4, 5, 6],
+      "req": [
+        {"code": "TRN-red", "label": "Red Trinity", "icon_key": "trinity", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-007_009",
+      "world": "Traverse Town",
+      "area": "Item Workshop",
+      "loc": [
+        {"text": "On the table after using "},
+        {"code": "TRN-green", "label": "Green Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": " to enter."}
+      ],
+      "ord": 100000,
+      "nums": [7, 8, 9],
+      "req": [
+        {"code": "TRN-green", "label": "Green Trinity", "icon_key": "trinity", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-010_012",
+      "world": "Traverse Town",
+      "area": "Secret Waterway",
+      "loc": [
+        {"text": "Use "},
+        {"code": "TRN-red", "label": "Red Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": " to enter from the Alleyway."}
+      ],
+      "ord": 100000,
+      "nums": [10, 11, 12],
+      "req": [
+        {"code": "TRN-red", "label": "Red Trinity", "icon_key": "trinity", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-013_015",
+      "world": "Wonderland",
+      "area": "Queen's Castle",
+      "loc": [
+        {"text": "Enter the area that became accessible after pushing a rock into the pond after the trial, and go through the passage in the wall to land on-top of the hedge in the corner of Queen's Castle for the chest."}
+      ],
+      "ord": 101000,
+      "nums": [13, 14, 15],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "PUP-016_018",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "loc": [
+        {"text": "Inside a chest on one of the raised lilypads in the center of the room."}
+      ],
+      "ord": 101000,
+      "nums": [16, 17, 18]
+    },
+    {
+      "id": "PUP-019_021",
+      "world": "Wonderland",
+      "area": "Tea Party Garden",
+      "loc": [
+        {"text": "From the Lotus Forest above the pond use a well-timed "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " to reach an entrance to the top of the Tea Party Garden's hedge with 2 chests, one with the puppies."}
+      ],
+      "ord": 101000,
+      "nums": [19, 20, 21],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ],
+      "hint": [
+        {"text": "If you can't reach it using "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": ", you can come back later and use "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": "."}
+      ]
+    },
+    {
+      "id": "PUP-058_060",
+      "world": "Wonderland",
+      "area": "Lotus Forest",
+      "loc": [
+        {"text": "Use the entrance to the Bizarre Room located above the entrance to the Tea Party Garden. In there, the party will find a picture frame they must activate by lighting the two lamps. Examining the painting will take them back to the Lotus Forest. Cast "},
+        {"code": "SPL-thunder", "label": "Thunder", "icon_key": "spell", "qty": 1},
+        {"text": " on the string of flowers to receive the chest."}
+      ],
+      "ord": 101000,
+      "nums": [58, 59, 60],
+      "req": [
+        {"code": "SPL-thunder", "label": "Thunder", "icon_key": "spell", "qty": 1}
+      ],
+      "hint": [
+        {"text": "To examine the painting all enemies in the vicinity must be cleared."}
+      ]
+    },
+    {
+      "id": "PUP-022_024",
+      "world": "Olympus Coliseum",
+      "area": "Coliseum Gates",
+      "loc": [
+        {"text": "Activate the "},
+        {"code": "TRN-blue", "label": "Blue Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": " under the statue on the right side."}
+      ],
+      "ord": 102000,
+      "nums": [22, 23, 24],
+      "req": [
+        {"code": "TRN-blue", "label": "Blue Trinity", "icon_key": "trinity", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-025_027",
+      "world": "Deep Jungle",
+      "area": "Hippos' Lagoon",
+      "loc": [
+        {"text": "On the last islet in the marsh."}
+      ],
+      "ord": 103000,
+      "nums": [25, 26, 27],
+      "hint": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " or "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": " recommended, but not needed. Use a mid-air strike on the last jump to go further."}
+      ]
+    },
+    {
+      "id": "PUP-028_030",
+      "world": "Deep Jungle",
+      "area": "Vines 2",
+      "loc": [
+        {"text": "Reachable by using the vines to swing to the platform in the distance, from where you can jump to the one with the chest."}
+      ],
+      "ord": 103000,
+      "nums": [28, 29, 30]
+    },
+    {
+      "id": "PUP-031_033",
+      "world": "Deep Jungle",
+      "area": "Waterfall Cavern",
+      "loc": [
+        {"text": "On a high platform opposite the alcove at the far end upon entering the cavern."}
+      ],
+      "ord": 103000,
+      "nums": [31, 32, 33]
+    },
+    {
+      "id": "PUP-034_036",
+      "world": "Deep Jungle",
+      "area": "Camp",
+      "loc": [
+        {"text": "Activate the "},
+        {"code": "TRN-blue", "label": "Blue Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": " near the table with the lab equipment."}
+      ],
+      "ord": 103000,
+      "nums": [34, 35, 36],
+      "req": [
+        {"code": "TRN-blue", "label": "Blue Trinity", "icon_key": "trinity", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-037_039",
+      "world": "Agrabah",
+      "area": "Treasure Room",
+      "loc": [
+        {"text": "On a platform above the entrance, jump over from the gold pile, which is reached by climbing the fireplace next to it."}
+      ],
+      "ord": 104000,
+      "nums": [37, 38, 39]
+    },
+    {
+      "id": "PUP-046_048",
+      "world": "Agrabah",
+      "area": "Hidden Room",
+      "loc": [
+        {"text": "Technically requires "},
+        {"code": "TRN-yellow", "label": "Yellow Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": ", but can be acquired earlier by using "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": "."},
+        {"break": true},
+        {"text": "From the "},
+        {"code": "ICON-access-door", "label": "Silent Chamber", "icon_key": "access_door"},
+        {"text": " activate the gem in the side passage, opening a door in the same room. "},
+        {"text": " Using "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " you can just barely reach the ledge of the revealed passage, then head through to activate another gem, which will open a large gate nearby with 2 chests, one with the puppies."}
+      ],
+      "ord": 104000,
+      "nums": [46, 47, 48],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "PUP-049_051",
+      "world": "Agrabah",
+      "area": "Cave: Entrance",
+      "loc": [
+        {"text": "In a blue chest on a tall pillar at the end of the Entrance area."}
+      ],
+      "ord": 104000,
+      "nums": [49, 50, 51],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ],
+      "hint": [
+        {"text": "Can be acquired without "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": " by using a nearby barrel to reach the platform."}
+      ]
+    },
+    {
+      "id": "PUP-052_054",
+      "world": "Agrabah",
+      "area": "Palace Gates",
+      "loc": [
+        {"text": "Use the upper passage into the Palace Gates area, followed by jumping to the tall ledge in the opposite corner."}
+      ],
+      "ord": 104000,
+      "nums": [52, 53, 54],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "PUP-055_057",
+      "world": "Monstro",
+      "area": "Chamber 3",
+      "loc": [
+        {"text": "On-top of the platform above the upper passage to Chamber 2."}
+      ],
+      "ord": 105000,
+      "nums": [55, 56, 57],
+      "hint": [
+        {"text": "Use a barrel for extra height if you don't have "},
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"},
+        {"text": " yet."}
+      ]
+    },
+    {
+      "id": "PUP-073_075",
+      "world": "Monstro",
+      "area": "Mouth",
+      "loc": [
+        {"text": "On a wooden platform close to the ceiling."}
+      ],
+      "ord": 105000,
+      "nums": [73, 74, 75],
+      "req": [
+        {"code": "ABL-high-jump", "label": "High Jump", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "PUP-076_078",
+      "world": "Monstro",
+      "area": "Chamber 6",
+      "loc": [
+        {"text": "On the lowest step of the staggered floor in Chamber 6."}
+      ],
+      "ord": 105000,
+      "nums": [76, 77, 78]
+    },
+    {
+      "id": "PUP-079_081",
+      "world": "Monstro",
+      "area": "Chamber 5",
+      "loc": [
+        {"text": "Jump across the platforms to reach the highest area in the Chamber to find the chest on-top of a barrel, between two passages to Chambers 3 and 6."}
+      ],
+      "ord": 105000,
+      "nums": [79, 80, 81]
+    },
+    {
+      "id": "PUP-040_042",
+      "world": "Halloween Town",
+      "area": "Oogie's Manor",
+      "loc": [
+        {"text": "This chest can only be accessible after hitting the crank in the Evil Playroom, after the Lock, Shock, and Barrel bossfight. After doing so return to the first staircase and it's about halfway up, inside a large hollow cylindrical room that was previously closed."}
+      ],
+      "ord": 107000,
+      "nums": [40, 41, 42],
+      "hint": [
+        {"text": "If this chest is not opened before defeating Oogie's Manor, it can be found in the Manor Ruins in a small alcove."}
+      ]
+    },
+    {
+      "id": "PUP-064_066",
+      "world": "Halloween Town",
+      "area": "Cemetery",
+      "loc": [
+        {"text": "After sealing the world's "},
+        {"code": "ICON-keyhole", "label": "Keyhole", "icon_key": "keyhole"},
+        {"text": ", leave and then return to the Moonlight Hill and look for the crypt door, shaped like a christmas tree, enter it to reach the Cemetery. In the corner, barely visible, there is a green chest with the puppies."}
+      ],
+      "ord": 107000,
+      "nums": [64, 65, 66]
+    },
+    {
+      "id": "PUP-067_069",
+      "world": "Halloween Town",
+      "area": "Moonlight Hill",
+      "loc": [
+        {"text": "Activate the "},
+        {"code": "TRN-white", "label": "White Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": " to the left of the hill, near a broken segment of wall."}
+      ],
+      "ord": 107000,
+      "nums": [67, 68, 69],
+      "req": [
+        {"code": "TRN-white", "label": "White Trinity", "icon_key": "trinity", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-070_072",
+      "world": "Halloween Town",
+      "area": "Guillotine Square",
+      "loc": [
+        {"text": "Use "},
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"},
+        {"text": " to reach the mouth of a grey pumpkin-like tower structure with 2 chests, one with the puppies."}
+      ],
+      "ord": 107000,
+      "nums": [70, 71, 72],
+      "req": [
+        {"code": "ABL-glide", "label": "Glide", "icon_key": "ability"}
+      ]
+    },
+    {
+      "id": "PUP-043_045",
+      "world": "Neverland",
+      "area": "Deck",
+      "loc": [
+        {"text": "Activate the "},
+        {"code": "TRN-white", "label": "White Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": " near the helm on the ship's deck."}
+      ],
+      "ord": 108000,
+      "nums": [43, 44, 45],
+      "req": [
+        {"code": "TRN-white", "label": "White Trinity", "icon_key": "trinity", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-082_084",
+      "world": "Neverland",
+      "area": "Hold",
+      "loc": [
+        {"text": "Using flight, on the rafter near the ceiling."}
+      ],
+      "ord": 108000,
+      "nums": [82, 83, 84]
+    },
+    {
+      "id": "PUP-085_087",
+      "world": "Neverland",
+      "area": "Hold",
+      "loc": [
+        {"text": "Activate the "},
+        {"code": "TRN-yellow", "label": "Yellow Trinity", "icon_key": "trinity", "qty": 1},
+        {"text": " on the door to gain access to a room with 4 chests, one of which contains the puppies."}
+      ],
+      "ord": 108000,
+      "nums": [85, 86, 87],
+      "req": [
+        {"code": "TRN-yellow", "label": "Yellow Trinity", "icon_key": "trinity", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-088_090",
+      "world": "Neverland",
+      "area": "Captain's Cabin",
+      "loc": [
+        {"text": "After defeating AntiSora, in a chest on the bed."}
+      ],
+      "ord": 108000,
+      "nums": [88, 89, 90]
+    },
+    {
+      "id": "PUP-061_063",
+      "world": "Hollow Bastion",
+      "area": "Grand Hall",
+      "loc": [
+        {"text": "On the left side, on a ledge above the stairs, during Sora's second visit."}
+      ],
+      "ord": 109000,
+      "nums": [61, 62, 63]
+    },
+    {
+      "id": "PUP-091_093",
+      "world": "Hollow Bastion",
+      "area": "Rising Falls",
+      "loc": [
+        {"text": "Use "},
+        {"code": "SPL-blizzard", "label": "Blizzard", "icon_key": "spell", "qty": 1},
+        {"text": " to freeze the floating bubbles, which can then be used as platforms to reach a higher one."}
+      ],
+      "ord": 109000,
+      "nums": [91, 92, 93]
+    },
+    {
+      "id": "PUP-094_096",
+      "world": "Hollow Bastion",
+      "area": "Castle Gates",
+      "loc": [
+        {"text": "Past the Entrance Hall and outside the castle, use the red switch to activate the moving platforms, then use one to reach the platform next to the switch, with the chest on a platform floating above it, which you can lower with "},
+        {"code": "SPL-gravity", "label": "Gravity", "icon_key": "spell", "qty": 1},
+        {"text": "."}
+      ],
+      "ord": 109000,
+      "nums": [94, 95, 96],
+      "req": [
+        {"code": "SPL-gravity", "label": "Gravity", "icon_key": "spell", "qty": 1}
+      ]
+    },
+    {
+      "id": "PUP-097_099",
+      "world": "Hollow Bastion",
+      "area": "Lift Stop",
+      "loc": [
+        {"text": "After solving the entire Library book puzzle, use the hidden exit to enter a Lift Stop area where you can use "},
+        {"code": "SPL-gravity", "label": "Gravity", "icon_key": "spell", "qty": 1},
+        {"text": " to lower a platform with a chest."}
+      ],
+      "ord": 109000,
+      "nums": [97, 98, 99],
+      "req": [
+        {"code": "SPL-gravity", "label": "Gravity", "icon_key": "spell", "qty": 1}
+      ]
+    }
+  ]
+}
