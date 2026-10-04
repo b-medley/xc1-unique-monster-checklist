@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | ProgressDial</title>
+<meta name="description" content="Report wrong or missing data, a bug, or a suggestion for any ProgressDial checklist.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101113'/%3E%3Ccircle cx='16' cy='16' r='9.5' fill='none' stroke='%233a3d44' stroke-width='3.5'/%3E%3Ccircle cx='16' cy='16' r='9.5' fill='none' stroke='%23f1f1ee' stroke-width='3.5' stroke-linecap='round' stroke-dasharray='43 59.7' transform='rotate(-90 16 16)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Same palette and type as index.html, so the two pages read as one site. */
+  :root{
+    --bg:#101113; --panel:#17181b; --field:#101113; --line:#2a2c31;
+    --ink:#f1f1ee; --dim:#a4a7ae; --faint:#868992; --track:#3a3d44;
+    --danger:#ff7b6e; --ok:#5fcf9a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Manrope',system-ui,sans-serif; font-size:15px; line-height:1.5;
+    -webkit-font-smoothing:antialiased; min-height:100vh;
+  }
+  button,input,select,textarea{font-family:inherit;}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+
+  header.site{max-width:640px;margin:0 auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);}
+  .brand-mark{width:28px;height:28px;flex:0 0 auto;display:block;}
+  .brand-name{font-weight:800;font-size:16px;letter-spacing:-.02em;}
+  .back-link{color:var(--dim);text-decoration:none;font-size:13px;font-weight:700;padding:8px 12px;border-radius:99px;white-space:nowrap;}
+  .back-link:hover{color:var(--ink);background:var(--panel);}
+
+  main{max-width:640px;margin:0 auto;padding:14px 20px 50px;}
+  h1{font-weight:800;font-size:clamp(23px,5.4vw,30px);letter-spacing:-.03em;margin:0 0 6px;}
+  .sub{color:var(--dim);font-size:14.5px;margin:0 0 22px;}
+
+  form{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:16px;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  label{font-size:13px;font-weight:700;color:var(--dim);}
+  label .opt{font-weight:500;color:var(--faint);}
+  select,textarea,input[type="email"]{
+    width:100%;background:var(--field);border:1px solid var(--line);border-radius:12px;
+    color:var(--ink);padding:12px 14px;font-size:15px;
+  }
+  textarea{min-height:150px;resize:vertical;line-height:1.5;}
+  ::placeholder{color:var(--faint);}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;} /* spam trap, hidden from people */
+
+  .send-btn{align-self:flex-start;background:var(--ink);color:var(--bg);border:1px solid var(--ink);border-radius:99px;padding:12px 26px;font-size:14px;font-weight:800;cursor:pointer;}
+  .send-btn:disabled{opacity:.6;cursor:default;}
+
+  .status{border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5;display:none;}
+  .status.show{display:block;}
+  .status.ok{background:rgba(95,207,154,.12);border:1px solid var(--ok);color:#c9f2de;}
+  .status.err{background:rgba(255,123,110,.10);border:1px solid var(--danger);color:#ffc4bd;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="./">
+    <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <circle cx="16" cy="16" r="12" stroke="var(--track)" stroke-width="4"/>
+      <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="54.3 75.4" transform="rotate(-90 16 16)"/>
+    </svg>
+    <span class="brand-name">ProgressDial</span>
+  </a>
+  <a class="back-link" href="./">&larr; All checklists</a>
+</header>
+
+<main>
+  <h1>Feedback</h1>
+  <p class="sub">Spotted something wrong or missing in a checklist, or have an idea? Tell me here.</p>
+
+  <form id="feedback-form" action="https://formspree.io/f/xkjwbdoo" method="POST" novalidate>
+    <!-- The subject line is filled in from the "Which checklist?" choice, see the script below. -->
+    <input type="hidden" name="_subject" id="fb-subject" value="Feedback: ProgressDial (general)">
+    <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+
+    <!-- Sent as "checklist", the same field name the Kingdom Hearts form uses, so every message is tagged the same way.
+         data-key is the short name for links: feedback.html?about=kh1fm opens with that checklist already picked. -->
+    <div class="field">
+      <label for="fb-checklist">Which checklist?</label>
+      <select id="fb-checklist" name="checklist">
+        <option value="ProgressDial (general)" data-key="general">General, or the site as a whole</option>
+        <option value="Xenoblade Chronicles Definitive Edition" data-key="xcde1">Xenoblade Chronicles: Definitive Edition</option>
+        <option value="Kingdom Hearts I Final Mix" data-key="kh1fm">Kingdom Hearts Final Mix</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="fb-topic">What is it about?</label>
+      <select id="fb-topic" name="topic">
+        <option value="Wrong or missing data">Wrong or missing data</option>
+        <option value="Bug on the page">Bug on the page</option>
+        <option value="Suggestion">Suggestion</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="fb-message">Message</label>
+      <textarea id="fb-message" name="message" placeholder="For a data fix, say which entry and where it is in the game."></textarea>
+    </div>
+
+    <div class="field">
+      <label for="fb-email">Email <span class="opt">(optional)</span></label>
+      <input type="email" id="fb-email" name="email" autocomplete="email" placeholder="Only if you'd like a reply">
+    </div>
+
+    <div class="status" id="fb-status" role="status" aria-live="polite"></div>
+    <button type="submit" class="send-btn" id="fb-send">Send feedback</button>
+  </form>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var form = document.getElementById("feedback-form"),
+      checklist = document.getElementById("fb-checklist"),
+      subject = document.getElementById("fb-subject"),
+      message = document.getElementById("fb-message"),
+      status = document.getElementById("fb-status"),
+      send = document.getElementById("fb-send");
+
+  function show(kind, text){
+    status.className = "status show " + kind;
+    status.textContent = text;
+  }
+  function syncSubject(){
+    subject.value = "Feedback: " + checklist.value;
+  }
+
+  /* A checklist page can link here with ?about=<key> to arrive with itself already picked. */
+  var about = new URLSearchParams(location.search).get("about");
+  if (about){
+    for (var i = 0; i < checklist.options.length; i++){
+      if (checklist.options[i].getAttribute("data-key") === about) checklist.selectedIndex = i;
+    }
+  }
+  syncSubject();
+  checklist.addEventListener("change", syncSubject);
+
+  /* Sent in the background so the reader stays on this page and gets a
+     plain message in place -- no pop-up dialogs, no redirect. */
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!message.value.trim()){
+      show("err", "Please write a message first.");
+      message.focus();
+      return;
+    }
+    send.disabled = true;
+    send.textContent = "Sending…";
+    fetch(form.action, {method:"POST", body:new FormData(form), headers:{"Accept":"application/json"}})
+      .then(function(res){
+        if (!res.ok) throw new Error("status "+res.status);
+        form.reset();
+        syncSubject();
+        show("ok", "Thanks, your feedback was sent.");
+      })
+      .catch(function(){
+        show("err", "Couldn’t send that. Check your connection and try again.");
+      })
+      .then(function(){
+        send.disabled = false;
+        send.textContent = "Send feedback";
+      });
+  });
+})();
+</script>
+<script data-goatcounter="https://nishekan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
